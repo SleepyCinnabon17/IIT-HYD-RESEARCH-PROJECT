@@ -1,0 +1,12 @@
+{
+  "repository": "OpenSistemas/YOLOv8-crack-seg",
+  "revision": "910c33b45c040fd8b1cb93eae3fb08ec2ca8b956",
+  "source_filename": "yolov8s/weights/best.pt",
+  "local_filename": "models/crack_yolov8s_best.pt",
+  "size_bytes": 23861027,
+  "sha256": "aceae4a99a4e7903a78d11336afc71b4cb47318888d87279922687bfeb16637d",
+  "license": "AGPL-3.0",
+  "download_method": "huggingface_hub.hf_hub_download",
+  "acquired_at": "2026-08-13T16:09:36+05:30"
+}
+

@@ -1,0 +1,63 @@
+{
+  "image": "ambiguous_01.jpg",
+  "expected_category": "ambiguous",
+  "schema_version": "1.0",
+  "detected": true,
+  "confidence": 0.4658004939556122,
+  "raw_confidence": 0.47736287117004395,
+  "variance": 0.05184601961338773,
+  "box": [
+    233.65338134765625,
+    275.4300537109375,
+    262.9696044921875,
+    312.2645263671875
+  ],
+  "hallucination_risk": "High",
+  "tta_confidences": [
+    0.47736287117004395,
+    0.3728242814540863,
+    0.46104466915130615,
+    0.5304092764854431,
+    0.4873613715171814
+  ],
+  "tta_names": [
+    "original",
+    "horizontal_flip",
+    "brightness_0.8",
+    "contrast_1.15",
+    "rotation_+3"
+  ],
+  "uncertainty_metric": "population_standard_deviation_of_tta_confidence",
+  "thresholds": {
+    "confidence": 0.35,
+    "variance": 0.03,
+    "high_risk_variance": 0.045,
+    "detector_floor": 0.01
+  },
+  "decision_trace": {
+    "base_detection_present": true,
+    "confidence_passed": true,
+    "uncertainty_passed": false,
+    "risk": "High",
+    "gate_permitted": false
+  },
+  "normalized_image_sha256": "deaeef070f586d281d9237460b4d47370ada819a6518e76547543deb933aa2f4",
+  "models": {
+    "detector": "crack_yolov8s_best.pt",
+    "vlm": "vikhyatk/moondream2",
+    "vlm_revision": "2024-08-26"
+  },
+  "runtime": {
+    "device": "cpu",
+    "detector_dtype": "float32",
+    "vlm_dtype": "float32"
+  },
+  "vlm_called": false,
+  "vlm_succeeded": false,
+  "vlm_error": null,
+  "crop_box": null,
+  "explanation": "Explanation withheld — flagged for human review",
+  "gate_log": "VLM SKIPPED: HIGH RISK",
+  "gate_reason": "Explanation withheld because calibrated confidence or TTA stability did not satisfy the Low-risk gate.",
+  "processing_time": 6.893811999999343
+}

@@ -1,0 +1,137 @@
+[
+  {
+    "image": "ambiguous_01.jpg",
+    "detected": true,
+    "confidence": 0.4328874349594116,
+    "raw_confidence": 0.3924362063407898,
+    "variance": 0.05604976874230236,
+    "box": [
+      233.73233032226562,
+      275.3901672363281,
+      263.0605773925781,
+      312.3357849121094
+    ],
+    "hallucination_risk": "Low",
+    "tta_confidences": [
+      0.3924362063407898,
+      0.525003969669342,
+      0.36334526538848877,
+      0.45900464057922363,
+      0.42464709281921387
+    ],
+    "tta_names": [
+      "original",
+      "horizontal_flip",
+      "brightness_0.8",
+      "contrast_1.15",
+      "rotation_+3"
+    ]
+  },
+  {
+    "image": "ambiguous_02.jpg",
+    "detected": false,
+    "confidence": 0.0,
+    "raw_confidence": 0.0,
+    "variance": 0.0,
+    "box": null,
+    "hallucination_risk": "N/A",
+    "tta_confidences": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "tta_names": [
+      "original",
+      "horizontal_flip",
+      "brightness_0.8",
+      "contrast_1.15",
+      "rotation_+3"
+    ]
+  },
+  {
+    "image": "clear_01.jpg",
+    "detected": true,
+    "confidence": 0.32356232702732085,
+    "raw_confidence": 0.3956896662712097,
+    "variance": 0.11457178217586653,
+    "box": [
+      180.9586181640625,
+      297.3421325683594,
+      253.9656982421875,
+      358.59283447265625
+    ],
+    "hallucination_risk": "Medium",
+    "tta_confidences": [
+      0.3956896662712097,
+      0.14080439507961273,
+      0.3565278947353363,
+      0.46946489810943604,
+      0.2553247809410095
+    ],
+    "tta_names": [
+      "original",
+      "horizontal_flip",
+      "brightness_0.8",
+      "contrast_1.15",
+      "rotation_+3"
+    ]
+  },
+  {
+    "image": "clear_02.jpg",
+    "detected": true,
+    "confidence": 0.7349784970283508,
+    "raw_confidence": 0.7615015506744385,
+    "variance": 0.016715576768169167,
+    "box": [
+      1116.8377685546875,
+      401.4510192871094,
+      1854.10791015625,
+      749.1715087890625
+    ],
+    "hallucination_risk": "Low",
+    "tta_confidences": [
+      0.7615015506744385,
+      0.7298619747161865,
+      0.7287954092025757,
+      0.74338698387146,
+      0.7113465666770935
+    ],
+    "tta_names": [
+      "original",
+      "horizontal_flip",
+      "brightness_0.8",
+      "contrast_1.15",
+      "rotation_+3"
+    ]
+  },
+  {
+    "image": "clear_03.jpg",
+    "detected": true,
+    "confidence": 0.6916781187057495,
+    "raw_confidence": 0.6815808415412903,
+    "variance": 0.07408258602996766,
+    "box": [
+      0.0,
+      22.09716796875,
+      750.0,
+      219.37490844726562
+    ],
+    "hallucination_risk": "Low",
+    "tta_confidences": [
+      0.6815808415412903,
+      0.8325271606445312,
+      0.6191827654838562,
+      0.6791067719459534,
+      0.6459930539131165
+    ],
+    "tta_names": [
+      "original",
+      "horizontal_flip",
+      "brightness_0.8",
+      "contrast_1.15",
+      "rotation_+3"
+    ]
+  }
+]

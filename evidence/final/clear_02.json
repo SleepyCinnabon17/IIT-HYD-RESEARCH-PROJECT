@@ -1,0 +1,68 @@
+{
+  "image": "clear_02.jpg",
+  "expected_category": "clear",
+  "schema_version": "1.0",
+  "detected": true,
+  "confidence": 0.7418948650360108,
+  "raw_confidence": 0.7592848539352417,
+  "variance": 0.018741379460705206,
+  "box": [
+    1119.798095703125,
+    407.8780517578125,
+    1851.7918701171875,
+    753.3716430664062
+  ],
+  "hallucination_risk": "Low",
+  "tta_confidences": [
+    0.7592848539352417,
+    0.7662025690078735,
+    0.7219945788383484,
+    0.7417044639587402,
+    0.7202878594398499
+  ],
+  "tta_names": [
+    "original",
+    "horizontal_flip",
+    "brightness_0.8",
+    "contrast_1.15",
+    "rotation_+3"
+  ],
+  "uncertainty_metric": "population_standard_deviation_of_tta_confidence",
+  "thresholds": {
+    "confidence": 0.35,
+    "variance": 0.03,
+    "high_risk_variance": 0.045,
+    "detector_floor": 0.01
+  },
+  "decision_trace": {
+    "base_detection_present": true,
+    "confidence_passed": true,
+    "uncertainty_passed": true,
+    "risk": "Low",
+    "gate_permitted": true
+  },
+  "normalized_image_sha256": "532032f59efaaf403874d36c5ab4af1d249de9aea7d6a7137634141df1de96be",
+  "models": {
+    "detector": "crack_yolov8s_best.pt",
+    "vlm": "vikhyatk/moondream2",
+    "vlm_revision": "2024-08-26"
+  },
+  "runtime": {
+    "device": "cpu",
+    "detector_dtype": "float32",
+    "vlm_dtype": "float32"
+  },
+  "vlm_called": true,
+  "vlm_succeeded": true,
+  "vlm_error": null,
+  "crop_box": [
+    1009,
+    356,
+    1856,
+    806
+  ],
+  "explanation": "A large crack in the pavement, with the crack extending from the left side of the image towards the right.",
+  "gate_log": "VLM CALLED",
+  "gate_reason": "A base detection exists and both confidence and TTA stability satisfy the Low-risk gate.",
+  "processing_time": 31.382574699999168
+}

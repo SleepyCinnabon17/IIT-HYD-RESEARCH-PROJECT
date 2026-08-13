@@ -1,0 +1,47 @@
+{
+  "status": "PASS",
+  "project_root": "C:\\Users\\Niranjan\\OneDrive\\Desktop\\IIT HYD RI",
+  "checks": {
+    "packages": {
+      "torch": "2.13.0",
+      "torchvision": "0.28.0",
+      "ultralytics": "8.4.118",
+      "transformers": "4.44.0",
+      "accelerate": "1.14.0",
+      "PIL": "11.3.0",
+      "gradio": "5.49.1",
+      "einops": "0.8.2",
+      "huggingface_hub": "0.36.2"
+    },
+    "runtime": {
+      "python": "3.11.9",
+      "device": "cpu",
+      "cuda_available": false,
+      "dtype": "float32"
+    },
+    "project_directories": {
+      "required": [
+        "models",
+        "test_images",
+        "evidence",
+        "tests"
+      ],
+      "missing": []
+    },
+    "detector_checkpoint": {
+      "path": "C:\\Users\\Niranjan\\OneDrive\\Desktop\\IIT HYD RI\\models\\crack_yolov8s_best.pt",
+      "exists": true,
+      "expected_size": 23861027,
+      "expected_sha256": "aceae4a99a4e7903a78d11336afc71b4cb47318888d87279922687bfeb16637d",
+      "actual_size": 23861027,
+      "actual_sha256": "aceae4a99a4e7903a78d11336afc71b4cb47318888d87279922687bfeb16637d",
+      "verified": true
+    },
+    "pip_check": {
+      "passed": true,
+      "output": "No broken requirements found."
+    }
+  },
+  "errors": [],
+  "note": "Preflight does not load detector or VLM weights and is not an inference test."
+}

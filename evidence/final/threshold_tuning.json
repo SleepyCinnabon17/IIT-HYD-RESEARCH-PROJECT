@@ -1,0 +1,59 @@
+{
+  "parameter_changed": "VARIANCE_THRESHOLD",
+  "old_values": {
+    "confidence_threshold": 0.35,
+    "variance_threshold": 0.15
+  },
+  "new_values": {
+    "confidence_threshold": 0.35,
+    "variance_threshold": 0.03
+  },
+  "reason": "The original variance threshold classified the real pavement-shadow false positive Low risk; 0.03 preserves all three clear cases as Low and makes the shadow High because 0.051846 exceeds the 0.045 high-risk boundary.",
+  "complete_matrix_comparison": [
+    {
+      "image": "ambiguous_01.jpg",
+      "old_risk": "Low",
+      "new_risk": "High",
+      "confidence": 0.4658004939556122,
+      "variance": 0.05184601961338773,
+      "old_gate_permitted": true,
+      "new_gate_permitted": false
+    },
+    {
+      "image": "ambiguous_02.jpg",
+      "old_risk": "N/A",
+      "new_risk": "N/A",
+      "confidence": 0.0,
+      "variance": 0.0,
+      "old_gate_permitted": false,
+      "new_gate_permitted": false
+    },
+    {
+      "image": "clear_01.jpg",
+      "old_risk": "Low",
+      "new_risk": "Low",
+      "confidence": 0.8985786676406861,
+      "variance": 0.004150215874321795,
+      "old_gate_permitted": true,
+      "new_gate_permitted": true
+    },
+    {
+      "image": "clear_02.jpg",
+      "old_risk": "Low",
+      "new_risk": "Low",
+      "confidence": 0.7418948650360108,
+      "variance": 0.018741379460705206,
+      "old_gate_permitted": true,
+      "new_gate_permitted": true
+    },
+    {
+      "image": "clear_03.jpg",
+      "old_risk": "Low",
+      "new_risk": "Low",
+      "confidence": 0.8095114827156067,
+      "variance": 0.011018639802931126,
+      "old_gate_permitted": true,
+      "new_gate_permitted": true
+    }
+  ]
+}

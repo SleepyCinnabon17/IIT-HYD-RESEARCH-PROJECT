@@ -1,0 +1,14 @@
+{
+  "repository": "vikhyatk/moondream2",
+  "revision": "2024-08-26",
+  "resolved_commit": "92d3d73b6fd61ab84d9fe093a9c7fd8c04bf2c0d",
+  "source_filename": "model.safetensors",
+  "cache_only": true,
+  "size_bytes": 3736040266,
+  "sha256": "4bf7aed8ba4325d23fa7cd348d795a27f3b272682536f08aca4cdd62cde79293",
+  "license": "Apache-2.0",
+  "trust_remote_code": true,
+  "transformers_version": "4.44.0",
+  "inference_device": "cpu",
+  "inference_dtype": "float32"
+}

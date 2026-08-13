@@ -1,0 +1,14 @@
+{
+  "checkpoint": "models/crack_yolov8s_best.pt",
+  "device": "cpu",
+  "image_size": 640,
+  "internal_confidence_floor": 0.01,
+  "results": [
+    {"image": "ambiguous_01.jpg", "expected_category": "ambiguous", "detections": 37, "top_confidence": 0.477363, "box_xyxy": [233.65, 275.43, 262.97, 312.26], "masks": 37, "inference_seconds": 2.264},
+    {"image": "ambiguous_02.jpg", "expected_category": "ambiguous", "detections": 0, "top_confidence": 0.0, "box_xyxy": null, "masks": 0, "inference_seconds": 0.287},
+    {"image": "clear_01.jpg", "expected_category": "clear", "detections": 38, "top_confidence": 0.408591, "box_xyxy": [19.68, 220.97, 146.85, 287.21], "masks": 38, "inference_seconds": 0.287},
+    {"image": "clear_02.jpg", "expected_category": "clear", "detections": 16, "top_confidence": 0.759285, "box_xyxy": [1119.8, 407.88, 1851.79, 753.37], "masks": 16, "inference_seconds": 0.331},
+    {"image": "clear_03.jpg", "expected_category": "clear", "detections": 8, "top_confidence": 0.289337, "box_xyxy": [174.02, 23.4, 750.0, 215.11], "masks": 8, "inference_seconds": 0.176}
+  ]
+}
+

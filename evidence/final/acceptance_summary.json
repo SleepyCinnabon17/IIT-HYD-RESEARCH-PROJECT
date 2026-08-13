@@ -1,0 +1,17 @@
+{
+  "status": "PASS",
+  "confidence_threshold": 0.35,
+  "variance_threshold": 0.03,
+  "clear_low_count": 3,
+  "clear_count": 3,
+  "real_explanation_example": "clear_01.jpg",
+  "real_withheld_example": "ambiguous_01.jpg",
+  "no_detection_example": "ambiguous_02.jpg",
+  "real_detector_gate_spy_passed": true,
+  "determinism_passed": true,
+  "vlm_attempt_count": 3,
+  "vlm_success_count": 2,
+  "language_guard_blocked_images": [
+    "clear_03.jpg"
+  ]
+}

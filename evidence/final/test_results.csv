@@ -1,0 +1,6 @@
+﻿Image,Expected Category,Raw Confidence,Calibrated Confidence,TTA Variance,Risk,VLM Called,VLM Succeeded,Explanation,Processing Time
+ambiguous_01.jpg,ambiguous,0.47736287117004395,0.4658004939556122,0.05184601961338773,High,False,False,Explanation withheld — flagged for human review,6.893811999999343
+ambiguous_02.jpg,ambiguous,0.0,0.0,0.0,N/A,False,False,No defect detected.,1.3064316999998482
+clear_01.jpg,clear,0.8954295516014099,0.8985786676406861,0.004150215874321795,Low,True,True,The crack is vertical and extends from the top left to the bottom right of the image.,33.545409800000016
+clear_02.jpg,clear,0.7592848539352417,0.7418948650360108,0.018741379460705206,Low,True,True,"A large crack in the pavement, with the crack extending from the left side of the image towards the right.",31.382574699999168
+clear_03.jpg,clear,0.8173372149467468,0.8095114827156067,0.011018639802931126,Low,True,False,Explanation unavailable — VLM failed closed; human review required,25.332798400000684

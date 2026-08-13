@@ -1,0 +1,61 @@
+{
+  "schema_version": "1.0",
+  "detected": true,
+  "confidence": 0.8985786676406861,
+  "raw_confidence": 0.8954295516014099,
+  "variance": 0.004150215874321795,
+  "box": [
+    194.15261840820312,
+    0.18205870687961578,
+    340.4500427246094,
+    414.973388671875
+  ],
+  "hallucination_risk": "Low",
+  "tta_confidences": [
+    0.8954295516014099,
+    0.9058310389518738,
+    0.8942824602127075,
+    0.9002769589424133,
+    0.8970733284950256
+  ],
+  "tta_names": [
+    "original",
+    "horizontal_flip",
+    "brightness_0.8",
+    "contrast_1.15",
+    "rotation_+3"
+  ],
+  "uncertainty_metric": "population_standard_deviation_of_tta_confidence",
+  "thresholds": {
+    "confidence": 0.35,
+    "variance": 0.03,
+    "high_risk_variance": 0.045,
+    "detector_floor": 0.01
+  },
+  "decision_trace": {
+    "base_detection_present": true,
+    "confidence_passed": true,
+    "uncertainty_passed": true,
+    "risk": "Low",
+    "gate_permitted": true
+  },
+  "normalized_image_sha256": "8bc118e08c140fd5f19846cdf0b71e74b8aa5284c81ddb59c4ea86aee6945b38",
+  "models": {
+    "detector": "crack_yolov8s_best.pt",
+    "vlm": "vikhyatk/moondream2",
+    "vlm_revision": "2024-08-26"
+  },
+  "vlm_called": true,
+  "vlm_succeeded": true,
+  "vlm_error": null,
+  "crop_box": [
+    172,
+    0,
+    363,
+    416
+  ],
+  "explanation": "The crack is vertical and extends from the top left to the bottom right of the image.",
+  "gate_log": "VLM CALLED",
+  "gate_reason": "A base detection exists and both confidence and TTA stability satisfy the Low-risk gate.",
+  "processing_time": 52.9169222999999
+}

@@ -1,0 +1,9 @@
+{
+  "image": "ambiguous_01.jpg",
+  "risk": "High",
+  "vlm_loader_calls": 0,
+  "vlm_called": false,
+  "explanation": "Explanation withheld — flagged for human review",
+  "elapsed": 1.6647054000004573,
+  "passed": true
+}
