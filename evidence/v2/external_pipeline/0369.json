@@ -1,0 +1,138 @@
+{
+  "id": 369,
+  "positive": true,
+  "seed": 20261276,
+  "calibration_sha256": "23717b8127e17f2aca75d93901e1574d6b66addad3e6036f05d0add6003dbaff",
+  "cached_detector_seconds": 2.0846880999997666,
+  "schema_version": "1.0",
+  "detected": true,
+  "confidence": 0.012264327146112919,
+  "raw_confidence": 0.013757393695414066,
+  "variance": 0.00730034590752963,
+  "box": [
+    3.027514696121216,
+    3.2705078125,
+    253.05972290039062,
+    244.8012237548828
+  ],
+  "hallucination_risk": "Medium",
+  "tta_confidences": [
+    0.013757393695414066,
+    0.0,
+    0.012040635570883751,
+    0.012597611173987389,
+    0.02292599529027939
+  ],
+  "tta_names": [
+    "original",
+    "horizontal_flip",
+    "brightness_0.8",
+    "contrast_1.15",
+    "rotation_+3"
+  ],
+  "uncertainty_metric": "population_standard_deviation_of_tta_confidence",
+  "thresholds": {
+    "confidence": 0.35,
+    "variance": 0.016384084442903905,
+    "high_risk_variance": 0.02457612666435586,
+    "detector_floor": 0.01
+  },
+  "decision_trace": {
+    "base_detection_present": true,
+    "confidence_passed": false,
+    "uncertainty_passed": true,
+    "risk": "Medium",
+    "gate_permitted": false
+  },
+  "detection_id": 0,
+  "normalized_image_sha256": "5852cf4bfef8751341da3a44a0f7f0e05cd1405810cd73554425c12f7bad12d4",
+  "models": {
+    "detector": "crack_yolov8s_best.pt",
+    "vlm": "vikhyatk/moondream2",
+    "vlm_revision": "2024-08-26"
+  },
+  "runtime": {
+    "device": "cpu",
+    "detector_dtype": "float32",
+    "vlm_dtype": "float32"
+  },
+  "vlm_called": false,
+  "vlm_succeeded": false,
+  "vlm_error": null,
+  "crop_box": null,
+  "explanation": "Region 1 (Medium): Explanation withheld \u2014 flagged for human review",
+  "gate_log": "1 REGIONS: 0 VLM CALLS",
+  "gate_reason": "Each region has an independent gate; image risk is the highest region risk. Scalar confidence and box describe the top region.",
+  "processing_time": 0.004276699999536504,
+  "detections": [
+    {
+      "schema_version": "1.0",
+      "detected": true,
+      "confidence": 0.012264327146112919,
+      "raw_confidence": 0.013757393695414066,
+      "variance": 0.00730034590752963,
+      "box": [
+        3.027514696121216,
+        3.2705078125,
+        253.05972290039062,
+        244.8012237548828
+      ],
+      "hallucination_risk": "Medium",
+      "tta_confidences": [
+        0.013757393695414066,
+        0.0,
+        0.012040635570883751,
+        0.012597611173987389,
+        0.02292599529027939
+      ],
+      "tta_names": [
+        "original",
+        "horizontal_flip",
+        "brightness_0.8",
+        "contrast_1.15",
+        "rotation_+3"
+      ],
+      "uncertainty_metric": "population_standard_deviation_of_tta_confidence",
+      "thresholds": {
+        "confidence": 0.35,
+        "variance": 0.016384084442903905,
+        "high_risk_variance": 0.02457612666435586,
+        "detector_floor": 0.01
+      },
+      "decision_trace": {
+        "base_detection_present": true,
+        "confidence_passed": false,
+        "uncertainty_passed": true,
+        "risk": "Medium",
+        "gate_permitted": false
+      },
+      "detection_id": 0,
+      "normalized_image_sha256": "5852cf4bfef8751341da3a44a0f7f0e05cd1405810cd73554425c12f7bad12d4",
+      "models": {
+        "detector": "crack_yolov8s_best.pt",
+        "vlm": "vikhyatk/moondream2",
+        "vlm_revision": "2024-08-26"
+      },
+      "runtime": {
+        "device": "cpu",
+        "detector_dtype": "float32",
+        "vlm_dtype": "float32"
+      },
+      "vlm_called": false,
+      "vlm_succeeded": false,
+      "vlm_error": null,
+      "crop_box": null,
+      "explanation": "Explanation withheld \u2014 flagged for human review",
+      "gate_log": "VLM SKIPPED: MEDIUM RISK",
+      "gate_reason": "Explanation withheld because calibrated confidence or TTA stability did not satisfy the Low-risk gate.",
+      "processing_time": 0.0009855999996943865
+    }
+  ],
+  "pass_box_counts": [
+    1,
+    0,
+    2,
+    1,
+    5
+  ]
+}

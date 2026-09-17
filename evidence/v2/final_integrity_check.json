@@ -1,0 +1,14 @@
+{
+  "status": "PASS",
+  "images": 511,
+  "counts": {
+    "calibration": 111,
+    "evaluation": 200,
+    "external": 200
+  },
+  "external_pipeline_images": 200,
+  "all_input_hashes_verified": true,
+  "all_gate_boundaries_verified": true,
+  "pilot_sections_preserved": true,
+  "deployed_calibration_matches": true
+}

@@ -23,7 +23,7 @@ image
 - Detector: `OpenSistemas/YOLOv8-crack-seg`, `yolov8s/weights/best.pt`, revision `910c33b45c040fd8b1cb93eae3fb08ec2ca8b956`, SHA-256 `aceae4a99a4e7903a78d11336afc71b4cb47318888d87279922687bfeb16637d`, AGPL-3.0.
 - VLM: `vikhyatk/moondream2`, revision `2024-08-26` (resolved commit `92d3d73b6fd61ab84d9fe093a9c7fd8c04bf2c0d`), Apache-2.0.
 - Confidence threshold: `0.35`.
-- TTA standard-deviation threshold: `0.03`.
+- TTA standard-deviation threshold: loaded from `models/gate_calibration.json` by default CLI/UI inspection; `PipelineConfig()` retains explicit legacy defaults for historical experiments.
 - Detector inference floor: `0.01`.
 - Crop expansion: 15% on each side, clamped to image bounds.
 - Device: automatic CUDA when available; CPU fp32 otherwise.
@@ -60,9 +60,15 @@ python app.py
 
 Then open `http://127.0.0.1:7860`. Use `--host`, `--port`, or `--share` only when the corresponding network exposure is intentional.
 
-The UI shows the annotated original-pass box, risk indicator, grounded explanation or refusal, confidence metrics, five TTA confidences, processing time, and explicit `VLM CALLED`/`VLM SKIPPED` gate evidence. Requests are queued with concurrency one to limit CPU/RAM contention.
+The UI numbers every original-pass box and shows per-region risk, TTA statistics, and explanation or refusal. Each region is matched across inverse-transformed TTA boxes and gated independently; the image risk is the highest region risk. The language guard checks measured crop geometry as well as diagnostic keywords. Requests are queued with concurrency one to limit CPU/RAM contention.
 
-## Validation Summary
+## V2 Evaluation
+
+`evaluate_v2.py` provides seeded data selection, hashed inference caches, disjoint threshold calibration, confidence intervals, external SDNET2018 execution, per-region coverage, a 30-output grounding challenge, and a 3/5/8/10/15-pass TTA audit. Run its `download`, `prepare`, `detect`, `summarize`, `external-vlm`, and `report` phases in order. See [REPORT.md](REPORT.md) for measured results and [evidence/v2/results.json](evidence/v2/results.json) for machine-readable KPIs.
+
+The larger Crack-Seg sample is not a fresh 200-image held-out test set: the source has only 112 official test images, and its sole negative is in validation and was already used in the pilot. The reports disclose this limitation and keep evaluation images disjoint from the new calibration subset. No statistical guarantee of language truth is asserted.
+
+## Pilot Evaluation (superseded)
 
 The locked five-image acceptance evidence demonstrates all required directions:
 
@@ -97,13 +103,13 @@ Tests cover TTA order and statistics, missing detections, boundary risks, box ex
 
 ## Important Limitations
 
-- Threshold `0.03` was tuned to demonstrate separation on a small selected five-image set; it is not calibrated for general deployment.
+- The legacy threshold `0.03` came from selected pilot cases. The v2 threshold is fitted to a separate calibration subset, but model-selection exposure and sparse negatives limit generalization claims.
 - The 29-image expansion is curated from one dataset and is not independent external validation. The requested `0.13–0.17` sensitivity grid was internally stable, but 15/29 labels differ between shipped `0.03` and reference `0.15`.
 - The detector confuses some shadows, edges, wires, and background patterns with cracks. The empty-label false positive proves TTA stability does not imply semantic correctness.
 - The gate regulates explanation release; it does not establish detector correctness or crack severity.
 - Moondream output can contain unsupported claims. A language guard fails closed on known patterns, but no finite word list guarantees complete semantic safety.
 - CPU fp32 inference is slow and memory intensive. Latency depends on hardware, cache state, image, and system load.
-- Only the highest-confidence original-pass box is explained. Other detections and inverse-transformed augmented boxes are not aggregated.
+- All base detections are now processed; box association can still fail under strong transforms, and bbox geometry cannot verify arbitrary appearance or severity claims.
 - The `.pt` detector checkpoint uses pickle-based loading and carries AGPL-3.0 obligations. Moondream requires pinned `trust_remote_code`; both are supply-chain considerations.
 
 ## Project Files
@@ -112,6 +118,7 @@ Tests cover TTA order and statistics, missing detections, boundary risks, box ex
 - `app.py` — minimal Gradio UI.
 - `diagnostics.py` — environment and checkpoint preflight.
 - `evaluate.py` — locked five-image evidence runner.
+- `evaluate_v2.py` — reproducible v2 dataset, calibration, external, grounding and TTA evaluations.
 - `instrumentation/` — approved expanded evidence, latency, sensitivity, and integrity tooling.
 - `tests/` — automated tests.
 - `TEST_RESULTS.md`, `SENSITIVITY.md`, `REPORT.md`, `DECISIONS.md` — evidence and documentation.

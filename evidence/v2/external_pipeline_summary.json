@@ -1,0 +1,12 @@
+{
+  "n": 200,
+  "real_vlm": true,
+  "images_vlm_called": 5,
+  "regions_vlm_called": 5,
+  "regions_vlm_succeeded": 3,
+  "regions_failed_closed": 2,
+  "geometry_blocks": 1,
+  "word_list_blocks": 1,
+  "negative_images_gated_low": 0,
+  "language_stage_seconds": 405.5534724000063
+}

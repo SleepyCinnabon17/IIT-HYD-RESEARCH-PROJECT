@@ -1,0 +1,8 @@
+{
+  "variance_threshold": 0.016384084442903905,
+  "confidence_threshold": 0.35,
+  "tta_passes": 5,
+  "detector_sha256": "aceae4a99a4e7903a78d11336afc71b4cb47318888d87279922687bfeb16637d",
+  "manifest_sha256": "49eea8323f1761e72135045d26b5dec38bb2ba5489342f0d8bac3056054c14a1",
+  "confidence_guarantee": null
+}

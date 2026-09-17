@@ -1,0 +1,240 @@
+{
+  "id": 338,
+  "positive": true,
+  "seed": 20261245,
+  "calibration_sha256": "23717b8127e17f2aca75d93901e1574d6b66addad3e6036f05d0add6003dbaff",
+  "cached_detector_seconds": 1.9782079000015074,
+  "schema_version": "1.0",
+  "detected": true,
+  "confidence": 0.9210587263107299,
+  "raw_confidence": 0.9278398752212524,
+  "variance": 0.007784945191671981,
+  "box": [
+    168.2654571533203,
+    0.36726075410842896,
+    255.5933837890625,
+    113.70829772949219
+  ],
+  "hallucination_risk": "Medium",
+  "tta_confidences": [
+    0.9278398752212524,
+    0.9125490188598633,
+    0.9250356554985046,
+    0.9290527701377869,
+    0.9108163118362427
+  ],
+  "tta_names": [
+    "original",
+    "horizontal_flip",
+    "brightness_0.8",
+    "contrast_1.15",
+    "rotation_+3"
+  ],
+  "uncertainty_metric": "population_standard_deviation_of_tta_confidence",
+  "thresholds": {
+    "confidence": 0.35,
+    "variance": 0.016384084442903905,
+    "high_risk_variance": 0.02457612666435586,
+    "detector_floor": 0.01
+  },
+  "decision_trace": {
+    "base_detection_present": true,
+    "confidence_passed": true,
+    "uncertainty_passed": true,
+    "risk": "Low",
+    "gate_permitted": true
+  },
+  "detection_id": 0,
+  "normalized_image_sha256": "41ef318d4b687f6a8e94d77cfc8cb6e435f60b463f2b1665f6754c8b1c04458d",
+  "models": {
+    "detector": "crack_yolov8s_best.pt",
+    "vlm": "vikhyatk/moondream2",
+    "vlm_revision": "2024-08-26"
+  },
+  "runtime": {
+    "device": "cpu",
+    "detector_dtype": "float32",
+    "vlm_dtype": "float32"
+  },
+  "vlm_called": true,
+  "vlm_succeeded": true,
+  "vlm_error": null,
+  "crop_box": [
+    155,
+    0,
+    256,
+    131
+  ],
+  "explanation": "Region 1 (Low): The crack is located in the middle of the image and extends horizontally across the frame.\nRegion 2 (Medium): Explanation withheld \u2014 flagged for human review",
+  "grounding": {
+    "passed": true,
+    "reasons": [],
+    "attributes": {
+      "width": 0.8646329369875464,
+      "height": 0.8651987555372807,
+      "area": 0.7480793410781691,
+      "confidence": 0.9210587263107299,
+      "center_x": 0.5636576284276377,
+      "center_y": 0.4354028949755749,
+      "aspect_ratio": 0.7704881565068856
+    },
+    "checked_claims": [],
+    "scope": "geometric contradictions only; appearance and causality not certified"
+  },
+  "gate_log": "2 REGIONS: 1 VLM CALLS",
+  "gate_reason": "Each region has an independent gate; image risk is the highest region risk. Scalar confidence and box describe the top region.",
+  "processing_time": 75.69725689999905,
+  "detections": [
+    {
+      "schema_version": "1.0",
+      "detected": true,
+      "confidence": 0.9210587263107299,
+      "raw_confidence": 0.9278398752212524,
+      "variance": 0.007784945191671981,
+      "box": [
+        168.2654571533203,
+        0.36726075410842896,
+        255.5933837890625,
+        113.70829772949219
+      ],
+      "hallucination_risk": "Low",
+      "tta_confidences": [
+        0.9278398752212524,
+        0.9125490188598633,
+        0.9250356554985046,
+        0.9290527701377869,
+        0.9108163118362427
+      ],
+      "tta_names": [
+        "original",
+        "horizontal_flip",
+        "brightness_0.8",
+        "contrast_1.15",
+        "rotation_+3"
+      ],
+      "uncertainty_metric": "population_standard_deviation_of_tta_confidence",
+      "thresholds": {
+        "confidence": 0.35,
+        "variance": 0.016384084442903905,
+        "high_risk_variance": 0.02457612666435586,
+        "detector_floor": 0.01
+      },
+      "decision_trace": {
+        "base_detection_present": true,
+        "confidence_passed": true,
+        "uncertainty_passed": true,
+        "risk": "Low",
+        "gate_permitted": true
+      },
+      "detection_id": 0,
+      "normalized_image_sha256": "41ef318d4b687f6a8e94d77cfc8cb6e435f60b463f2b1665f6754c8b1c04458d",
+      "models": {
+        "detector": "crack_yolov8s_best.pt",
+        "vlm": "vikhyatk/moondream2",
+        "vlm_revision": "2024-08-26"
+      },
+      "runtime": {
+        "device": "cpu",
+        "detector_dtype": "float32",
+        "vlm_dtype": "float32"
+      },
+      "vlm_called": true,
+      "vlm_succeeded": true,
+      "vlm_error": null,
+      "crop_box": [
+        155,
+        0,
+        256,
+        131
+      ],
+      "explanation": "The crack is located in the middle of the image and extends horizontally across the frame.",
+      "grounding": {
+        "passed": true,
+        "reasons": [],
+        "attributes": {
+          "width": 0.8646329369875464,
+          "height": 0.8651987555372807,
+          "area": 0.7480793410781691,
+          "confidence": 0.9210587263107299,
+          "center_x": 0.5636576284276377,
+          "center_y": 0.4354028949755749,
+          "aspect_ratio": 0.7704881565068856
+        },
+        "checked_claims": [],
+        "scope": "geometric contradictions only; appearance and causality not certified"
+      },
+      "gate_log": "VLM CALLED",
+      "gate_reason": "A base detection exists and both confidence and TTA stability satisfy the Low-risk gate.",
+      "processing_time": 75.61971569999878
+    },
+    {
+      "schema_version": "1.0",
+      "detected": true,
+      "confidence": 0.027832835726439954,
+      "raw_confidence": 0.015557882376015186,
+      "variance": 0.022336261344526875,
+      "box": [
+        7.844189643859863,
+        0.929858386516571,
+        256.0,
+        253.40725708007812
+      ],
+      "hallucination_risk": "Medium",
+      "tta_confidences": [
+        0.015557882376015186,
+        0.015872443094849586,
+        0.01913173496723175,
+        0.016170084476470947,
+        0.0724320337176323
+      ],
+      "tta_names": [
+        "original",
+        "horizontal_flip",
+        "brightness_0.8",
+        "contrast_1.15",
+        "rotation_+3"
+      ],
+      "uncertainty_metric": "population_standard_deviation_of_tta_confidence",
+      "thresholds": {
+        "confidence": 0.35,
+        "variance": 0.016384084442903905,
+        "high_risk_variance": 0.02457612666435586,
+        "detector_floor": 0.01
+      },
+      "decision_trace": {
+        "base_detection_present": true,
+        "confidence_passed": false,
+        "uncertainty_passed": false,
+        "risk": "Medium",
+        "gate_permitted": false
+      },
+      "detection_id": 1,
+      "normalized_image_sha256": "41ef318d4b687f6a8e94d77cfc8cb6e435f60b463f2b1665f6754c8b1c04458d",
+      "models": {
+        "detector": "crack_yolov8s_best.pt",
+        "vlm": "vikhyatk/moondream2",
+        "vlm_revision": "2024-08-26"
+      },
+      "runtime": {
+        "device": "cpu",
+        "detector_dtype": "float32",
+        "vlm_dtype": "float32"
+      },
+      "vlm_called": false,
+      "vlm_succeeded": false,
+      "vlm_error": null,
+      "crop_box": null,
+      "explanation": "Explanation withheld \u2014 flagged for human review",
+      "gate_log": "VLM SKIPPED: MEDIUM RISK",
+      "gate_reason": "Explanation withheld because calibrated confidence or TTA stability did not satisfy the Low-risk gate.",
+      "processing_time": 0.022091099999670405
+    }
+  ],
+  "pass_box_counts": [
+    2,
+    2,
+    2,
+    2,
+    9
+  ]
+}

@@ -1,0 +1,64 @@
+{
+  "id": 348,
+  "sha256": "408a9ca851d9ea1ef92ef6bb0425444b5162399ea9b766d4b98a79728be5cfda",
+  "seconds": 2.9524899999996705,
+  "detections": [
+    {
+      "schema_version": "1.0",
+      "detected": true,
+      "confidence": 0.011572891101241111,
+      "raw_confidence": 0.019002705812454224,
+      "variance": 0.009551219801271807,
+      "box": [
+        100.98814392089844,
+        46.12739944458008,
+        141.516357421875,
+        57.42274856567383
+      ],
+      "hallucination_risk": "Medium",
+      "tta_confidences": [
+        0.019002705812454224,
+        0.0,
+        0.02161804400384426,
+        0.017243705689907074,
+        0.0
+      ],
+      "tta_names": [
+        "original",
+        "horizontal_flip",
+        "brightness_0.8",
+        "contrast_1.15",
+        "rotation_+3"
+      ],
+      "uncertainty_metric": "population_standard_deviation_of_tta_confidence",
+      "thresholds": {
+        "confidence": 0.35,
+        "variance": 0.03,
+        "high_risk_variance": 0.045,
+        "detector_floor": 0.01
+      },
+      "decision_trace": {
+        "base_detection_present": true,
+        "confidence_passed": false,
+        "uncertainty_passed": true,
+        "risk": "Medium",
+        "gate_permitted": false
+      },
+      "detection_id": 0
+    }
+  ],
+  "pass_box_counts": [
+    1,
+    0,
+    1,
+    1,
+    5
+  ],
+  "legacy_top_confidences": [
+    0.019002705812454224,
+    0.0,
+    0.02161804400384426,
+    0.017243705689907074,
+    0.03286559879779816
+  ]
+}

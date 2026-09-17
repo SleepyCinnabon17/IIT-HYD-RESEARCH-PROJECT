@@ -1,0 +1,138 @@
+{
+  "id": 448,
+  "positive": false,
+  "seed": 20261355,
+  "calibration_sha256": "23717b8127e17f2aca75d93901e1574d6b66addad3e6036f05d0add6003dbaff",
+  "cached_detector_seconds": 4.893874499999583,
+  "schema_version": "1.0",
+  "detected": true,
+  "confidence": 0.04203152097761631,
+  "raw_confidence": 0.03272322937846184,
+  "variance": 0.015593737020201755,
+  "box": [
+    179.54409790039062,
+    35.160484313964844,
+    194.36996459960938,
+    57.5009880065918
+  ],
+  "hallucination_risk": "Medium",
+  "tta_confidences": [
+    0.03272322937846184,
+    0.03132385015487671,
+    0.02658652327954769,
+    0.06834211945533752,
+    0.05118188261985779
+  ],
+  "tta_names": [
+    "original",
+    "horizontal_flip",
+    "brightness_0.8",
+    "contrast_1.15",
+    "rotation_+3"
+  ],
+  "uncertainty_metric": "population_standard_deviation_of_tta_confidence",
+  "thresholds": {
+    "confidence": 0.35,
+    "variance": 0.016384084442903905,
+    "high_risk_variance": 0.02457612666435586,
+    "detector_floor": 0.01
+  },
+  "decision_trace": {
+    "base_detection_present": true,
+    "confidence_passed": false,
+    "uncertainty_passed": true,
+    "risk": "Medium",
+    "gate_permitted": false
+  },
+  "detection_id": 0,
+  "normalized_image_sha256": "a09b931d9b3aa5b574719f0b988751b30a42fcb62ffd7bd5c25319baecb94720",
+  "models": {
+    "detector": "crack_yolov8s_best.pt",
+    "vlm": "vikhyatk/moondream2",
+    "vlm_revision": "2024-08-26"
+  },
+  "runtime": {
+    "device": "cpu",
+    "detector_dtype": "float32",
+    "vlm_dtype": "float32"
+  },
+  "vlm_called": false,
+  "vlm_succeeded": false,
+  "vlm_error": null,
+  "crop_box": null,
+  "explanation": "Region 1 (Medium): Explanation withheld \u2014 flagged for human review",
+  "gate_log": "1 REGIONS: 0 VLM CALLS",
+  "gate_reason": "Each region has an independent gate; image risk is the highest region risk. Scalar confidence and box describe the top region.",
+  "processing_time": 0.0028810999992856523,
+  "detections": [
+    {
+      "schema_version": "1.0",
+      "detected": true,
+      "confidence": 0.04203152097761631,
+      "raw_confidence": 0.03272322937846184,
+      "variance": 0.015593737020201755,
+      "box": [
+        179.54409790039062,
+        35.160484313964844,
+        194.36996459960938,
+        57.5009880065918
+      ],
+      "hallucination_risk": "Medium",
+      "tta_confidences": [
+        0.03272322937846184,
+        0.03132385015487671,
+        0.02658652327954769,
+        0.06834211945533752,
+        0.05118188261985779
+      ],
+      "tta_names": [
+        "original",
+        "horizontal_flip",
+        "brightness_0.8",
+        "contrast_1.15",
+        "rotation_+3"
+      ],
+      "uncertainty_metric": "population_standard_deviation_of_tta_confidence",
+      "thresholds": {
+        "confidence": 0.35,
+        "variance": 0.016384084442903905,
+        "high_risk_variance": 0.02457612666435586,
+        "detector_floor": 0.01
+      },
+      "decision_trace": {
+        "base_detection_present": true,
+        "confidence_passed": false,
+        "uncertainty_passed": true,
+        "risk": "Medium",
+        "gate_permitted": false
+      },
+      "detection_id": 0,
+      "normalized_image_sha256": "a09b931d9b3aa5b574719f0b988751b30a42fcb62ffd7bd5c25319baecb94720",
+      "models": {
+        "detector": "crack_yolov8s_best.pt",
+        "vlm": "vikhyatk/moondream2",
+        "vlm_revision": "2024-08-26"
+      },
+      "runtime": {
+        "device": "cpu",
+        "detector_dtype": "float32",
+        "vlm_dtype": "float32"
+      },
+      "vlm_called": false,
+      "vlm_succeeded": false,
+      "vlm_error": null,
+      "crop_box": null,
+      "explanation": "Explanation withheld \u2014 flagged for human review",
+      "gate_log": "VLM SKIPPED: MEDIUM RISK",
+      "gate_reason": "Explanation withheld because calibrated confidence or TTA stability did not satisfy the Low-risk gate.",
+      "processing_time": 0.000444499999503023
+    }
+  ],
+  "pass_box_counts": [
+    1,
+    1,
+    1,
+    1,
+    4
+  ]
+}

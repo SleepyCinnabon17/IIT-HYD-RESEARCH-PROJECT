@@ -1,0 +1,107 @@
+{
+  "id": 365,
+  "sha256": "f2e9bdf5336e062760d162e8bf50646b801c5303e60780aaf1a7550caae3d69e",
+  "seconds": 2.101782899999307,
+  "detections": [
+    {
+      "schema_version": "1.0",
+      "detected": true,
+      "confidence": 0.8828023910522461,
+      "raw_confidence": 0.8978258967399597,
+      "variance": 0.027445838021783846,
+      "box": [
+        176.023193359375,
+        189.8874053955078,
+        255.8549346923828,
+        255.77261352539062
+      ],
+      "hallucination_risk": "Low",
+      "tta_confidences": [
+        0.8978258967399597,
+        0.8947172164916992,
+        0.8916430473327637,
+        0.901522159576416,
+        0.8283036351203918
+      ],
+      "tta_names": [
+        "original",
+        "horizontal_flip",
+        "brightness_0.8",
+        "contrast_1.15",
+        "rotation_+3"
+      ],
+      "uncertainty_metric": "population_standard_deviation_of_tta_confidence",
+      "thresholds": {
+        "confidence": 0.35,
+        "variance": 0.03,
+        "high_risk_variance": 0.045,
+        "detector_floor": 0.01
+      },
+      "decision_trace": {
+        "base_detection_present": true,
+        "confidence_passed": true,
+        "uncertainty_passed": true,
+        "risk": "Low",
+        "gate_permitted": true
+      },
+      "detection_id": 0
+    },
+    {
+      "schema_version": "1.0",
+      "detected": true,
+      "confidence": 0.011133739538490773,
+      "raw_confidence": 0.010479336604475975,
+      "variance": 0.0006922922962541844,
+      "box": [
+        18.307666778564453,
+        3.2769532203674316,
+        254.6339874267578,
+        255.2003936767578
+      ],
+      "hallucination_risk": "Medium",
+      "tta_confidences": [
+        0.010479336604475975,
+        0.011697771959006786,
+        0.011809897609055042,
+        0.011555409990251064,
+        0.010126281529664993
+      ],
+      "tta_names": [
+        "original",
+        "horizontal_flip",
+        "brightness_0.8",
+        "contrast_1.15",
+        "rotation_+3"
+      ],
+      "uncertainty_metric": "population_standard_deviation_of_tta_confidence",
+      "thresholds": {
+        "confidence": 0.35,
+        "variance": 0.03,
+        "high_risk_variance": 0.045,
+        "detector_floor": 0.01
+      },
+      "decision_trace": {
+        "base_detection_present": true,
+        "confidence_passed": false,
+        "uncertainty_passed": true,
+        "risk": "Medium",
+        "gate_permitted": false
+      },
+      "detection_id": 1
+    }
+  ],
+  "pass_box_counts": [
+    2,
+    2,
+    2,
+    2,
+    6
+  ],
+  "legacy_top_confidences": [
+    0.8978258967399597,
+    0.8947172164916992,
+    0.8916430473327637,
+    0.901522159576416,
+    0.8283036351203918
+  ]
+}

@@ -37,10 +37,10 @@ def metrics_markdown(result: dict[str, Any]) -> str:
     """Format auditable detector and gate metrics for the interface."""
     thresholds = result["thresholds"]
     confidences = ", ".join(f"{value:.4f}" for value in result["tta_confidences"])
-    return f"""| Metric | Value |
+    summary = f"""| Metric | Value |
 |---|---:|
 | Detection | `{"Yes" if result["detected"] else "No"}` |
-| Calibrated confidence | `{result["confidence"]:.2%}` |
+| Mean TTA confidence | `{result["confidence"]:.2%}` |
 | Raw confidence | `{result["raw_confidence"]:.2%}` |
 | TTA variance (population stddev) | `{result["variance"]:.4f}` |
 | Hallucination risk | `{result["hallucination_risk"]}` |
@@ -54,6 +54,12 @@ def metrics_markdown(result: dict[str, Any]) -> str:
 
 **Gate evidence:** `{result["gate_log"]}` — {result["gate_reason"]}
 """
+    if result.get("detections"):
+        summary += "\n**Per-region results** (image risk is the highest region risk):\n\n"
+        summary += "| Region | Mean TTA confidence | TTA stddev | Risk | Explanation surfaced |\n|---|---:|---:|---|---|\n"
+        for i, region in enumerate(result["detections"], 1):
+            summary += f"| {i} | {region['confidence']:.2%} | {region['variance']:.4f} | {region['hallucination_risk']} | {region['vlm_succeeded']} |\n"
+    return summary
 
 
 def inspect_for_ui(image: Image.Image | None) -> tuple[Image.Image, str, str, str]:
@@ -97,7 +103,7 @@ Detector → TTA uncertainty gate → grounded VLM explanation when allowed. Upl
             api_name="inspect",
         )
         gr.Markdown(
-            "The red box is the detector's original-pass region. `variance` in machine-readable results is a compatibility field containing population standard deviation, not mathematical variance."
+            "Numbered red boxes show all original-pass detections. Each region is gated independently. `variance` in machine-readable results contains population standard deviation, not mathematical variance."
         )
     return demo
 

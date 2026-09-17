@@ -1,0 +1,642 @@
+{
+  "seed": 20260907,
+  "manifest_sha256": "49eea8323f1761e72135045d26b5dec38bb2ba5489342f0d8bac3056054c14a1",
+  "metrics": {
+    "evaluation": {
+      "precision": 0.995,
+      "recall": 1.0,
+      "f1": 0.9974937343358395,
+      "accuracy": 0.995,
+      "tp": 199,
+      "fp": 1,
+      "fn": 0,
+      "tn": 0,
+      "n": 200,
+      "ci95": {
+        "precision": {
+          "low": 0.995,
+          "high": 0.995,
+          "width": 0.0
+        },
+        "recall": {
+          "low": 1.0,
+          "high": 1.0,
+          "width": 0.0
+        },
+        "f1": {
+          "low": 0.9974937343358395,
+          "high": 0.9974937343358395,
+          "width": 0.0
+        },
+        "accuracy": {
+          "low": 0.995,
+          "high": 0.995,
+          "width": 0.0
+        }
+      },
+      "exact_binomial_ci95": {
+        "precision": [
+          0.9724581015424416,
+          0.9998734189719902
+        ],
+        "recall": [
+          0.9816336723055656,
+          1.0
+        ],
+        "specificity": [
+          0.0,
+          0.975
+        ],
+        "accuracy": [
+          0.9724581015424416,
+          0.9998734189719902
+        ]
+      },
+      "simultaneous_rate_ci95": {
+        "precision": {
+          "low": 0.9948892465954905,
+          "high": 0.9999371898750079,
+          "width": 0.005047943279517408
+        },
+        "recall": {
+          "low": 0.9782204412009666,
+          "high": 1.0,
+          "width": 0.02177955879903337
+        },
+        "f1": {
+          "low": 0.9864844349708896,
+          "high": 0.999968593951195,
+          "width": 0.013484158980305416
+        },
+        "accuracy": {
+          "low": 0.9733293389949618,
+          "high": 0.9999375,
+          "width": 0.026608161005038267
+        }
+      },
+      "at_confidence_035": {
+        "precision": 0.9948717948717949,
+        "recall": 0.9748743718592965,
+        "f1": 0.9847715736040609,
+        "accuracy": 0.97,
+        "tp": 194,
+        "fp": 1,
+        "fn": 5,
+        "tn": 0,
+        "n": 200,
+        "ci95": {
+          "precision": {
+            "low": 0.9947368421052631,
+            "high": 0.9949748743718593,
+            "width": 0.0002380322665961332
+          },
+          "recall": {
+            "low": 0.949748743718593,
+            "high": 0.9949748743718593,
+            "width": 0.045226130653266305
+          },
+          "f1": {
+            "low": 0.9717223650385605,
+            "high": 0.9949748743718593,
+            "width": 0.02325250933329881
+          },
+          "accuracy": {
+            "low": 0.945,
+            "high": 0.99,
+            "width": 0.04500000000000004
+          }
+        },
+        "exact_binomial_ci95": {
+          "precision": [
+            0.9717601619923162,
+            0.9998701735152731
+          ],
+          "recall": [
+            0.9423421941769233,
+            0.9917925490683187
+          ],
+          "specificity": [
+            0.0,
+            0.975
+          ],
+          "accuracy": [
+            0.9358493732949736,
+            0.9889125443277963
+          ]
+        },
+        "simultaneous_rate_ci95": {
+          "precision": {
+            "low": 0.9946661561037479,
+            "high": 0.9999367568280164,
+            "width": 0.005270600724268548
+          },
+          "recall": {
+            "low": 0.937095739902186,
+            "high": 0.9931522379526037,
+            "width": 0.05605649805041768
+          },
+          "f1": {
+            "low": 0.9650230905132645,
+            "high": 0.9965329500644025,
+            "width": 0.03150985955113794
+          },
+          "accuracy": {
+            "low": 0.932410261202675,
+            "high": 0.9931239767628407,
+            "width": 0.06071371556016569
+          }
+        }
+      }
+    },
+    "external": {
+      "precision": 0.6962962962962963,
+      "recall": 0.94,
+      "f1": 0.8,
+      "accuracy": 0.765,
+      "tp": 94,
+      "fp": 41,
+      "fn": 6,
+      "tn": 59,
+      "n": 200,
+      "ci95": {
+        "precision": {
+          "low": 0.6482758620689655,
+          "high": 0.75,
+          "width": 0.10172413793103452
+        },
+        "recall": {
+          "low": 0.89,
+          "high": 0.98,
+          "width": 0.08999999999999997
+        },
+        "f1": {
+          "low": 0.759995633187773,
+          "high": 0.8401864855531253,
+          "width": 0.08019085236535228
+        },
+        "accuracy": {
+          "low": 0.71,
+          "high": 0.815,
+          "width": 0.10499999999999998
+        }
+      },
+      "exact_binomial_ci95": {
+        "precision": [
+          0.6113051633305904,
+          0.7724495344219432
+        ],
+        "recall": [
+          0.8739700654191771,
+          0.9776651139286836
+        ],
+        "specificity": [
+          0.4871442037667309,
+          0.6873800234324292
+        ],
+        "accuracy": [
+          0.7000381273527178,
+          0.8219292653993161
+        ]
+      },
+      "simultaneous_rate_ci95": {
+        "precision": {
+          "low": 0.621087285855216,
+          "high": 0.7657951027074504,
+          "width": 0.14470781685223444
+        },
+        "recall": {
+          "low": 0.8636468075882214,
+          "high": 0.9809368187012394,
+          "width": 0.11729001111301796
+        },
+        "f1": {
+          "low": 0.7225536936630265,
+          "high": 0.8601166585666065,
+          "width": 0.13756296490358
+        },
+        "accuracy": {
+          "low": 0.6683767326268502,
+          "high": 0.8404673150225397,
+          "width": 0.17209058239568953
+        }
+      },
+      "at_confidence_035": {
+        "precision": 0.8771929824561403,
+        "recall": 0.5,
+        "f1": 0.6369426751592356,
+        "accuracy": 0.715,
+        "tp": 50,
+        "fp": 7,
+        "fn": 50,
+        "tn": 93,
+        "n": 200,
+        "ci95": {
+          "precision": {
+            "low": 0.7962962962962963,
+            "high": 0.9555555555555556,
+            "width": 0.15925925925925932
+          },
+          "recall": {
+            "low": 0.4,
+            "high": 0.6,
+            "width": 0.19999999999999996
+          },
+          "f1": {
+            "low": 0.5466363636363636,
+            "high": 0.7195121951219512,
+            "width": 0.1728758314855876
+          },
+          "accuracy": {
+            "low": 0.66,
+            "high": 0.77,
+            "width": 0.10999999999999999
+          }
+        },
+        "exact_binomial_ci95": {
+          "precision": [
+            0.7632050006375726,
+            0.9491710598414328
+          ],
+          "recall": [
+            0.39832112950330095,
+            0.6016788704966991
+          ],
+          "specificity": [
+            0.8610802715441336,
+            0.9713947110925814
+          ],
+          "accuracy": [
+            0.6470573002484601,
+            0.7764456019896788
+          ]
+        },
+        "simultaneous_rate_ci95": {
+          "precision": {
+            "low": 0.7200557195189222,
+            "high": 0.9612308233442735,
+            "width": 0.24117510382535123
+          },
+          "recall": {
+            "low": 0.38477935730216123,
+            "high": 0.6152206426978387,
+            "width": 0.2304412853956775
+          },
+          "f1": {
+            "low": 0.5015455841163587,
+            "high": 0.7502534111037952,
+            "width": 0.24870782698743643
+          },
+          "accuracy": {
+            "low": 0.6175921474295442,
+            "high": 0.7952035210259654,
+            "width": 0.1776113735964212
+          }
+        }
+      }
+    }
+  },
+  "environment": {
+    "python": "3.11.9",
+    "platform": "Windows-10-10.0.26200-SP0",
+    "device": "cpu",
+    "torch_threads": 4,
+    "packages": {
+      "torch": "2.13.0",
+      "ultralytics": "8.4.118",
+      "numpy": "2.4.6",
+      "Pillow": "11.3.0",
+      "transformers": "4.44.0",
+      "scikit-learn": "1.9.0",
+      "scipy": "1.17.1",
+      "matplotlib": "3.11.1"
+    }
+  },
+  "domain_gap": {
+    "precision": -0.2987037037037037,
+    "recall": -0.06000000000000005,
+    "f1": -0.1974937343358395,
+    "accuracy": -0.22999999999999998
+  },
+  "calibration": {
+    "trust_label": "one-to-one ground-truth box IoU >= 0.5; not language correctness",
+    "n_regions": 771,
+    "trustworthy_regions": 126,
+    "auc": {
+      "roc": 0.37877445551864153,
+      "pr_average_precision": 0.14300532622310447
+    },
+    "chosen": {
+      "threshold": 0.016384084442903905,
+      "low_count": 42,
+      "false_low_count": 2,
+      "false_explanation_rate_proxy": 0.047619047619047616,
+      "false_low_rate_among_untrustworthy": 0.0031007751937984496,
+      "true_low_recall": 0.31746031746031744,
+      "one_sided_95_upper": 0.14241447656314618
+    },
+    "old": {
+      "threshold": 0.03,
+      "low_count": 68,
+      "false_low_count": 7,
+      "false_explanation_rate_proxy": 0.10294117647058823,
+      "false_low_rate_among_untrustworthy": 0.010852713178294573,
+      "true_low_recall": 0.48412698412698413,
+      "one_sided_95_upper": 0.1846713944197365
+    },
+    "evaluation_old": {
+      "threshold": 0.03,
+      "low_count": 108,
+      "false_low_count": 8,
+      "false_explanation_rate_proxy": 0.07407407407407407,
+      "false_low_rate_among_untrustworthy": 0.005044136191677175,
+      "true_low_recall": 0.4366812227074236,
+      "one_sided_95_upper": 0.12968438382579167
+    },
+    "evaluation_chosen": {
+      "threshold": 0.016384084442903905,
+      "low_count": 60,
+      "false_low_count": 3,
+      "false_explanation_rate_proxy": 0.05,
+      "false_low_rate_among_untrustworthy": 0.0018915510718789407,
+      "true_low_recall": 0.24890829694323144,
+      "one_sided_95_upper": 0.1241872104774361
+    },
+    "selection": "Maximize true-positive region recall subject to empirical false-Low fraction <=5%; smallest threshold wins ties. Calibration-only selection.",
+    "guarantee": "None. Selection-set binomial bounds are descriptive, not valid post-selection guarantees; clustered boxes and model-selection exposure also apply.",
+    "calibration_all_auc": {
+      "n": 771,
+      "positive_prevalence": 0.16342412451361868,
+      "roc": 0.37877445551864153,
+      "pr_average_precision": 0.14300532622310447
+    },
+    "calibration_confidence_eligible_auc": {
+      "n": 137,
+      "positive_prevalence": 0.7664233576642335,
+      "roc": 0.7113095238095237,
+      "pr_average_precision": 0.8935455426690728
+    },
+    "evaluation_all_auc": {
+      "n": 1815,
+      "positive_prevalence": 0.12617079889807162,
+      "roc": 0.345784897327599,
+      "pr_average_precision": 0.09495548333641513
+    },
+    "evaluation_confidence_eligible_auc": {
+      "n": 255,
+      "positive_prevalence": 0.7254901960784313,
+      "roc": 0.7098069498069498,
+      "pr_average_precision": 0.8787569568502845
+    },
+    "legacy_top_calibration": {
+      "threshold": 0.03,
+      "low_count": 75,
+      "false_low_count": 6,
+      "false_explanation_rate_proxy": 0.08,
+      "false_low_rate_among_untrustworthy": 0.5,
+      "true_low_recall": 0.696969696969697,
+      "one_sided_95_upper": 0.1517970538719126
+    },
+    "legacy_top_evaluation": {
+      "threshold": 0.03,
+      "low_count": 133,
+      "false_low_count": 10,
+      "false_explanation_rate_proxy": 0.07518796992481203,
+      "false_low_rate_among_untrustworthy": 0.4166666666666667,
+      "true_low_recall": 0.6988636363636364,
+      "one_sided_95_upper": 0.12419784380247026
+    }
+  },
+  "coverage": {
+    "evaluation": {
+      "n": 200,
+      "old_handled": 200,
+      "new_handled": 1815,
+      "old_mean_per_image": 1.0,
+      "new_mean_per_image": 9.075,
+      "multi_detection_images": 183,
+      "old_correct_localizations": 176,
+      "new_correct_localizations": 229,
+      "ground_truth_regions": 251
+    },
+    "external": {
+      "n": 200,
+      "old_handled": 135,
+      "new_handled": 632,
+      "old_mean_per_image": 0.675,
+      "new_mean_per_image": 3.16,
+      "multi_detection_images": 102
+    }
+  },
+  "tta": {
+    "audit_images": 30,
+    "regions": 245,
+    "curve": [
+      {
+        "n": 3,
+        "mean_std": 0.02495516414112409,
+        "mean_absolute_error_vs_15": 0.03556495514035473,
+        "relative_mae_vs_15": 0.6326023558738743
+      },
+      {
+        "n": 5,
+        "mean_std": 0.03864016152903547,
+        "mean_absolute_error_vs_15": 0.022479567790235102,
+        "relative_mae_vs_15": 0.3998494441229695
+      },
+      {
+        "n": 7,
+        "mean_std": 0.048580889705920005,
+        "mean_absolute_error_vs_15": 0.017715667250035,
+        "relative_mae_vs_15": 0.31511280680721254
+      },
+      {
+        "n": 8,
+        "mean_std": 0.04643945830939947,
+        "mean_absolute_error_vs_15": 0.01716557094011077,
+        "relative_mae_vs_15": 0.30532811228862633
+      },
+      {
+        "n": 10,
+        "mean_std": 0.05136780018270774,
+        "mean_absolute_error_vs_15": 0.010951603457644265,
+        "relative_mae_vs_15": 0.19479878775500484
+      },
+      {
+        "n": 15,
+        "mean_std": 0.0562200801342661,
+        "mean_absolute_error_vs_15": 0.0,
+        "relative_mae_vs_15": 0.0
+      }
+    ],
+    "first_n_below_10_percent_relative_mae": null,
+    "production_n": 5,
+    "rationale": "Retain five passes for the calibrated gate; increased N is an audited alternative, requiring independent recalibration before deployment. N=15 is a reference, not ground truth.",
+    "mean_pixel_change_by_pass": {
+      "original": 0.0,
+      "horizontal_flip": 0.10830673371008497,
+      "brightness_0.8": 0.13109993536163642,
+      "contrast_1.15": 0.01249977288951412,
+      "rotation_+3": 0.07993623105163336,
+      "vertical_flip": 0.11023325908683655,
+      "scale_0.85": 0.021818875006445707,
+      "color_0.5": 0.009545654646227331,
+      "brightness_1.2": 0.12477041949874954,
+      "rotation_-3": 0.0798957673655425,
+      "scale_1.15": 0.013621182781339034,
+      "contrast_0.85": 0.013047513779714713,
+      "rotation_+7": 0.08876198624687381,
+      "color_1.5": 0.009406682919921751,
+      "rotation_-7": 0.08872855769835057
+    }
+  },
+  "grounding": {
+    "n": 30,
+    "old": {
+      "precision": 1.0,
+      "recall": 0.2,
+      "f1": 0.3333333333333333,
+      "accuracy": 0.6,
+      "tp": 3,
+      "fp": 0,
+      "fn": 12,
+      "tn": 15,
+      "n": 30,
+      "ci95": {
+        "precision": {
+          "low": 1.0,
+          "high": 1.0,
+          "width": 0.0
+        },
+        "recall": {
+          "low": 0.0,
+          "high": 0.4,
+          "width": 0.4
+        },
+        "f1": {
+          "low": 0.0,
+          "high": 0.5714285714285714,
+          "width": 0.5714285714285714
+        },
+        "accuracy": {
+          "low": 0.5,
+          "high": 0.7,
+          "width": 0.19999999999999996
+        }
+      },
+      "exact_binomial_ci95": {
+        "precision": [
+          0.2924017738212867,
+          1.0
+        ],
+        "recall": [
+          0.04331200510583601,
+          0.4808911338068531
+        ],
+        "specificity": [
+          0.7819806390891612,
+          1.0
+        ],
+        "accuracy": [
+          0.4060349300518187,
+          0.7734423511714232
+        ]
+      },
+      "simultaneous_rate_ci95": {
+        "precision": {
+          "low": 0.11636081260884532,
+          "high": 1.0,
+          "width": 0.8836391873911547
+        },
+        "recall": {
+          "low": 0.03335972283664306,
+          "high": 0.5175206867742023,
+          "width": 0.4841609639375592
+        },
+        "f1": {
+          "low": 0.05185346747695742,
+          "high": 0.6820607999411163,
+          "width": 0.6302073324641589
+        },
+        "accuracy": {
+          "low": 0.3900136852458606,
+          "high": 0.7587603433871011,
+          "width": 0.36874665814124047
+        }
+      }
+    },
+    "new": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "accuracy": 1.0,
+      "tp": 15,
+      "fp": 0,
+      "fn": 0,
+      "tn": 15,
+      "n": 30,
+      "ci95": {
+        "precision": {
+          "low": 1.0,
+          "high": 1.0,
+          "width": 0.0
+        },
+        "recall": {
+          "low": 1.0,
+          "high": 1.0,
+          "width": 0.0
+        },
+        "f1": {
+          "low": 1.0,
+          "high": 1.0,
+          "width": 0.0
+        },
+        "accuracy": {
+          "low": 1.0,
+          "high": 1.0,
+          "width": 0.0
+        }
+      },
+      "exact_binomial_ci95": {
+        "precision": [
+          0.7819806390891612,
+          1.0
+        ],
+        "recall": [
+          0.7819806390891612,
+          1.0
+        ],
+        "specificity": [
+          0.7819806390891612,
+          1.0
+        ],
+        "accuracy": [
+          0.8842966917779725,
+          1.0
+        ]
+      },
+      "simultaneous_rate_ci95": {
+        "precision": {
+          "low": 0.7466676476550782,
+          "high": 1.0,
+          "width": 0.2533323523449218
+        },
+        "recall": {
+          "low": 0.7466676476550782,
+          "high": 1.0,
+          "width": 0.2533323523449218
+        },
+        "f1": {
+          "low": 0.7466676476550782,
+          "high": 1.0,
+          "width": 0.2533323523449218
+        },
+        "accuracy": {
+          "low": 0.7466676476550782,
+          "high": 1.0,
+          "width": 0.2533323523449218
+        }
+      }
+    },
+    "limitation": "Authored geometry challenge set, not held-out natural VLM hallucination prevalence. Three box templates are correlated."
+  }
+}

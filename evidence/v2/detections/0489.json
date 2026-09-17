@@ -1,0 +1,20 @@
+{
+  "id": 489,
+  "sha256": "cd316442d8e942bb689871fcee849dc358dde651651945ca73ee7cab1b796b34",
+  "seconds": 2.6711048999986815,
+  "detections": [],
+  "pass_box_counts": [
+    0,
+    0,
+    0,
+    0,
+    5
+  ],
+  "legacy_top_confidences": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.3494626581668854
+  ]
+}

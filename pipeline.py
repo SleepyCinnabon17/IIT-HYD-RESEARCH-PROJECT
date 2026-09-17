@@ -52,6 +52,7 @@ class PipelineConfig:
     image_size: int = 640
     crop_expansion: float = 0.15
     device: str = "auto"
+    tta_passes: int = 5
 
     def __post_init__(self) -> None:
         numeric_fields = {
@@ -75,6 +76,8 @@ class PipelineConfig:
             raise ValueError("crop_expansion must be non-negative.")
         if self.device not in {"auto", "cpu", "cuda"}:
             raise ValueError("device must be one of: auto, cpu, cuda.")
+        if self.tta_passes not in range(3, 16):
+            raise ValueError("tta_passes must be within [3, 15].")
 
     def resolved_device(self) -> str:
         if self.device != "auto":
@@ -92,6 +95,22 @@ class DetectionPass:
 
 _DETECTOR_CACHE: dict[str, Any] = {}
 _VLM_CACHE: tuple[Any, Any] | None = None
+
+
+def deployed_config() -> PipelineConfig:
+    """Use the reproducible calibration artifact for normal CLI/UI inspection."""
+    path = Path(__file__).parent / "models/gate_calibration.json"
+    if not path.exists():
+        return PipelineConfig()
+    calibration = json.loads(path.read_text(encoding="utf-8"))
+    cfg = PipelineConfig(variance_threshold=calibration["variance_threshold"],
+                         confidence_threshold=calibration["confidence_threshold"],
+                         tta_passes=calibration["tta_passes"])
+    with Path(cfg.detector_path).open('rb') as stream:
+        checksum = hashlib.file_digest(stream, 'sha256').hexdigest()
+    if checksum != calibration['detector_sha256']:
+        raise ValueError("Gate calibration does not match detector weights; recalibration required.")
+    return cfg
 
 
 def load_image(image: str | os.PathLike[str] | Image.Image) -> Image.Image:
@@ -117,10 +136,12 @@ def load_image(image: str | os.PathLike[str] | Image.Image) -> Image.Image:
     return loaded
 
 
-def deterministic_tta(image: Image.Image) -> list[tuple[str, Image.Image]]:
+def deterministic_tta(image: Image.Image, n: int = 5) -> list[tuple[str, Image.Image]]:
     """Return the exact, ordered five-pass deterministic augmentation sequence."""
     rgb = load_image(image)
-    return [
+    if n not in range(1, 16):
+        raise ValueError("TTA pass count must be within [1, 15].")
+    variants = [
         (TTA_NAMES[0], rgb.copy()),
         (TTA_NAMES[1], ImageOps.mirror(rgb)),
         (TTA_NAMES[2], ImageEnhance.Brightness(rgb).enhance(0.8)),
@@ -135,6 +156,19 @@ def deterministic_tta(image: Image.Image) -> list[tuple[str, Image.Image]]:
             ),
         ),
     ]
+    variants.extend([
+        ("vertical_flip", ImageOps.flip(rgb)),
+        ("scale_0.85", rgb.resize((round(rgb.width * .85), round(rgb.height * .85)))),
+        ("color_0.5", ImageEnhance.Color(rgb).enhance(.5)),
+        ("brightness_1.2", ImageEnhance.Brightness(rgb).enhance(1.2)),
+        ("rotation_-3", rgb.rotate(-3, resample=Image.Resampling.BILINEAR, fillcolor=(128, 128, 128))),
+        ("scale_1.15", rgb.resize((round(rgb.width * 1.15), round(rgb.height * 1.15)))),
+        ("contrast_0.85", ImageEnhance.Contrast(rgb).enhance(.85)),
+        ("rotation_+7", rgb.rotate(7, resample=Image.Resampling.BILINEAR, fillcolor=(128, 128, 128))),
+        ("color_1.5", ImageEnhance.Color(rgb).enhance(1.5)),
+        ("rotation_-7", rgb.rotate(-7, resample=Image.Resampling.BILINEAR, fillcolor=(128, 128, 128))),
+    ])
+    return variants[:n]
 
 
 def classify_risk(
@@ -202,6 +236,88 @@ def _predict_top(
 Predictor = Callable[[Any, Image.Image, PipelineConfig], DetectionPass]
 
 
+def _predict_all(detector: Any, image: Image.Image, config: PipelineConfig) -> list[DetectionPass]:
+    result = detector.predict(source=image, imgsz=config.image_size,
+                              conf=config.detector_confidence_floor,
+                              device=config.resolved_device(),
+                              half=config.resolved_device() == "cuda", verbose=False)[0]
+    if result.boxes is None:
+        return []
+    return sorted([DetectionPass(float(c), _validated_box(b))
+                   for c, b in zip(result.boxes.conf.tolist(), result.boxes.xyxy.tolist())],
+                  key=lambda p: -p.confidence)
+
+
+def box_iou(a: Sequence[float], b: Sequence[float]) -> float:
+    intersection = max(0., min(a[2], b[2]) - max(a[0], b[0])) * max(0., min(a[3], b[3]) - max(a[1], b[1]))
+    union = (a[2]-a[0])*(a[3]-a[1]) + (b[2]-b[0])*(b[3]-b[1]) - intersection
+    return intersection / union if union > 0 else 0.
+
+
+def inverse_box(box: Sequence[float], name: str, original_size: tuple[int, int], augmented_size: tuple[int, int]) -> list[float]:
+    """Map all four corners back to the original image before matching."""
+    w, h = original_size
+    points = [(box[x], box[y]) for x, y in ((0, 1), (0, 3), (2, 1), (2, 3))]
+    if name == "horizontal_flip":
+        points = [(w-x, y) for x, y in points]
+    elif name == "vertical_flip":
+        points = [(x, h-y) for x, y in points]
+    elif name.startswith("scale_"):
+        points = [(x*w/augmented_size[0], y*h/augmented_size[1]) for x, y in points]
+    elif name.startswith("rotation_"):
+        angle = math.radians(float(name.split("_")[1]))
+        c, s = math.cos(angle), math.sin(angle)
+        points = [(c*(x-w/2)-s*(y-h/2)+w/2, s*(x-w/2)+c*(y-h/2)+h/2) for x, y in points]
+    xs, ys = zip(*points)
+    return [max(0., min(xs)), max(0., min(ys)), min(float(w), max(xs)), min(float(h), max(ys))]
+
+
+def match_detections(base: list[DetectionPass], candidates: list[DetectionPass], min_iou: float = .3) -> list[float]:
+    """Greedy highest-IoU one-to-one association; a missing match contributes zero."""
+    edges = sorted(((box_iou(a.box, b.box), i, j) for i, a in enumerate(base)
+                    for j, b in enumerate(candidates)), reverse=True)
+    scores = [0.] * len(base)
+    used_base, used_candidate = set(), set()
+    for overlap, i, j in edges:
+        if overlap >= min_iou and i not in used_base and j not in used_candidate:
+            scores[i] = candidates[j].confidence
+            used_base.add(i)
+            used_candidate.add(j)
+    return scores
+
+
+def run_all_detections(image: Image.Image, config: PipelineConfig, detector: Any,
+                       predictor: Any = None) -> dict[str, Any]:
+    """Share image inference while keeping a distinct matched TTA sequence per base box."""
+    predict = predictor or _predict_all
+    augmented = deterministic_tta(image, config.tta_passes)
+    all_passes = []
+    for name, frame in augmented:
+        raw = predict(detector, frame, config)
+        if isinstance(raw, DetectionPass):
+            raw = [raw]
+        valid = []
+        for p in raw:
+            if not math.isfinite(p.confidence) or not 0 <= p.confidence <= 1:
+                raise ValueError("Detector confidence must be finite and within [0, 1].")
+            if p.box is not None and p.confidence >= config.detector_confidence_floor:
+                valid.append(DetectionPass(p.confidence, inverse_box(_validated_box(p.box), name, image.size, frame.size)))
+        all_passes.append(valid)
+    base = sorted(all_passes[0], key=lambda p: -p.confidence)
+    matched = [[p.confidence for p in base]] + [match_detections(base, candidates) for candidates in all_passes[1:]]
+    regions = []
+    for i, p in enumerate(base):
+        scores = [row[i] for row in matched]
+        # Reuse the audited decision construction without another inference call.
+        seq = iter(DetectionPass(c, p.box if c else None) for c in scores)
+        region = run_detection_with_uncertainty(image, config=config, detector=detector,
+                                                predictor=lambda *_: next(seq))  # noqa: B023 - consumed synchronously before the next iteration
+        region["detection_id"] = i
+        regions.append(region)
+    return {"detections": regions, "pass_box_counts": [len(p) for p in all_passes],
+            "legacy_top_confidences": [max((p.confidence for p in rows), default=0.) for rows in all_passes]}
+
+
 def _validated_box(box: Sequence[float]) -> list[float]:
     if len(box) != 4 or not all(math.isfinite(float(value)) for value in box):
         raise ValueError("Detection box must contain four finite xyxy values.")
@@ -223,13 +339,13 @@ def run_detection_with_uncertainty(
     The compatibility field ``variance`` contains population standard deviation,
     not mathematical variance or Bayesian posterior uncertainty.
     """
-    cfg = config or PipelineConfig()
+    cfg = config or deployed_config()
     rgb = load_image(image)
     active_detector = detector if detector is not None else _load_detector(cfg)
     predict = predictor or _predict_top
 
     passes: list[DetectionPass] = []
-    for _, augmented in deterministic_tta(rgb):
+    for _, augmented in deterministic_tta(rgb, cfg.tta_passes):
         prediction = predict(active_detector, augmented, cfg)
         confidence = float(prediction.confidence)
         if not math.isfinite(confidence) or not 0.0 <= confidence <= 1.0:
@@ -268,7 +384,7 @@ def run_detection_with_uncertainty(
         "box": base.box,
         "hallucination_risk": risk,
         "tta_confidences": confidences,
-        "tta_names": list(TTA_NAMES),
+        "tta_names": [name for name, _ in deterministic_tta(rgb, cfg.tta_passes)],
         "uncertainty_metric": "population_standard_deviation_of_tta_confidence",
         "thresholds": {
             "confidence": cfg.confidence_threshold,
@@ -369,23 +485,24 @@ def annotate_image(image: Image.Image, box: Sequence[float] | None) -> Image.Ima
     return annotated
 
 
-def inspect(
+def _inspect_single(
     image: str | os.PathLike[str] | Image.Image,
     *,
     config: PipelineConfig | None = None,
     detector: Any | None = None,
     predictor: Predictor | None = None,
     vlm_loader: VlmLoader | None = None,
+    detection_result: dict[str, Any] | None = None,
 ) -> dict[str, Any]:
     """Inspect one image; this is the only pipeline function permitted to call the VLM."""
     started = time.perf_counter()
-    cfg = config or PipelineConfig()
+    cfg = config or deployed_config()
     rgb = load_image(image)
     fingerprint = hashlib.sha256()
     fingerprint.update(rgb.width.to_bytes(8, "big"))
     fingerprint.update(rgb.height.to_bytes(8, "big"))
     fingerprint.update(rgb.tobytes())
-    result = run_detection_with_uncertainty(
+    result = detection_result.copy() if detection_result is not None else run_detection_with_uncertainty(
         rgb,
         config=cfg,
         detector=detector,
@@ -434,6 +551,11 @@ def inspect(
             result["explanation"] = _generate_explanation(
                 crop, cfg, vlm_loader or _load_vlm
             )
+            local_box = [result["box"][0]-crop_box[0], result["box"][1]-crop_box[1],
+                         result["box"][2]-crop_box[0], result["box"][3]-crop_box[1]]
+            result["grounding"] = verify_grounding(result["explanation"], local_box, crop.size, result["confidence"])
+            if not result["grounding"]["passed"]:
+                raise ValueError("Grounding verifier: " + "; ".join(result["grounding"]["reasons"]))
             result["vlm_succeeded"] = True
         except Exception as exc:  # noqa: BLE001 - the safety boundary must fail closed for every VLM failure
             result["explanation"] = VLM_ERROR_MESSAGE
@@ -444,6 +566,94 @@ def inspect(
     result["processing_time"] = time.perf_counter() - started
     result["annotated_image"] = annotate_image(rgb, result["box"])
     print(gate_log, flush=True)
+    return result
+
+
+def verify_grounding(text: str, box: Sequence[float], image_size: tuple[int, int], confidence: float) -> dict[str, Any]:
+    """Check explicit geometric claims in the coordinate frame seen by the VLM.
+
+    This is a contradiction detector, not a semantic truth certificate. Appearance,
+    branching and severity are not inferable from box geometry and remain unverified.
+    """
+    x1, y1, x2, y2 = _validated_box(box)
+    w, h = image_size
+    attributes = {"width": (x2-x1)/w, "height": (y2-y1)/h,
+                  "area": (x2-x1)*(y2-y1)/(w*h), "confidence": confidence,
+                  "center_x": (x1+x2)/(2*w), "center_y": (y1+y2)/(2*h),
+                  "aspect_ratio": (x2-x1)/(y2-y1)}
+    lower = text.lower()
+    reasons, checked = [], []
+    if UNSUPPORTED_EXPLANATION_PATTERN.search(text):
+        reasons.append("unsupported diagnostic or measurement language")
+    predicates = {
+        "left": attributes["center_x"] < .4,
+        "right": attributes["center_x"] > .6,
+        "top": attributes["center_y"] < .4,
+        "bottom": attributes["center_y"] > .6,
+        "center": .35 <= attributes["center_x"] <= .65 and .35 <= attributes["center_y"] <= .65,
+        "horizontal": attributes["aspect_ratio"] >= 1.5,
+        "vertical": attributes["aspect_ratio"] <= 1/1.5,
+        "tiny": attributes["area"] <= .05,
+    }
+    for word, consistent in predicates.items():
+        if re.search(r"\b" + word + r"\b", lower):
+            checked.append(word)
+            if not consistent:
+                reasons.append(f"{word} contradicts measured bounding region")
+    for match in re.finditer(r"\b(width|height|area|confidence)\s*(?:is|of|=|:)?\s*(\d+(?:\.\d+)?)\s*%", lower):
+        attribute, amount = match.groups()
+        checked.append(attribute)
+        if abs(float(amount)/100 - attributes[attribute]) > .05:
+            reasons.append(f"{attribute} percentage differs by more than 5 percentage points")
+    if re.search(r"\b(?:no crack|no defect|crack.free)\b", lower):
+        checked.append("presence")
+        reasons.append("absence claim conflicts with the detected region")
+    if re.search(r"\b(?:not|never|neither)\b", lower) and checked:
+        reasons.append("negated geometric claim requires human review")
+    return {"passed": not reasons, "reasons": reasons, "attributes": attributes,
+            "checked_claims": checked, "scope": "geometric contradictions only; appearance and causality not certified"}
+
+
+def inspect(image: str | os.PathLike[str] | Image.Image, *, config: PipelineConfig | None = None,
+            detector: Any | None = None, predictor: Predictor | None = None,
+            vlm_loader: VlmLoader | None = None, all_predictor: Any = None,
+            detection_batch: dict[str, Any] | None = None) -> dict[str, Any]:
+    """Gate and explain every base detection; legacy scalar predictor remains a test adapter.
+
+    detection_batch permits evaluation to replay actual cached detector passes through
+    the same language boundary. It must come from run_all_detections with this config.
+    """
+    started = time.perf_counter()
+    cfg = config or deployed_config()
+    rgb = load_image(image)
+    if predictor is not None:
+        result = _inspect_single(rgb, config=cfg, detector=detector, predictor=predictor, vlm_loader=vlm_loader)
+        result["detections"] = [_json_result(result)] if result["detected"] else []
+        return result
+    active = detector if detector is not None else _load_detector(cfg)
+    batch = detection_batch if detection_batch is not None else run_all_detections(rgb, cfg, active, all_predictor)
+    if not batch["detections"]:
+        result = _inspect_single(rgb, config=cfg, detector=active,
+                                 predictor=lambda *_: DetectionPass(0., None), vlm_loader=vlm_loader)
+        result["detections"] = []
+        return result
+    regions = [_inspect_single(rgb, config=cfg, detector=active, vlm_loader=vlm_loader,
+                               detection_result=region) for region in batch["detections"]]
+    result = regions[0].copy()
+    result["detections"] = [_json_result(region) for region in regions]
+    result["pass_box_counts"] = batch["pass_box_counts"]
+    result["hallucination_risk"] = max((r["hallucination_risk"] for r in regions), key={"Low": 0, "Medium": 1, "High": 2}.get)
+    result["vlm_called"] = any(r["vlm_called"] for r in regions)
+    result["vlm_succeeded"] = any(r["vlm_succeeded"] for r in regions)
+    result["explanation"] = "\n".join(f"Region {i+1} ({r['hallucination_risk']}): {r['explanation']}" for i, r in enumerate(regions))
+    result["gate_log"] = f"{len(regions)} REGIONS: {sum(r['vlm_called'] for r in regions)} VLM CALLS"
+    result["gate_reason"] = "Each region has an independent gate; image risk is the highest region risk. Scalar confidence and box describe the top region."
+    annotated = rgb.copy()
+    for i, r in enumerate(regions):
+        annotated = annotate_image(annotated, r["box"])
+        ImageDraw.Draw(annotated).text(tuple(r["box"][:2]), str(i+1), fill="yellow")
+    result["annotated_image"] = annotated
+    result["processing_time"] = time.perf_counter() - started
     return result
 
 
@@ -460,10 +670,10 @@ def main(argv: Sequence[str] | None = None) -> int:
     parser.add_argument(
         "--confidence-threshold",
         type=float,
-        default=PipelineConfig.confidence_threshold,
+        default=deployed_config().confidence_threshold,
     )
     parser.add_argument(
-        "--variance-threshold", type=float, default=PipelineConfig.variance_threshold
+        "--variance-threshold", type=float, default=deployed_config().variance_threshold
     )
     parser.add_argument("--save-annotated", type=Path)
     parser.add_argument(

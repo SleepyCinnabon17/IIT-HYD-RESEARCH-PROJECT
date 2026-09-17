@@ -1,0 +1,62 @@
+{
+  "id": 379,
+  "positive": true,
+  "seed": 20261286,
+  "calibration_sha256": "23717b8127e17f2aca75d93901e1574d6b66addad3e6036f05d0add6003dbaff",
+  "cached_detector_seconds": 2.1894629999987956,
+  "schema_version": "1.0",
+  "detected": false,
+  "confidence": 0.0,
+  "raw_confidence": 0.0,
+  "variance": 0.0,
+  "box": null,
+  "hallucination_risk": "N/A",
+  "tta_confidences": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+  ],
+  "tta_names": [
+    "original",
+    "horizontal_flip",
+    "brightness_0.8",
+    "contrast_1.15",
+    "rotation_+3"
+  ],
+  "uncertainty_metric": "population_standard_deviation_of_tta_confidence",
+  "thresholds": {
+    "confidence": 0.35,
+    "variance": 0.016384084442903905,
+    "high_risk_variance": 0.024576126664,
+    "detector_floor": 0.01
+  },
+  "decision_trace": {
+    "base_detection_present": false,
+    "confidence_passed": false,
+    "uncertainty_passed": true,
+    "risk": "N/A",
+    "gate_permitted": false
+  },
+  "normalized_image_sha256": "351a57f08106061c123ddd41c7e406ce155483bbcdb79ffc93b8543b80df114d",
+  "models": {
+    "detector": "crack_yolov8s_best.pt",
+    "vlm": "vikhyatk/moondream2",
+    "vlm_revision": "2024-08-26"
+  },
+  "runtime": {
+    "device": "cpu",
+    "detector_dtype": "float32",
+    "vlm_dtype": "float32"
+  },
+  "vlm_called": false,
+  "vlm_succeeded": false,
+  "vlm_error": null,
+  "crop_box": null,
+  "explanation": "No defect detected.",
+  "gate_log": "VLM SKIPPED: NO DETECTION",
+  "gate_reason": "The original detector pass produced no valid region.",
+  "processing_time": 0.07132610000007844,
+  "detections": []
+}

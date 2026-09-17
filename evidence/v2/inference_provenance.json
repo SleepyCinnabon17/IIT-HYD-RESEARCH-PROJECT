@@ -1,0 +1,17 @@
+{
+  "pipeline_sha256": "6abcee9c3a95b989bfbb62e7bcd2c28f8882af08d36775aa75d1e0cfa7f13897",
+  "weights_sha256": "aceae4a99a4e7903a78d11336afc71b4cb47318888d87279922687bfeb16637d",
+  "manifest_sha256": "49eea8323f1761e72135045d26b5dec38bb2ba5489342f0d8bac3056054c14a1",
+  "config": {
+    "detector_path": "models/crack_yolov8s_best.pt",
+    "confidence_threshold": 0.35,
+    "variance_threshold": 0.03,
+    "detector_confidence_floor": 0.01,
+    "image_size": 640,
+    "crop_expansion": 0.15,
+    "device": "cpu",
+    "tta_passes": 5
+  },
+  "python": "3.11.9",
+  "torch": "2.13.0+cpu"
+}

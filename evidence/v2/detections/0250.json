@@ -1,0 +1,104 @@
+{
+  "id": 250,
+  "sha256": "1c6d1d2c409a5ac361f8556f17c2d1d2001f1b0124fba73170bd7a3a908f59c9",
+  "seconds": 6.3629540000001725,
+  "detections": [
+    {
+      "schema_version": "1.0",
+      "detected": true,
+      "confidence": 0.7720117211341858,
+      "raw_confidence": 0.7529361844062805,
+      "variance": 0.04320981507451692,
+      "box": [
+        1.8370513916015625,
+        0.0,
+        350.7185974121094,
+        416.0
+      ],
+      "hallucination_risk": "Medium",
+      "tta_confidences": [
+        0.7529361844062805,
+        0.7324956655502319,
+        0.7512726187705994,
+        0.7737403512001038,
+        0.7516139149665833,
+        0.781180202960968,
+        0.740517795085907,
+        0.7532289028167725,
+        0.7541033625602722,
+        0.8557388186454773,
+        0.7550140619277954,
+        0.7342097163200378,
+        0.8043351769447327,
+        0.7523524761199951,
+        0.88743656873703
+      ],
+      "tta_names": [
+        "original",
+        "horizontal_flip",
+        "brightness_0.8",
+        "contrast_1.15",
+        "rotation_+3",
+        "vertical_flip",
+        "scale_0.85",
+        "color_0.5",
+        "brightness_1.2",
+        "rotation_-3",
+        "scale_1.15",
+        "contrast_0.85",
+        "rotation_+7",
+        "color_1.5",
+        "rotation_-7"
+      ],
+      "uncertainty_metric": "population_standard_deviation_of_tta_confidence",
+      "thresholds": {
+        "confidence": 0.35,
+        "variance": 0.03,
+        "high_risk_variance": 0.045,
+        "detector_floor": 0.01
+      },
+      "decision_trace": {
+        "base_detection_present": true,
+        "confidence_passed": true,
+        "uncertainty_passed": false,
+        "risk": "Medium",
+        "gate_permitted": false
+      },
+      "detection_id": 0
+    }
+  ],
+  "pass_box_counts": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    2,
+    1,
+    1,
+    1,
+    1,
+    1
+  ],
+  "legacy_top_confidences": [
+    0.7529361844062805,
+    0.7324956655502319,
+    0.7512726187705994,
+    0.7737403512001038,
+    0.7516139149665833,
+    0.781180202960968,
+    0.740517795085907,
+    0.7532289028167725,
+    0.7541033625602722,
+    0.8557388186454773,
+    0.7550140619277954,
+    0.7342097163200378,
+    0.8043351769447327,
+    0.7523524761199951,
+    0.88743656873703
+  ]
+}

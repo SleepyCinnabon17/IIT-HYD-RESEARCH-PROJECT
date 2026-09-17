@@ -1,0 +1,1209 @@
+{
+  "n": 200,
+  "training_n": 3717,
+  "suspect_distance_le_4": 0,
+  "minimum_distance": 12,
+  "records": [
+    {
+      "id": 311,
+      "sha256": "b1d31ac55578ee87f0c5c173fce104efa4996a910bab01c3a2426c82157d75f4",
+      "nearest_training_path": "C:\\Users\\Niranjan\\.cache\\hallucination-aware-visual-inspection\\crack-seg\\images\\train\\2394.rf.82c99e38f58b0eb0ec812552f46f9f14.jpg",
+      "hamming_distance_63_bits": 18
+    },
+    {
+      "id": 312,
+      "sha256": "442278f01c18a9b6dfd23f50cbf0d3cbc9bd6546eaab677d2408aadbb252f1fd",
+      "nearest_training_path": "C:\\Users\\Niranjan\\.cache\\hallucination-aware-visual-inspection\\crack-seg\\images\\train\\3906.rf.f56e50716f9826f5334f0d0780ef6c9b.jpg",
+      "hamming_distance_63_bits": 16
+    },
+    {
+      "id": 313,
+      "sha256": "eacc9cd0fafeae86b96548791ef51069f7f6d9234a490358e0b55ab5c91fd6f6",
+      "nearest_training_path": "C:\\Users\\Niranjan\\.cache\\hallucination-aware-visual-inspection\\crack-seg\\images\\train\\3277.rf.a4fe349e9e8c75ac9d3adc24e2378c02.jpg",
+      "hamming_distance_63_bits": 18
+    },
+    {
+      "id": 314,
+      "sha256": "1377720fa2de7605380f238a6ef2f53b28b696c5217c9a98f0786bbbdfbe5a6f",
+      "nearest_training_path": "C:\\Users\\Niranjan\\.cache\\hallucination-aware-visual-inspection\\crack-seg\\images\\train\\1633.rf.d9dd21e061b33c88aac28792d7ff906a.jpg",
+      "hamming_distance_63_bits": 20
+    },
+    {
+      "id": 315,
+      "sha256": "07754087c010414ef7c7b9fc3eb7500c45a2f19915c00e0b8adaaa2792b6cbe0",
+      "nearest_training_path": "C:\\Users\\Niranjan\\.cache\\hallucination-aware-visual-inspection\\crack-seg\\images\\train\\2158.rf.e1ca0bb9d62d45e3c234f49a3318dd9f.jpg",
+      "hamming_distance_63_bits": 14
+    },
+    {
+      "id": 316,
+      "sha256": "175b62665e27e842f07b45f037471e9b04ce50b546763afa81a73d319f7d40ec",
+      "nearest_training_path": "C:\\Users\\Niranjan\\.cache\\hallucination-aware-visual-inspection\\crack-seg\\images\\train\\1703.rf.f75692d2d512df728da3d2e205a50058.jpg",
+      "hamming_distance_63_bits": 20
+    },
+    {
+      "id": 317,
+      "sha256": "072368d524b3319cdb23a578452930b31ac03338066e2b27135f8f40c1336cbd",
+      "nearest_training_path": "C:\\Users\\Niranjan\\.cache\\hallucination-aware-visual-inspection\\crack-seg\\images\\train\\2081.rf.8cd0712d71c7959748acddced55bfa49.jpg",
+      "hamming_distance_63_bits": 16
+    },
+    {
+      "id": 318,
+      "sha256": "7c58625d9cc9b39b13c788fdde3b62dead96ac55d51a4b0f21fc5de2b302c183",
+      "nearest_training_path": "C:\\Users\\Niranjan\\.cache\\hallucination-aware-visual-inspection\\crack-seg\\images\\train\\1385.rf.3fc76fa8ace1b8ebc8b6fae5bc7362c3.jpg",
+      "hamming_distance_63_bits": 20
+    },
+    {
+      "id": 319,
+      "sha256": "ba82064a99f3229dc4ff024c29224289c55d2167cae4c36b56e5c743e450a508",
+      "nearest_training_path": "C:\\Users\\Niranjan\\.cache\\hallucination-aware-visual-inspection\\crack-seg\\images\\train\\1283.rf.9b4cb88419367ca1dae2531b860352ec.jpg",
+      "hamming_distance_63_bits": 18
+    },
+    {
+      "id": 320,
+      "sha256": "c1c6bd89873133369f5f399cd0234c4c0adc9f0fd6b004d5de995b12922d32fb",
+      "nearest_training_path": "C:\\Users\\Niranjan\\.cache\\hallucination-aware-visual-inspection\\crack-seg\\images\\train\\1917.rf.a5c819a7211a6e476a79479799865d4c.jpg",
+      "hamming_distance_63_bits": 18
+    },
+    {
+      "id": 321,
+      "sha256": "41b543cc47449c64794f57858e5090e1c2c299bdb60c11965c992017c45db341",
+      "nearest_training_path": "C:\\Users\\Niranjan\\.cache\\hallucination-aware-visual-inspection\\crack-seg\\images\\train\\2299.rf.b261990427ad363e80efb10e6fae7f99.jpg",
+      "hamming_distance_63_bits": 18
+    },
+    {
+      "id": 322,
+      "sha256": "3ea7eea36d9cda01cf1867d17c20b1275c400bd6e1e5cf22ce4286aaf3e4794c",
+      "nearest_training_path": "C:\\Users\\Niranjan\\.cache\\hallucination-aware-visual-inspection\\crack-seg\\images\\train\\3189.rf.6ab7bdff77e0daace1cd81cd3b664c91.jpg",
+      "hamming_distance_63_bits": 18
+    },
+    {
+      "id": 323,
+      "sha256": "b6bccd9f9c214ee463576e58241018525167fc0c3e2dfc49462a07be77fe850c",
+      "nearest_training_path": "C:\\Users\\Niranjan\\.cache\\hallucination-aware-visual-inspection\\crack-seg\\images\\train\\2054.rf.db87a41ebb253a141fe710f21857ca7b.jpg",
+      "hamming_distance_63_bits": 20
+    },
+    {
+      "id": 324,
+      "sha256": "27c47f647411571d5b45bbad1a0525d70e7d9e7cf069fcc85e133489300daf55",
+      "nearest_training_path": "C:\\Users\\Niranjan\\.cache\\hallucination-aware-visual-inspection\\crack-seg\\images\\train\\1829.rf.59758da08694189089332ba2bae10caf.jpg",
+      "hamming_distance_63_bits": 16
+    },
+    {
+      "id": 325,
+      "sha256": "241e72894dbe8dbd809991b116bac5ba0908a6bf1f9fe9dd2508d9617251a6c5",
+      "nearest_training_path": "C:\\Users\\Niranjan\\.cache\\hallucination-aware-visual-inspection\\crack-seg\\images\\train\\2328.rf.ce253db5665584cc6beb4fb01ebd4ef3.jpg",
+      "hamming_distance_63_bits": 18
+    },
+    {
+      "id": 326,
+      "sha256": "94f542fc3384221b4fc298990b7b9ebab36aaffedb72095f6b5d28e5080fdd51",
+      "nearest_training_path": "C:\\Users\\Niranjan\\.cache\\hallucination-aware-visual-inspection\\crack-seg\\images\\train\\1965.rf.e9e3280abcf46e447bbdef7eb3aca6c3.jpg",
+      "hamming_distance_63_bits": 20
+    },
+    {
+      "id": 327,
+      "sha256": "0c9d81c3bc6d3b351254bd948a2d32e09d167597a0c9f8d16493bfe0341bc0c7",
+      "nearest_training_path": "C:\\Users\\Niranjan\\.cache\\hallucination-aware-visual-inspection\\crack-seg\\images\\train\\1607.rf.52e46bc49cfb43801a3de41ad2a3cff5.jpg",
+      "hamming_distance_63_bits": 18
+    },
+    {
+      "id": 328,
+      "sha256": "7d48a23a9c19fdf9644257919a041c0068c05cfacbf65c1baf3363cf88eca37a",
+      "nearest_training_path": "C:\\Users\\Niranjan\\.cache\\hallucination-aware-visual-inspection\\crack-seg\\images\\train\\2238.rf.78a3aa0fe05f895c5499b816294d6839.jpg",
+      "hamming_distance_63_bits": 16
+    },
+    {
+      "id": 329,
+      "sha256": "66e5d4c0ec91229246e4ed5167f05f8b1e07ad2f8eced4c500e532a7133a36d7",
+      "nearest_training_path": "C:\\Users\\Niranjan\\.cache\\hallucination-aware-visual-inspection\\crack-seg\\images\\train\\3453.rf.6241f3447fdf729d1a3f6c27f9b373d0.jpg",
+      "hamming_distance_63_bits": 20
+    },
+    {
+      "id": 330,
+      "sha256": "bb9457de802fc51e8325f29fbb8dec76e35f931a1876fc38cedcf13ca0abd164",
+      "nearest_training_path": "C:\\Users\\Niranjan\\.cache\\hallucination-aware-visual-inspection\\crack-seg\\images\\train\\2340.rf.05bb78dc49e47fb58a0a9bc8d135d1db.jpg",
+      "hamming_distance_63_bits": 18
+    },
+    {
+      "id": 331,
+      "sha256": "4a840e05a41e0bf2a02f9a667d8e8dcfffde73af810b3abb495015dbfebd4aef",
+      "nearest_training_path": "C:\\Users\\Niranjan\\.cache\\hallucination-aware-visual-inspection\\crack-seg\\images\\train\\1850.rf.189425ff46d28988d7404df964bf33ed.jpg",
+      "hamming_distance_63_bits": 16
+    },
+    {
+      "id": 332,
+      "sha256": "6cd8203aeb52d04880dfbf52f3c5a6fad4023406cdea5c276879d65f0392894d",
+      "nearest_training_path": "C:\\Users\\Niranjan\\.cache\\hallucination-aware-visual-inspection\\crack-seg\\images\\train\\2296.rf.ea4fedccd6134557e39efc1e0033fcea.jpg",
+      "hamming_distance_63_bits": 16
+    },
+    {
+      "id": 333,
+      "sha256": "c0afde06c4a72cdf9d7b918eae2507d3a52149302c3060c29751da792f197b96",
+      "nearest_training_path": "C:\\Users\\Niranjan\\.cache\\hallucination-aware-visual-inspection\\crack-seg\\images\\train\\3127.rf.916f3c8269ba86bbccc04370f4183444.jpg",
+      "hamming_distance_63_bits": 20
+    },
+    {
+      "id": 334,
+      "sha256": "74e911e680fb4ae00d6b8a7ce211cde410333c35d357422c7cb2a2e56843e8a3",
+      "nearest_training_path": "C:\\Users\\Niranjan\\.cache\\hallucination-aware-visual-inspection\\crack-seg\\images\\train\\3803.rf.0bb4b5c80fb1a174de77af8f9d3c6ffb.jpg",
+      "hamming_distance_63_bits": 16
+    },
+    {
+      "id": 335,
+      "sha256": "b82c6deae92ba8effe50d45734355c18010bd1a4318a4875efcafdccef96f840",
+      "nearest_training_path": "C:\\Users\\Niranjan\\.cache\\hallucination-aware-visual-inspection\\crack-seg\\images\\train\\2269.rf.8a0e62a40a3d32b20027d89fb91b7e25.jpg",
+      "hamming_distance_63_bits": 20
+    },
+    {
+      "id": 336,
+      "sha256": "61b26248bd957c23a2b055e068d2fa81f8991e7746fde73a969d43829bb46b5c",
+      "nearest_training_path": "C:\\Users\\Niranjan\\.cache\\hallucination-aware-visual-inspection\\crack-seg\\images\\train\\1745.rf.0e8d6e0479f2b4e67d9b2c9424d40348.jpg",
+      "hamming_distance_63_bits": 18
+    },
+    {
+      "id": 337,
+      "sha256": "f02d77d97f39eab5021593baa552a72de16f66d3996509839db05f93c7cc9953",
+      "nearest_training_path": "C:\\Users\\Niranjan\\.cache\\hallucination-aware-visual-inspection\\crack-seg\\images\\train\\1325.rf.864b82f691696b95cf2ceb8acc59a95f.jpg",
+      "hamming_distance_63_bits": 18
+    },
+    {
+      "id": 338,
+      "sha256": "f209292fd3f971339e00e666e53fc9a36e5eadb3ebcedb49e3679498304e2361",
+      "nearest_training_path": "C:\\Users\\Niranjan\\.cache\\hallucination-aware-visual-inspection\\crack-seg\\images\\train\\1642.rf.59a93a8e952123828df402b26e8708dd.jpg",
+      "hamming_distance_63_bits": 20
+    },
+    {
+      "id": 339,
+      "sha256": "33329da083dfbb5355482fb62924a77355a6ca014a8ebbc98eb2c51a13dbbe31",
+      "nearest_training_path": "C:\\Users\\Niranjan\\.cache\\hallucination-aware-visual-inspection\\crack-seg\\images\\train\\2305.rf.95605745b61cb10f2675b8c4e6e547cd.jpg",
+      "hamming_distance_63_bits": 20
+    },
+    {
+      "id": 340,
+      "sha256": "73c2bd59dba9d2607eaec172f88d8f372e8e9a8902d477b925b69902755fd929",
+      "nearest_training_path": "C:\\Users\\Niranjan\\.cache\\hallucination-aware-visual-inspection\\crack-seg\\images\\train\\10.rf.1be181322657e5592be06e9ed277e0b3.jpg",
+      "hamming_distance_63_bits": 18
+    },
+    {
+      "id": 341,
+      "sha256": "96c02cc6723cfabf361e24dcdc85c7f5cf3f66262f32fc89d95509be99bb9080",
+      "nearest_training_path": "C:\\Users\\Niranjan\\.cache\\hallucination-aware-visual-inspection\\crack-seg\\images\\train\\2392.rf.0567e410a4a3479806fd0022d2752fb7.jpg",
+      "hamming_distance_63_bits": 16
+    },
+    {
+      "id": 342,
+      "sha256": "754a972fd18b437aebcf6230cd71990cc53173cdb850aebf6197cd55606b061c",
+      "nearest_training_path": "C:\\Users\\Niranjan\\.cache\\hallucination-aware-visual-inspection\\crack-seg\\images\\train\\3397.rf.8231cdf82374e801ea2ceae4c4a04c82.jpg",
+      "hamming_distance_63_bits": 16
+    },
+    {
+      "id": 343,
+      "sha256": "6450bb3baa0223fe3df5af3a3fdea6c6953aebc8cb25b72d04e234eb9e1cff03",
+      "nearest_training_path": "C:\\Users\\Niranjan\\.cache\\hallucination-aware-visual-inspection\\crack-seg\\images\\train\\2063.rf.b65e047da554f23a2d8bf8e7a29c7718.jpg",
+      "hamming_distance_63_bits": 16
+    },
+    {
+      "id": 344,
+      "sha256": "88326296d14ec57aebbb1abf048f6f0433fe8d0c3a308f35192141645995a514",
+      "nearest_training_path": "C:\\Users\\Niranjan\\.cache\\hallucination-aware-visual-inspection\\crack-seg\\images\\train\\1669.rf.09d9707950493565cc09814c920c0183.jpg",
+      "hamming_distance_63_bits": 18
+    },
+    {
+      "id": 345,
+      "sha256": "c350d56bccd3d71072eb0d2c861566995480a553a1bb51f262eb7b659b0066c2",
+      "nearest_training_path": "C:\\Users\\Niranjan\\.cache\\hallucination-aware-visual-inspection\\crack-seg\\images\\train\\3287.rf.29345416260aad2c71307e6bf22fe02e.jpg",
+      "hamming_distance_63_bits": 14
+    },
+    {
+      "id": 346,
+      "sha256": "cbbee831ec3418e0e347794119b91c5dbad9a09a9ac7aa6b3eb3c6cf173c8a46",
+      "nearest_training_path": "C:\\Users\\Niranjan\\.cache\\hallucination-aware-visual-inspection\\crack-seg\\images\\train\\3119.rf.446990dda5292666df25708bf36fdba1.jpg",
+      "hamming_distance_63_bits": 20
+    },
+    {
+      "id": 347,
+      "sha256": "732d7cf4a4f2ac60c087ba8560b43b3190bc49e67090cdf726a99fede5d0829a",
+      "nearest_training_path": "C:\\Users\\Niranjan\\.cache\\hallucination-aware-visual-inspection\\crack-seg\\images\\train\\2578.rf.19f05da8ca44509397038fdef740d26f.jpg",
+      "hamming_distance_63_bits": 18
+    },
+    {
+      "id": 348,
+      "sha256": "408a9ca851d9ea1ef92ef6bb0425444b5162399ea9b766d4b98a79728be5cfda",
+      "nearest_training_path": "C:\\Users\\Niranjan\\.cache\\hallucination-aware-visual-inspection\\crack-seg\\images\\train\\3528.rf.ff9de6836b0bac327326835ddd33e88c.jpg",
+      "hamming_distance_63_bits": 16
+    },
+    {
+      "id": 349,
+      "sha256": "8169bce1b252dc39d35814faea7a29f4b62374358b2db8aafc6274900d86eee5",
+      "nearest_training_path": "C:\\Users\\Niranjan\\.cache\\hallucination-aware-visual-inspection\\crack-seg\\images\\train\\2296.rf.ea4fedccd6134557e39efc1e0033fcea.jpg",
+      "hamming_distance_63_bits": 18
+    },
+    {
+      "id": 350,
+      "sha256": "8d51e819f0068a154246d0efd0226a3837bebaf16bad58736ad0d935e73953b8",
+      "nearest_training_path": "C:\\Users\\Niranjan\\.cache\\hallucination-aware-visual-inspection\\crack-seg\\images\\train\\3008.rf.00237e36c1b4aa2e1f0b9d3003651d30.jpg",
+      "hamming_distance_63_bits": 18
+    },
+    {
+      "id": 351,
+      "sha256": "5023cfb080f21e9405d62e424febfd10d71e49824ac0c6bf656a98cead078317",
+      "nearest_training_path": "C:\\Users\\Niranjan\\.cache\\hallucination-aware-visual-inspection\\crack-seg\\images\\train\\1958.rf.54e146748c99e7cae9b4aa0620db1e37.jpg",
+      "hamming_distance_63_bits": 16
+    },
+    {
+      "id": 352,
+      "sha256": "494b1aa7482835099268c21494137ec21412d4fa146cd9618918f01f837af72f",
+      "nearest_training_path": "C:\\Users\\Niranjan\\.cache\\hallucination-aware-visual-inspection\\crack-seg\\images\\train\\2075.rf.e1136f38bc68400a841a8e7dc0928970.jpg",
+      "hamming_distance_63_bits": 12
+    },
+    {
+      "id": 353,
+      "sha256": "00ea5338355b8cd1deaf5eeec121b198bfd456af6f49e7c7c582cab2096acc97",
+      "nearest_training_path": "C:\\Users\\Niranjan\\.cache\\hallucination-aware-visual-inspection\\crack-seg\\images\\train\\2006.rf.e80b8442f862a40992a7eacba927b416.jpg",
+      "hamming_distance_63_bits": 18
+    },
+    {
+      "id": 354,
+      "sha256": "80bfcdae4aeae82e3efb7586b707cbe7feb1e299db1487b4a30ccfe3a2ba9b60",
+      "nearest_training_path": "C:\\Users\\Niranjan\\.cache\\hallucination-aware-visual-inspection\\crack-seg\\images\\train\\2094.rf.8f33ee6756442eb21d72522d65ff0d8d.jpg",
+      "hamming_distance_63_bits": 20
+    },
+    {
+      "id": 355,
+      "sha256": "c0e84d66035339a3437dd8bd66f961dabd7d6e28ecf9c0818699505127db119b",
+      "nearest_training_path": "C:\\Users\\Niranjan\\.cache\\hallucination-aware-visual-inspection\\crack-seg\\images\\train\\3007.rf.79f4ea3e8c515121a88654c24a142aab.jpg",
+      "hamming_distance_63_bits": 18
+    },
+    {
+      "id": 356,
+      "sha256": "616cdf382ef321d25e73516c7ee87b4449ca3ce048342ab0cbb89e3b5fba3f20",
+      "nearest_training_path": "C:\\Users\\Niranjan\\.cache\\hallucination-aware-visual-inspection\\crack-seg\\images\\train\\3352.rf.313666a455d6d4a9dfce25ffaad78a7b.jpg",
+      "hamming_distance_63_bits": 16
+    },
+    {
+      "id": 357,
+      "sha256": "97b7a37e79447300d926bddbff7f55bdd1f78920ce7c301fbd5db9fd319dc574",
+      "nearest_training_path": "C:\\Users\\Niranjan\\.cache\\hallucination-aware-visual-inspection\\crack-seg\\images\\train\\2177.rf.cc17f10d0c14426b1c5f4271ec25dcf7.jpg",
+      "hamming_distance_63_bits": 18
+    },
+    {
+      "id": 358,
+      "sha256": "1e4b4dc02e0754c380ba02049fb0dc30b005a26a01b81b3be88dba6b05ea11f5",
+      "nearest_training_path": "C:\\Users\\Niranjan\\.cache\\hallucination-aware-visual-inspection\\crack-seg\\images\\train\\1724.rf.dbd9b33aea3e2dea18756ba2a2ae7dce.jpg",
+      "hamming_distance_63_bits": 18
+    },
+    {
+      "id": 359,
+      "sha256": "e90927a70a08f828bb75261fd19bf35a1e72913bfb157ba96e1b1a488c11ad16",
+      "nearest_training_path": "C:\\Users\\Niranjan\\.cache\\hallucination-aware-visual-inspection\\crack-seg\\images\\train\\3046.rf.f48247bd13b504597a1e037a05d5a9a3.jpg",
+      "hamming_distance_63_bits": 18
+    },
+    {
+      "id": 360,
+      "sha256": "c8ad2656b94dc25b1c8702de85fc21ff567fb455a9bc67fcbb540503770849d2",
+      "nearest_training_path": "C:\\Users\\Niranjan\\.cache\\hallucination-aware-visual-inspection\\crack-seg\\images\\train\\2124.rf.b0fabf37ea8b3d6beb0dc77c426a67f9.jpg",
+      "hamming_distance_63_bits": 14
+    },
+    {
+      "id": 361,
+      "sha256": "0f036070c1aa1116fd04ce9cbced46a7972076e3ea7acaf631b17e879305b44c",
+      "nearest_training_path": "C:\\Users\\Niranjan\\.cache\\hallucination-aware-visual-inspection\\crack-seg\\images\\train\\2180.rf.0addbb15ae226859b5c3f371a9e36442.jpg",
+      "hamming_distance_63_bits": 18
+    },
+    {
+      "id": 362,
+      "sha256": "2925d46dd733ae6e783d005cf12c9b27b2e95146fd39c0a8a7040f976a39f763",
+      "nearest_training_path": "C:\\Users\\Niranjan\\.cache\\hallucination-aware-visual-inspection\\crack-seg\\images\\train\\1915.rf.b247a0edab5af8731fa7942737ec7849.jpg",
+      "hamming_distance_63_bits": 12
+    },
+    {
+      "id": 363,
+      "sha256": "f9885240b677161c1b8165945bef40d8b9aa6c098f2571933e0218802be34764",
+      "nearest_training_path": "C:\\Users\\Niranjan\\.cache\\hallucination-aware-visual-inspection\\crack-seg\\images\\train\\1730.rf.05ffd9748627b1c3d5d244f22d838491.jpg",
+      "hamming_distance_63_bits": 18
+    },
+    {
+      "id": 364,
+      "sha256": "7b2d648ed1df7cf6d80a558e00cb44fc18322feee130796792504bc90ca1b1bc",
+      "nearest_training_path": "C:\\Users\\Niranjan\\.cache\\hallucination-aware-visual-inspection\\crack-seg\\images\\train\\3555.rf.3beeb7b97f0c93b4fbd3b5d140b4356f.jpg",
+      "hamming_distance_63_bits": 16
+    },
+    {
+      "id": 365,
+      "sha256": "f2e9bdf5336e062760d162e8bf50646b801c5303e60780aaf1a7550caae3d69e",
+      "nearest_training_path": "C:\\Users\\Niranjan\\.cache\\hallucination-aware-visual-inspection\\crack-seg\\images\\train\\2558.rf.7f5124f5d272e018e932765bc2bc34fd.jpg",
+      "hamming_distance_63_bits": 18
+    },
+    {
+      "id": 366,
+      "sha256": "92acccaff4f6c5c4a3940a3fa8c2311ccd409dd1e34feb40983d7d02e7f4fcf7",
+      "nearest_training_path": "C:\\Users\\Niranjan\\.cache\\hallucination-aware-visual-inspection\\crack-seg\\images\\train\\1726.rf.2e01e0190ac241962448cd4c116926f6.jpg",
+      "hamming_distance_63_bits": 20
+    },
+    {
+      "id": 367,
+      "sha256": "8c20a0045e254cf11ff1d0dd8a102531c5369e92d05ffde6fdaac64265b9bb17",
+      "nearest_training_path": "C:\\Users\\Niranjan\\.cache\\hallucination-aware-visual-inspection\\crack-seg\\images\\train\\2406.rf.4687869747f3e2bfeaf3a22879b8bf15.jpg",
+      "hamming_distance_63_bits": 16
+    },
+    {
+      "id": 368,
+      "sha256": "9cef1f725c1e0633e7649a2135f37e187b8e2a3d7edecc7b67d5af5b74101495",
+      "nearest_training_path": "C:\\Users\\Niranjan\\.cache\\hallucination-aware-visual-inspection\\crack-seg\\images\\train\\3406.rf.dc0558039830f25a6b658ad6c7d29dd0.jpg",
+      "hamming_distance_63_bits": 16
+    },
+    {
+      "id": 369,
+      "sha256": "1cfe9c0cb96cd0ab345528036c98717c282506cb20a73bc5dafbb5effab105e5",
+      "nearest_training_path": "C:\\Users\\Niranjan\\.cache\\hallucination-aware-visual-inspection\\crack-seg\\images\\train\\3323.rf.48dcc27d0df325e303967f08c3b0776f.jpg",
+      "hamming_distance_63_bits": 16
+    },
+    {
+      "id": 370,
+      "sha256": "3ed67539de025404c668773905acbccb09c110e190d44a313e6a38befb8cf317",
+      "nearest_training_path": "C:\\Users\\Niranjan\\.cache\\hallucination-aware-visual-inspection\\crack-seg\\images\\train\\2152.rf.7e0a17c6121286c605cc3e0d2610ae51.jpg",
+      "hamming_distance_63_bits": 18
+    },
+    {
+      "id": 371,
+      "sha256": "174d16ab97e0cc1781989efc1fa449a2f3da6df1219d6aac8f704e409b0ecec8",
+      "nearest_training_path": "C:\\Users\\Niranjan\\.cache\\hallucination-aware-visual-inspection\\crack-seg\\images\\train\\2316.rf.eb21f6b3b3e257d23b83395207235c2a.jpg",
+      "hamming_distance_63_bits": 18
+    },
+    {
+      "id": 372,
+      "sha256": "45d72f3f0333031d27fdc22aab6302b46638aa21dd2c600d407c7ac38ab1039d",
+      "nearest_training_path": "C:\\Users\\Niranjan\\.cache\\hallucination-aware-visual-inspection\\crack-seg\\images\\train\\1899.rf.c05583a0d1327f794ed389b8932cbd8a.jpg",
+      "hamming_distance_63_bits": 18
+    },
+    {
+      "id": 373,
+      "sha256": "268c45fe92e0e3ab40da8cfd1215a45481ab5b40be7fe57c4cfa01d0db6f5bbb",
+      "nearest_training_path": "C:\\Users\\Niranjan\\.cache\\hallucination-aware-visual-inspection\\crack-seg\\images\\train\\2461.rf.0b6a3f73dfefa77c58a3d793bca342e2.jpg",
+      "hamming_distance_63_bits": 20
+    },
+    {
+      "id": 374,
+      "sha256": "954fd4c4eb0ad09b58d7680bb6204229026c5c2284ace93f8eebc5332b2cfb95",
+      "nearest_training_path": "C:\\Users\\Niranjan\\.cache\\hallucination-aware-visual-inspection\\crack-seg\\images\\train\\3086.rf.47d57167edbc96c4fccb3067a1355161.jpg",
+      "hamming_distance_63_bits": 16
+    },
+    {
+      "id": 375,
+      "sha256": "e408170a08077b2497b0dee1d3eebbbfb621a18bfce301ef414e2996f81b262b",
+      "nearest_training_path": "C:\\Users\\Niranjan\\.cache\\hallucination-aware-visual-inspection\\crack-seg\\images\\train\\2551.rf.ff02947067f5c5b2fd9f9e4244a31e60.jpg",
+      "hamming_distance_63_bits": 18
+    },
+    {
+      "id": 376,
+      "sha256": "c70d284becfeac8921f415172af51ac1ba5538b83e0960da7888269da0347861",
+      "nearest_training_path": "C:\\Users\\Niranjan\\.cache\\hallucination-aware-visual-inspection\\crack-seg\\images\\train\\3378.rf.5b71921499434e4441101fa43330ca17.jpg",
+      "hamming_distance_63_bits": 18
+    },
+    {
+      "id": 377,
+      "sha256": "3b5b799fb74f305ab78be472a0ab74a322918a1a53202188b207a80a1de4cf38",
+      "nearest_training_path": "C:\\Users\\Niranjan\\.cache\\hallucination-aware-visual-inspection\\crack-seg\\images\\train\\3169.rf.136437f26e85aa61f24aa06b77788c5d.jpg",
+      "hamming_distance_63_bits": 16
+    },
+    {
+      "id": 378,
+      "sha256": "d4ce55f7abfc4a5ca7f1865a43e7c0210b216d29eb1ba011a59a6575626b7c63",
+      "nearest_training_path": "C:\\Users\\Niranjan\\.cache\\hallucination-aware-visual-inspection\\crack-seg\\images\\train\\3363.rf.efabb22a3b8ddf6203a454c06d81c79b.jpg",
+      "hamming_distance_63_bits": 16
+    },
+    {
+      "id": 379,
+      "sha256": "39dfdc2916f31c37cfbe83af9cf33b9f4515ef4ae84cc33f4f22524e814b904e",
+      "nearest_training_path": "C:\\Users\\Niranjan\\.cache\\hallucination-aware-visual-inspection\\crack-seg\\images\\train\\2410.rf.b81b069a2fcb6016bf4c6ab74104ec72.jpg",
+      "hamming_distance_63_bits": 14
+    },
+    {
+      "id": 380,
+      "sha256": "b2c046256341e139d5430ddbcb81c0c4ea7451bb29e42b0a7fd5bf2f1b9a9378",
+      "nearest_training_path": "C:\\Users\\Niranjan\\.cache\\hallucination-aware-visual-inspection\\crack-seg\\images\\train\\3519.rf.09e9371826180a89fdbce37e44d9c6cb.jpg",
+      "hamming_distance_63_bits": 16
+    },
+    {
+      "id": 381,
+      "sha256": "ae5532c34fc5c9b07df40e09f8ad6e95855e63d0aa31dbbcc14b58adb6aa11c5",
+      "nearest_training_path": "C:\\Users\\Niranjan\\.cache\\hallucination-aware-visual-inspection\\crack-seg\\images\\train\\3146.rf.838f50f55bce4bb719cf0f6711fae7e6.jpg",
+      "hamming_distance_63_bits": 20
+    },
+    {
+      "id": 382,
+      "sha256": "17470651a7144157e12493ce1119365caffa08ea2d0cda7372a4dbc963b5aeda",
+      "nearest_training_path": "C:\\Users\\Niranjan\\.cache\\hallucination-aware-visual-inspection\\crack-seg\\images\\train\\3167.rf.62d1e1f72f30f281d55dca251313cd0b.jpg",
+      "hamming_distance_63_bits": 20
+    },
+    {
+      "id": 383,
+      "sha256": "778a24f600248bd6114a62946f49285b08b13dbba2281bbeb083c48cd5417399",
+      "nearest_training_path": "C:\\Users\\Niranjan\\.cache\\hallucination-aware-visual-inspection\\crack-seg\\images\\train\\2058.rf.f65a73c892e00871802d30042d445a5a.jpg",
+      "hamming_distance_63_bits": 20
+    },
+    {
+      "id": 384,
+      "sha256": "9cead85be8f5a17c2941f268da66b52b3ae43dcbf27a97165228d8360b09a11e",
+      "nearest_training_path": "C:\\Users\\Niranjan\\.cache\\hallucination-aware-visual-inspection\\crack-seg\\images\\train\\2389.rf.82095e6b98efab06bb9bf02e8229c1a3.jpg",
+      "hamming_distance_63_bits": 20
+    },
+    {
+      "id": 385,
+      "sha256": "31f435d076d4d33e496dc3230ef360510c7cb8f51e1461fc20bc444d74821280",
+      "nearest_training_path": "C:\\Users\\Niranjan\\.cache\\hallucination-aware-visual-inspection\\crack-seg\\images\\train\\2135.rf.d3e5faea08114e456df197fa6f8300cf.jpg",
+      "hamming_distance_63_bits": 18
+    },
+    {
+      "id": 386,
+      "sha256": "e97255a01ae970c27b575e3f400bdf90af97458e90ffc573955f735f21eee24d",
+      "nearest_training_path": "C:\\Users\\Niranjan\\.cache\\hallucination-aware-visual-inspection\\crack-seg\\images\\train\\1852.rf.14b7b64dce2ac0bdd84bf59e9820ba73.jpg",
+      "hamming_distance_63_bits": 18
+    },
+    {
+      "id": 387,
+      "sha256": "997d0d142e189e43554135a210948759711002e0eca96852ed930f39ab95063b",
+      "nearest_training_path": "C:\\Users\\Niranjan\\.cache\\hallucination-aware-visual-inspection\\crack-seg\\images\\train\\3139.rf.af8cf1ba687b93107ba054efb414a80d.jpg",
+      "hamming_distance_63_bits": 16
+    },
+    {
+      "id": 388,
+      "sha256": "659c0a6da180a2db19b811ef655aa911258bfdf24410097e8b5335ea61570c37",
+      "nearest_training_path": "C:\\Users\\Niranjan\\.cache\\hallucination-aware-visual-inspection\\crack-seg\\images\\train\\3523.rf.b43595c9136a3b226c7389a03738a152.jpg",
+      "hamming_distance_63_bits": 18
+    },
+    {
+      "id": 389,
+      "sha256": "80ed6cb951b08fde418eb4531beebe18a8927a1f7e722f4b4c396a74f02c0322",
+      "nearest_training_path": "C:\\Users\\Niranjan\\.cache\\hallucination-aware-visual-inspection\\crack-seg\\images\\train\\2398.rf.91b47f791364c3c97e3957a50096e4f9.jpg",
+      "hamming_distance_63_bits": 18
+    },
+    {
+      "id": 390,
+      "sha256": "071f24d6bbb1a03aa5787df9f5a6cce1230004f0b5d51a711e2f5a90254024e4",
+      "nearest_training_path": "C:\\Users\\Niranjan\\.cache\\hallucination-aware-visual-inspection\\crack-seg\\images\\train\\2242.rf.e49230fe4bc692e896823fc97d8571ab.jpg",
+      "hamming_distance_63_bits": 18
+    },
+    {
+      "id": 391,
+      "sha256": "c699c8039035f351658d19a56579887934bee315cdef63b78618094054a378a4",
+      "nearest_training_path": "C:\\Users\\Niranjan\\.cache\\hallucination-aware-visual-inspection\\crack-seg\\images\\train\\2410.rf.b81b069a2fcb6016bf4c6ab74104ec72.jpg",
+      "hamming_distance_63_bits": 12
+    },
+    {
+      "id": 392,
+      "sha256": "ecca0e6a09918cd1a3c2df322e918458e12e901d717e026fcae5a4114071ad20",
+      "nearest_training_path": "C:\\Users\\Niranjan\\.cache\\hallucination-aware-visual-inspection\\crack-seg\\images\\train\\2356.rf.c26b2bb9abc54b4ff00513f68fe118ba.jpg",
+      "hamming_distance_63_bits": 20
+    },
+    {
+      "id": 393,
+      "sha256": "2533347c1836056305ff079df7b943685fc76bca1e225adf6d04ca524c5b86a9",
+      "nearest_training_path": "C:\\Users\\Niranjan\\.cache\\hallucination-aware-visual-inspection\\crack-seg\\images\\train\\3810.rf.5e35eee450440784cccde0b486a218a6.jpg",
+      "hamming_distance_63_bits": 16
+    },
+    {
+      "id": 394,
+      "sha256": "32101cf51e94abff3746cac5860ac208ab9f85bacc57404f4ccffce27d4553e9",
+      "nearest_training_path": "C:\\Users\\Niranjan\\.cache\\hallucination-aware-visual-inspection\\crack-seg\\images\\train\\1721.rf.85833887211c6e7630b7d6c2ae300657.jpg",
+      "hamming_distance_63_bits": 14
+    },
+    {
+      "id": 395,
+      "sha256": "1d46a1fd3b0ae59ee220cf8d86e21e87aa6a4f193d8a3c62abec148ed0407086",
+      "nearest_training_path": "C:\\Users\\Niranjan\\.cache\\hallucination-aware-visual-inspection\\crack-seg\\images\\train\\3111.rf.5c47066be4f2338fc20d6b5401016b63.jpg",
+      "hamming_distance_63_bits": 16
+    },
+    {
+      "id": 396,
+      "sha256": "fe6c356ec9c03c32388bba57e5925704dd59a3433547fb2a2571ebbe9ed8b632",
+      "nearest_training_path": "C:\\Users\\Niranjan\\.cache\\hallucination-aware-visual-inspection\\crack-seg\\images\\train\\1628.rf.a4036b3cad60294ba02018c4a8da621c.jpg",
+      "hamming_distance_63_bits": 18
+    },
+    {
+      "id": 397,
+      "sha256": "4297665b5c327e1f2987e194113ac35e3ea34286de01ea82734cfefcb2f1a3ce",
+      "nearest_training_path": "C:\\Users\\Niranjan\\.cache\\hallucination-aware-visual-inspection\\crack-seg\\images\\train\\3863.rf.7918d23e987152c96409ca7df9668bd1.jpg",
+      "hamming_distance_63_bits": 18
+    },
+    {
+      "id": 398,
+      "sha256": "698bcf95a464d677098afbc129c13ecedfb1377cfeeb4d8e70334d35d8a1e306",
+      "nearest_training_path": "C:\\Users\\Niranjan\\.cache\\hallucination-aware-visual-inspection\\crack-seg\\images\\train\\2227.rf.9cf84cda5b99cc0cce5e71d6d6539929.jpg",
+      "hamming_distance_63_bits": 18
+    },
+    {
+      "id": 399,
+      "sha256": "46732f5e11a0e03cd7986d04e3d91782b7ce07575efdb52f4e1b52a1101f9a4f",
+      "nearest_training_path": "C:\\Users\\Niranjan\\.cache\\hallucination-aware-visual-inspection\\crack-seg\\images\\train\\2269.rf.8a0e62a40a3d32b20027d89fb91b7e25.jpg",
+      "hamming_distance_63_bits": 20
+    },
+    {
+      "id": 400,
+      "sha256": "5fddcc966058f3a4d8e46b5b6a76d10ec49faa9e39135c5b8b2058a682b45456",
+      "nearest_training_path": "C:\\Users\\Niranjan\\.cache\\hallucination-aware-visual-inspection\\crack-seg\\images\\train\\1701.rf.06aae02e22edcac9ae86ad54f3a83277.jpg",
+      "hamming_distance_63_bits": 18
+    },
+    {
+      "id": 401,
+      "sha256": "cc4f648f3e881d013950171fb2ee7483605717377c9a385fed96428e233e6cd4",
+      "nearest_training_path": "C:\\Users\\Niranjan\\.cache\\hallucination-aware-visual-inspection\\crack-seg\\images\\train\\1212.rf.47327a2f0cfd0d93213066fc52fe2650.jpg",
+      "hamming_distance_63_bits": 20
+    },
+    {
+      "id": 402,
+      "sha256": "1a1be3dcbb900abceae61fd530eb435218463779262bb274960a5b9dab2615e1",
+      "nearest_training_path": "C:\\Users\\Niranjan\\.cache\\hallucination-aware-visual-inspection\\crack-seg\\images\\train\\2002.rf.e508fc09d8c8a2e6df5d1cde947b9e70.jpg",
+      "hamming_distance_63_bits": 18
+    },
+    {
+      "id": 403,
+      "sha256": "1a28bba1d7649c9d1aa5013b4dbfed16d29917ead2ed03776daa6b902b3b2ca2",
+      "nearest_training_path": "C:\\Users\\Niranjan\\.cache\\hallucination-aware-visual-inspection\\crack-seg\\images\\train\\3359.rf.3192a626350dc55deb4b0392bc1cabbd.jpg",
+      "hamming_distance_63_bits": 18
+    },
+    {
+      "id": 404,
+      "sha256": "4d4802651a34894a9df29e2e213028489035b18844870ce82eebc44162a8dfb3",
+      "nearest_training_path": "C:\\Users\\Niranjan\\.cache\\hallucination-aware-visual-inspection\\crack-seg\\images\\train\\1676.rf.be775d80976296f593b8ec83c45beca5.jpg",
+      "hamming_distance_63_bits": 18
+    },
+    {
+      "id": 405,
+      "sha256": "a1026f56f663259e4027cc6d318255292876ddfddc3649759599ece69b714504",
+      "nearest_training_path": "C:\\Users\\Niranjan\\.cache\\hallucination-aware-visual-inspection\\crack-seg\\images\\train\\3482.rf.60b29b18e9a1b198e4288afa746ea0b4.jpg",
+      "hamming_distance_63_bits": 18
+    },
+    {
+      "id": 406,
+      "sha256": "17818e7a327c6477b990f30299b44e5e231adcce98802673a39efb066ad30685",
+      "nearest_training_path": "C:\\Users\\Niranjan\\.cache\\hallucination-aware-visual-inspection\\crack-seg\\images\\train\\2326.rf.c6284617f46320600ad818782a990cb2.jpg",
+      "hamming_distance_63_bits": 18
+    },
+    {
+      "id": 407,
+      "sha256": "1ff28b592d2b800f8dfb54f815598abf5aff1b5ab93ddcac16851e95ce1a1ced",
+      "nearest_training_path": "C:\\Users\\Niranjan\\.cache\\hallucination-aware-visual-inspection\\crack-seg\\images\\train\\1652.rf.5abacc532efb72f805c8ced3aeac79d6.jpg",
+      "hamming_distance_63_bits": 18
+    },
+    {
+      "id": 408,
+      "sha256": "f7ddf5b6f85cfdecd965e8686d9e458e2b7b29801aec59c43115b3f9d3ef683c",
+      "nearest_training_path": "C:\\Users\\Niranjan\\.cache\\hallucination-aware-visual-inspection\\crack-seg\\images\\train\\2465.rf.72141dc740bd8119ee187ac741c3fc6c.jpg",
+      "hamming_distance_63_bits": 20
+    },
+    {
+      "id": 409,
+      "sha256": "b0cf20a9c5cd70727f060843e0af8a8abacfc1ee35a534ebda4a573739c30602",
+      "nearest_training_path": "C:\\Users\\Niranjan\\.cache\\hallucination-aware-visual-inspection\\crack-seg\\images\\train\\3548.rf.24b6616282a201fb7f113073328a3cfe.jpg",
+      "hamming_distance_63_bits": 12
+    },
+    {
+      "id": 410,
+      "sha256": "f463fb6ad792ae4aff88798c73dfdd30afe203e34e4ae0fc13aa1758e41d072d",
+      "nearest_training_path": "C:\\Users\\Niranjan\\.cache\\hallucination-aware-visual-inspection\\crack-seg\\images\\train\\1773.rf.df8bd73e35ad7b07850923e962a90367.jpg",
+      "hamming_distance_63_bits": 18
+    },
+    {
+      "id": 411,
+      "sha256": "f567474c5a7724e10cf9d4afbff6294578fb137bff2d44d583ca77705c76effa",
+      "nearest_training_path": "C:\\Users\\Niranjan\\.cache\\hallucination-aware-visual-inspection\\crack-seg\\images\\train\\2023.rf.c5fe4f246b45ebeb106b51568b1f90dc.jpg",
+      "hamming_distance_63_bits": 14
+    },
+    {
+      "id": 412,
+      "sha256": "b9dcff6e686cfd85820ef2b7bd15eb5af0347a5c89590e444dee872530a2cce3",
+      "nearest_training_path": "C:\\Users\\Niranjan\\.cache\\hallucination-aware-visual-inspection\\crack-seg\\images\\train\\2468.rf.dac83f232ab0f01cfc137fad4565a0d7.jpg",
+      "hamming_distance_63_bits": 14
+    },
+    {
+      "id": 413,
+      "sha256": "e15ad33e550a27650c8e9f0d300ec8783a756d26ac18f76bfc6afe49766fd0c9",
+      "nearest_training_path": "C:\\Users\\Niranjan\\.cache\\hallucination-aware-visual-inspection\\crack-seg\\images\\train\\2134.rf.b7e51d88e378b70abcd52ad635f17d86.jpg",
+      "hamming_distance_63_bits": 18
+    },
+    {
+      "id": 414,
+      "sha256": "5c1b828a6af057004c160602af72cae38bce2dd80b1ae8160f8a867004cd9718",
+      "nearest_training_path": "C:\\Users\\Niranjan\\.cache\\hallucination-aware-visual-inspection\\crack-seg\\images\\train\\1368.rf.fe5279285a99822ea95b759b2910a5c9.jpg",
+      "hamming_distance_63_bits": 20
+    },
+    {
+      "id": 415,
+      "sha256": "d60bbecd0f1bcfd95066d54e10e86fb3efbde44f89fbafef901f5507935f41c4",
+      "nearest_training_path": "C:\\Users\\Niranjan\\.cache\\hallucination-aware-visual-inspection\\crack-seg\\images\\train\\2114.rf.6e4512a51a3d4e63fbf1bccfccd0e7a3.jpg",
+      "hamming_distance_63_bits": 18
+    },
+    {
+      "id": 416,
+      "sha256": "433f25a9415e9414afec72aadf4a58f61950aac429794ee7bf53603bb1c17600",
+      "nearest_training_path": "C:\\Users\\Niranjan\\.cache\\hallucination-aware-visual-inspection\\crack-seg\\images\\train\\3236.rf.f9eeebdf512d396fc85027aa7e5eac76.jpg",
+      "hamming_distance_63_bits": 20
+    },
+    {
+      "id": 417,
+      "sha256": "4ef1c3eee10d09a9b8019572b671a0acea59ba0e41fce353d5735cb63c38bfe2",
+      "nearest_training_path": "C:\\Users\\Niranjan\\.cache\\hallucination-aware-visual-inspection\\crack-seg\\images\\train\\2138.rf.04946cc91228e58798e2a169403fd5d4.jpg",
+      "hamming_distance_63_bits": 20
+    },
+    {
+      "id": 418,
+      "sha256": "372af2547ad4c06baeec75d98fa2b0fd25575bb176eb812cc4a84a5e22245493",
+      "nearest_training_path": "C:\\Users\\Niranjan\\.cache\\hallucination-aware-visual-inspection\\crack-seg\\images\\train\\3308.rf.4b8d7d24c1445649a41a8dd9ba5e45b8.jpg",
+      "hamming_distance_63_bits": 16
+    },
+    {
+      "id": 419,
+      "sha256": "656a3d3a632a844d6cbd9bc649b8438954c32f68ace9cc7def6a06f7bda33c90",
+      "nearest_training_path": "C:\\Users\\Niranjan\\.cache\\hallucination-aware-visual-inspection\\crack-seg\\images\\train\\3030.rf.31a9aca163874f5b5cc55a07c966a48c.jpg",
+      "hamming_distance_63_bits": 18
+    },
+    {
+      "id": 420,
+      "sha256": "5203b26fab8cc1169b99c0563127c0fe20521b14368f75d74f751506fc6e1d7f",
+      "nearest_training_path": "C:\\Users\\Niranjan\\.cache\\hallucination-aware-visual-inspection\\crack-seg\\images\\train\\1907.rf.95e2d13e83355a0106502fde266a8a2e.jpg",
+      "hamming_distance_63_bits": 20
+    },
+    {
+      "id": 421,
+      "sha256": "5f6623dc2a0b06b9a2575f158937ecdf6f5f3f81433aa8e0f6ab587d5be99e2a",
+      "nearest_training_path": "C:\\Users\\Niranjan\\.cache\\hallucination-aware-visual-inspection\\crack-seg\\images\\train\\1703.rf.8e202648862ef0e55beb2fd285378f57.jpg",
+      "hamming_distance_63_bits": 20
+    },
+    {
+      "id": 422,
+      "sha256": "bf6652aac55e0d1856f32ed5b41f24baecf3feaf54b60359f990c19cbfe5b0c6",
+      "nearest_training_path": "C:\\Users\\Niranjan\\.cache\\hallucination-aware-visual-inspection\\crack-seg\\images\\train\\2351.rf.8509dc6bbad51923128a5cf92cc0203a.jpg",
+      "hamming_distance_63_bits": 18
+    },
+    {
+      "id": 423,
+      "sha256": "d247a0c4a767533d82387d39ce8d436c959a4f270e58d1bad0abbe174a58f87a",
+      "nearest_training_path": "C:\\Users\\Niranjan\\.cache\\hallucination-aware-visual-inspection\\crack-seg\\images\\train\\1864.rf.4cec0a0c1b5040a935bf454ba293a5e5.jpg",
+      "hamming_distance_63_bits": 20
+    },
+    {
+      "id": 424,
+      "sha256": "497e220d440bcb0dc7fa9b8159449507438c9dc18618107ad412ba248d6b405a",
+      "nearest_training_path": "C:\\Users\\Niranjan\\.cache\\hallucination-aware-visual-inspection\\crack-seg\\images\\train\\3176.rf.d6f7e9bdb8dcf50c4d6c71ef7f49febb.jpg",
+      "hamming_distance_63_bits": 18
+    },
+    {
+      "id": 425,
+      "sha256": "0b827ae6025e086e512105a19bf938e9d03bfd286c298c70faca5d29bc868924",
+      "nearest_training_path": "C:\\Users\\Niranjan\\.cache\\hallucination-aware-visual-inspection\\crack-seg\\images\\train\\1955.rf.62e9772fb2ff410ab7df5c681d317aff.jpg",
+      "hamming_distance_63_bits": 20
+    },
+    {
+      "id": 426,
+      "sha256": "7f8acad33c52cb60588871aa4c187431dd3c36f45f155e804ffc81bcf61c9944",
+      "nearest_training_path": "C:\\Users\\Niranjan\\.cache\\hallucination-aware-visual-inspection\\crack-seg\\images\\train\\1654.rf.703bebdbb104f9e7767d2023c56b09cd.jpg",
+      "hamming_distance_63_bits": 20
+    },
+    {
+      "id": 427,
+      "sha256": "670e7b31b1cec67769fee23c5cdee8390723ef648a0fbfdc47a0327e6b046621",
+      "nearest_training_path": "C:\\Users\\Niranjan\\.cache\\hallucination-aware-visual-inspection\\crack-seg\\images\\train\\2450.rf.a4396352550a5ddd90b5bb3a50039891.jpg",
+      "hamming_distance_63_bits": 20
+    },
+    {
+      "id": 428,
+      "sha256": "89f7a705c56531cd279d15fdf3f32c01abdd553ff71c98020f54aedd1eb08eba",
+      "nearest_training_path": "C:\\Users\\Niranjan\\.cache\\hallucination-aware-visual-inspection\\crack-seg\\images\\train\\141.rf.71f47c1b3520508099526c83792fd835.jpg",
+      "hamming_distance_63_bits": 18
+    },
+    {
+      "id": 429,
+      "sha256": "f94345ad48c5af2b2997ae181524f30e90f70bddaa389f04489061fc0dd1bcd6",
+      "nearest_training_path": "C:\\Users\\Niranjan\\.cache\\hallucination-aware-visual-inspection\\crack-seg\\images\\train\\1177.rf.6bb0830b57f7fd1ed4aa0dbabb8688c2.jpg",
+      "hamming_distance_63_bits": 18
+    },
+    {
+      "id": 430,
+      "sha256": "872bae684be84e54ec417900330db22347b7a4211c84be382e379fc509c62b76",
+      "nearest_training_path": "C:\\Users\\Niranjan\\.cache\\hallucination-aware-visual-inspection\\crack-seg\\images\\train\\2023.rf.c5fe4f246b45ebeb106b51568b1f90dc.jpg",
+      "hamming_distance_63_bits": 18
+    },
+    {
+      "id": 431,
+      "sha256": "e1496424ccf99ff826215849371be39706474cc124cfed697fbe55cb832f9ed2",
+      "nearest_training_path": "C:\\Users\\Niranjan\\.cache\\hallucination-aware-visual-inspection\\crack-seg\\images\\train\\1889.rf.2edf2c7d4f7933365c7c3d9676c7eb4e.jpg",
+      "hamming_distance_63_bits": 16
+    },
+    {
+      "id": 432,
+      "sha256": "2420fc62f4b5c66f3fe80c737f7b79e2c30c4d4286fe183022eebdac2d016861",
+      "nearest_training_path": "C:\\Users\\Niranjan\\.cache\\hallucination-aware-visual-inspection\\crack-seg\\images\\train\\1283.rf.ae66e5de1bda5a78ae7f7862f621c786.jpg",
+      "hamming_distance_63_bits": 18
+    },
+    {
+      "id": 433,
+      "sha256": "67543a4747b436b5ba8fc8713be0aa707cc0e9b8d13fa2675c63b7f934569d38",
+      "nearest_training_path": "C:\\Users\\Niranjan\\.cache\\hallucination-aware-visual-inspection\\crack-seg\\images\\train\\2577.rf.fcef7bf650bbb34765e71c91b43d8655.jpg",
+      "hamming_distance_63_bits": 20
+    },
+    {
+      "id": 434,
+      "sha256": "bee52e3f0559b7427464f87888199d014d24750550c199f1894137712f0f9d32",
+      "nearest_training_path": "C:\\Users\\Niranjan\\.cache\\hallucination-aware-visual-inspection\\crack-seg\\images\\train\\3401.rf.dd641528ae0bbf77f897bef8f6b796cd.jpg",
+      "hamming_distance_63_bits": 18
+    },
+    {
+      "id": 435,
+      "sha256": "b5c53e07214a5ecba6a7ea833260fba2f5f67495eb536e93090eeb5b371f8ca7",
+      "nearest_training_path": "C:\\Users\\Niranjan\\.cache\\hallucination-aware-visual-inspection\\crack-seg\\images\\train\\1283.rf.9b4cb88419367ca1dae2531b860352ec.jpg",
+      "hamming_distance_63_bits": 22
+    },
+    {
+      "id": 436,
+      "sha256": "b510d82c081f8b16949240c9f7b0a027e09bc7f1a7611ed9ffaf59878ea1ef32",
+      "nearest_training_path": "C:\\Users\\Niranjan\\.cache\\hallucination-aware-visual-inspection\\crack-seg\\images\\train\\2520.rf.e5a5ab882c8864e64fa353fe43d2f7b3.jpg",
+      "hamming_distance_63_bits": 18
+    },
+    {
+      "id": 437,
+      "sha256": "91122035e4aefa9cab14822b929df803f18c2f160f871ca3a238062c8d0d5847",
+      "nearest_training_path": "C:\\Users\\Niranjan\\.cache\\hallucination-aware-visual-inspection\\crack-seg\\images\\train\\3428.rf.ff417ae18a5b992d3beb5eff4db744a1.jpg",
+      "hamming_distance_63_bits": 18
+    },
+    {
+      "id": 438,
+      "sha256": "18de134225d317e6526c11b2b9fe2c8f77bc8debd4f08715c58319912894b6e3",
+      "nearest_training_path": "C:\\Users\\Niranjan\\.cache\\hallucination-aware-visual-inspection\\crack-seg\\images\\train\\1875.rf.5aa5955a42648b3a2515d097c17c8742.jpg",
+      "hamming_distance_63_bits": 20
+    },
+    {
+      "id": 439,
+      "sha256": "d9a88c652ae4d482ed0cb1a97b264cea7245ba249f20c04c14b91e47a599b0be",
+      "nearest_training_path": "C:\\Users\\Niranjan\\.cache\\hallucination-aware-visual-inspection\\crack-seg\\images\\train\\2260.rf.f8cfbc121040d16e250176fa84103763.jpg",
+      "hamming_distance_63_bits": 20
+    },
+    {
+      "id": 440,
+      "sha256": "05b6f61cca2ac5a2672739757d56dd4a5cb43a63bffe0f6c1d1ddb479919ce17",
+      "nearest_training_path": "C:\\Users\\Niranjan\\.cache\\hallucination-aware-visual-inspection\\crack-seg\\images\\train\\2468.rf.dac83f232ab0f01cfc137fad4565a0d7.jpg",
+      "hamming_distance_63_bits": 14
+    },
+    {
+      "id": 441,
+      "sha256": "ed44d5910f4ede092ed8df30dc0a4b7a206517406c2825deceb6a74109e39412",
+      "nearest_training_path": "C:\\Users\\Niranjan\\.cache\\hallucination-aware-visual-inspection\\crack-seg\\images\\train\\2464.rf.e3eb3a4fe09cf6649caf9e137bf95db9.jpg",
+      "hamming_distance_63_bits": 20
+    },
+    {
+      "id": 442,
+      "sha256": "f9b9fdacfc2afe37ea38945634dda548cba13afc22a71d8a8c33dbb7d4f49fde",
+      "nearest_training_path": "C:\\Users\\Niranjan\\.cache\\hallucination-aware-visual-inspection\\crack-seg\\images\\train\\165.rf.525261573d48adfb89ad31138e1f2fee.jpg",
+      "hamming_distance_63_bits": 18
+    },
+    {
+      "id": 443,
+      "sha256": "859191b811f126acf0ee7f4667f1f79fa612335f681e29d5481dd71629db5748",
+      "nearest_training_path": "C:\\Users\\Niranjan\\.cache\\hallucination-aware-visual-inspection\\crack-seg\\images\\train\\3043.rf.8bf09a787803050a18c163f4079c7462.jpg",
+      "hamming_distance_63_bits": 20
+    },
+    {
+      "id": 444,
+      "sha256": "c57af24fe178d0d24d9e3e1133d26772c02994f30c2325fc7fc58c673147a029",
+      "nearest_training_path": "C:\\Users\\Niranjan\\.cache\\hallucination-aware-visual-inspection\\crack-seg\\images\\train\\1899.rf.c05583a0d1327f794ed389b8932cbd8a.jpg",
+      "hamming_distance_63_bits": 20
+    },
+    {
+      "id": 445,
+      "sha256": "b1183135037e097d29634a90e69c54cdc26b24bbcf3f273bf03d11b38d88a39e",
+      "nearest_training_path": "C:\\Users\\Niranjan\\.cache\\hallucination-aware-visual-inspection\\crack-seg\\images\\train\\1766.rf.909c4d1be9f9343c4a2f99e7f2228299.jpg",
+      "hamming_distance_63_bits": 20
+    },
+    {
+      "id": 446,
+      "sha256": "2aa7dd6218c1da7ebdb9d0377fadc842a3dce69f780a3c7e82216f5050cc63b9",
+      "nearest_training_path": "C:\\Users\\Niranjan\\.cache\\hallucination-aware-visual-inspection\\crack-seg\\images\\train\\3477.rf.c4cb851ecca9528b5b2c20946aad4729.jpg",
+      "hamming_distance_63_bits": 18
+    },
+    {
+      "id": 447,
+      "sha256": "fcfe2fc105dd564cd51e82bb8e554f7afce5f8fe9760ebb3feb16ddd3164f917",
+      "nearest_training_path": "C:\\Users\\Niranjan\\.cache\\hallucination-aware-visual-inspection\\crack-seg\\images\\train\\3489.rf.dbcb44a46fb5b1d248de0726c7548702.jpg",
+      "hamming_distance_63_bits": 16
+    },
+    {
+      "id": 448,
+      "sha256": "c8a4cdffea737504e77603685d2bde55bd7a4aad64d770b2ed87bde5b1e740fe",
+      "nearest_training_path": "C:\\Users\\Niranjan\\.cache\\hallucination-aware-visual-inspection\\crack-seg\\images\\train\\1946.rf.9d26e4c74e9386d10ddc06ab5f849d5f.jpg",
+      "hamming_distance_63_bits": 18
+    },
+    {
+      "id": 449,
+      "sha256": "62a535e7d68376c3a3a0c713a2729f15ac61040be454d200028b091d3d18ec9b",
+      "nearest_training_path": "C:\\Users\\Niranjan\\.cache\\hallucination-aware-visual-inspection\\crack-seg\\images\\train\\3127.rf.b13320e947185a43b068db7211f6029c.jpg",
+      "hamming_distance_63_bits": 20
+    },
+    {
+      "id": 450,
+      "sha256": "39792078c0147226b66e037a4a8609559f2174e32be53f4aa39231e90850e6bb",
+      "nearest_training_path": "C:\\Users\\Niranjan\\.cache\\hallucination-aware-visual-inspection\\crack-seg\\images\\train\\2130.rf.3c06fdd87db9a2f762de36a29acb5559.jpg",
+      "hamming_distance_63_bits": 20
+    },
+    {
+      "id": 451,
+      "sha256": "d6cefe8c453d694323cc9a6ebe045a8f716191bc0d75359172b3cf80e912431f",
+      "nearest_training_path": "C:\\Users\\Niranjan\\.cache\\hallucination-aware-visual-inspection\\crack-seg\\images\\train\\2052.rf.3ac072d2686c860531bc306f349a3011.jpg",
+      "hamming_distance_63_bits": 18
+    },
+    {
+      "id": 452,
+      "sha256": "6765d5ca978fa59fcd1e74a328d6d53cfaddc9e93d2965e292b0e5b5ca99100f",
+      "nearest_training_path": "C:\\Users\\Niranjan\\.cache\\hallucination-aware-visual-inspection\\crack-seg\\images\\train\\1726.rf.1e0ba547e6868619fe9234762b5fcf48.jpg",
+      "hamming_distance_63_bits": 16
+    },
+    {
+      "id": 453,
+      "sha256": "cb0a883d9dff30f85f6a773683100f5d26eb463d7a5f9268dc7ae1aa63257b16",
+      "nearest_training_path": "C:\\Users\\Niranjan\\.cache\\hallucination-aware-visual-inspection\\crack-seg\\images\\train\\2332.rf.bba865cd93d01c97830e64cc557140a7.jpg",
+      "hamming_distance_63_bits": 16
+    },
+    {
+      "id": 454,
+      "sha256": "0bc62b073537528df0237bec21d07e6cc8dea8d0a49b68ef8d81f39cefe60319",
+      "nearest_training_path": "C:\\Users\\Niranjan\\.cache\\hallucination-aware-visual-inspection\\crack-seg\\images\\train\\2450.rf.a4396352550a5ddd90b5bb3a50039891.jpg",
+      "hamming_distance_63_bits": 18
+    },
+    {
+      "id": 455,
+      "sha256": "fdc49caad758edebd042dc75539c5c817cf2da49fcd622e604237a8e70798eb1",
+      "nearest_training_path": "C:\\Users\\Niranjan\\.cache\\hallucination-aware-visual-inspection\\crack-seg\\images\\train\\1864.rf.4cec0a0c1b5040a935bf454ba293a5e5.jpg",
+      "hamming_distance_63_bits": 18
+    },
+    {
+      "id": 456,
+      "sha256": "cdaf6225d062468c46b9e3ba0993ed936ad38f5f7923f3065c40f5553dc654d3",
+      "nearest_training_path": "C:\\Users\\Niranjan\\.cache\\hallucination-aware-visual-inspection\\crack-seg\\images\\train\\2037.rf.aa870fc63effa083601028bc193a7475.jpg",
+      "hamming_distance_63_bits": 20
+    },
+    {
+      "id": 457,
+      "sha256": "799ee1a860e5304a38916a5e83a10d2910440d2b8a34b0a990635949371372dd",
+      "nearest_training_path": "C:\\Users\\Niranjan\\.cache\\hallucination-aware-visual-inspection\\crack-seg\\images\\train\\1816.rf.7c9f11884cbd0f3c194060d5ec5e84ce.jpg",
+      "hamming_distance_63_bits": 18
+    },
+    {
+      "id": 458,
+      "sha256": "a98d3ab3dc58e23e2432430592130dd301bc726efd516fd754b49623d7a182cf",
+      "nearest_training_path": "C:\\Users\\Niranjan\\.cache\\hallucination-aware-visual-inspection\\crack-seg\\images\\train\\1834.rf.e2c4fcd75a47fe26056a74fdf3274038.jpg",
+      "hamming_distance_63_bits": 16
+    },
+    {
+      "id": 459,
+      "sha256": "64dfbbad79199a1923918aaa0c685e822ec0263bc51851b64ab662d94357fc4c",
+      "nearest_training_path": "C:\\Users\\Niranjan\\.cache\\hallucination-aware-visual-inspection\\crack-seg\\images\\train\\1757.rf.1cab7a23b99eeb9bb216a9ae9477e89e.jpg",
+      "hamming_distance_63_bits": 18
+    },
+    {
+      "id": 460,
+      "sha256": "e1eadac7d16fffbc89ef61f2bab92b7206217bd4bf1ee245968e24f3284591c0",
+      "nearest_training_path": "C:\\Users\\Niranjan\\.cache\\hallucination-aware-visual-inspection\\crack-seg\\images\\train\\1325.rf.864b82f691696b95cf2ceb8acc59a95f.jpg",
+      "hamming_distance_63_bits": 20
+    },
+    {
+      "id": 461,
+      "sha256": "0ae4b73c3ee97f8842561ae9997addee23c2aec5d529a02c19831f7d4e955cc1",
+      "nearest_training_path": "C:\\Users\\Niranjan\\.cache\\hallucination-aware-visual-inspection\\crack-seg\\images\\train\\1325.rf.0d19fc1589f0f313ac12570c74d06395.jpg",
+      "hamming_distance_63_bits": 18
+    },
+    {
+      "id": 462,
+      "sha256": "9d7e67e5d33462dbbe6eff31df926bdd3f8c1e3c53e5c463aa6af1744b098a18",
+      "nearest_training_path": "C:\\Users\\Niranjan\\.cache\\hallucination-aware-visual-inspection\\crack-seg\\images\\train\\1607.rf.52e46bc49cfb43801a3de41ad2a3cff5.jpg",
+      "hamming_distance_63_bits": 20
+    },
+    {
+      "id": 463,
+      "sha256": "1b8832ca9573d2df8575fb67fc9a041f99bee64ba3dc3af2a9d442ebe2960aad",
+      "nearest_training_path": "C:\\Users\\Niranjan\\.cache\\hallucination-aware-visual-inspection\\crack-seg\\images\\train\\2340.rf.05bb78dc49e47fb58a0a9bc8d135d1db.jpg",
+      "hamming_distance_63_bits": 14
+    },
+    {
+      "id": 464,
+      "sha256": "b6df4dab9b7d9aada5f4e80edc8eab056a3cafa6c6297a34b61d45ef29169e3b",
+      "nearest_training_path": "C:\\Users\\Niranjan\\.cache\\hallucination-aware-visual-inspection\\crack-seg\\images\\train\\2282.rf.02bddcb4589bbed12da652f66f575a63.jpg",
+      "hamming_distance_63_bits": 18
+    },
+    {
+      "id": 465,
+      "sha256": "2f5df34d0110055306cff6c73534a89274b8c6a12a275d69634eebede8953be7",
+      "nearest_training_path": "C:\\Users\\Niranjan\\.cache\\hallucination-aware-visual-inspection\\crack-seg\\images\\train\\2208.rf.302256cb2976c10ae37a5b7da28f49ea.jpg",
+      "hamming_distance_63_bits": 20
+    },
+    {
+      "id": 466,
+      "sha256": "a4572bca004a6443e3588fdc9f9c43c68137ff7f7eb92df749249b9fa5f9ddce",
+      "nearest_training_path": "C:\\Users\\Niranjan\\.cache\\hallucination-aware-visual-inspection\\crack-seg\\images\\train\\1976.rf.28941468f28682ac593bf6a7238d0469.jpg",
+      "hamming_distance_63_bits": 18
+    },
+    {
+      "id": 467,
+      "sha256": "16dacdb4ec42b6e0b317b50dd137e520d8ddfdebbd4087ae4c9fd27fa5005061",
+      "nearest_training_path": "C:\\Users\\Niranjan\\.cache\\hallucination-aware-visual-inspection\\crack-seg\\images\\train\\1838.rf.fe6c0a15ff1edf01c5c83cca72d8aea8.jpg",
+      "hamming_distance_63_bits": 18
+    },
+    {
+      "id": 468,
+      "sha256": "0ccaf147e87093bab441de1b955ba8d67bfb049c37f0231b080e1e53a57e9bb1",
+      "nearest_training_path": "C:\\Users\\Niranjan\\.cache\\hallucination-aware-visual-inspection\\crack-seg\\images\\train\\2149.rf.46a2a3abf5a7fed538f65fdf9428d92e.jpg",
+      "hamming_distance_63_bits": 20
+    },
+    {
+      "id": 469,
+      "sha256": "014b576d51f0efdd48ac23894b836ddefb79e7893bef9541f6897e14d3e9693a",
+      "nearest_training_path": "C:\\Users\\Niranjan\\.cache\\hallucination-aware-visual-inspection\\crack-seg\\images\\train\\1725.rf.0abe9646dad74e7a7686462a73ae6d72.jpg",
+      "hamming_distance_63_bits": 20
+    },
+    {
+      "id": 470,
+      "sha256": "fb6e76a57e4b306090fb8a34e862cb01bf79558128dfeb5706f87358871fc557",
+      "nearest_training_path": "C:\\Users\\Niranjan\\.cache\\hallucination-aware-visual-inspection\\crack-seg\\images\\train\\1938.rf.29a01a948d1a06fcd8b3d19ebfa4dc09.jpg",
+      "hamming_distance_63_bits": 20
+    },
+    {
+      "id": 471,
+      "sha256": "22b30178eeade1cb8531f5baf0e091a8a14d3a0b505dacfac9efa2f4a37bd8bc",
+      "nearest_training_path": "C:\\Users\\Niranjan\\.cache\\hallucination-aware-visual-inspection\\crack-seg\\images\\train\\2505.rf.298da6ff1f03523cfe251d341db820f5.jpg",
+      "hamming_distance_63_bits": 20
+    },
+    {
+      "id": 472,
+      "sha256": "0523b0b9ec120045f94b232f3bc66383fca18d3090674787bc8dbf077619822b",
+      "nearest_training_path": "C:\\Users\\Niranjan\\.cache\\hallucination-aware-visual-inspection\\crack-seg\\images\\train\\2548.rf.0155513f2f83fa3e0cb41727ee6e4e07.jpg",
+      "hamming_distance_63_bits": 18
+    },
+    {
+      "id": 473,
+      "sha256": "29b717556ca51fc4103d3bfe2860acbe31d1c4baf9b6053cbac2ffdf6b761396",
+      "nearest_training_path": "C:\\Users\\Niranjan\\.cache\\hallucination-aware-visual-inspection\\crack-seg\\images\\train\\141.rf.71f47c1b3520508099526c83792fd835.jpg",
+      "hamming_distance_63_bits": 18
+    },
+    {
+      "id": 474,
+      "sha256": "dc3aa7be380f81a4639f153e974af566ecae00160b49e88e0663b37e93282a73",
+      "nearest_training_path": "C:\\Users\\Niranjan\\.cache\\hallucination-aware-visual-inspection\\crack-seg\\images\\train\\2216.rf.adbaf6b8c358f6254ba9dea07c1dc5c3.jpg",
+      "hamming_distance_63_bits": 18
+    },
+    {
+      "id": 475,
+      "sha256": "5995b60d727d601b2cbfe14abfaa1ccc6d8ae07146105581b98167b9c36e2673",
+      "nearest_training_path": "C:\\Users\\Niranjan\\.cache\\hallucination-aware-visual-inspection\\crack-seg\\images\\train\\3494.rf.7adf04cd709fb8a0a895d76b4c60047a.jpg",
+      "hamming_distance_63_bits": 18
+    },
+    {
+      "id": 476,
+      "sha256": "b20964d6600685b5f3fd0341360e41a09d4f43ec43351e08363144bedd2734a8",
+      "nearest_training_path": "C:\\Users\\Niranjan\\.cache\\hallucination-aware-visual-inspection\\crack-seg\\images\\train\\2423.rf.12b59bdf7c9089f4c355ce037e54bc05.jpg",
+      "hamming_distance_63_bits": 16
+    },
+    {
+      "id": 477,
+      "sha256": "f510dfdfb9d721f078478f6838b5478477dfd32e6583ac2a8ad998595659de7e",
+      "nearest_training_path": "C:\\Users\\Niranjan\\.cache\\hallucination-aware-visual-inspection\\crack-seg\\images\\train\\2044.rf.e1cab96be42b0571ae7ac645b5c8418f.jpg",
+      "hamming_distance_63_bits": 20
+    },
+    {
+      "id": 478,
+      "sha256": "69e667fc4a37fe1116a0671169e0d0269f9e88fc934939b31c467e851a8c8025",
+      "nearest_training_path": "C:\\Users\\Niranjan\\.cache\\hallucination-aware-visual-inspection\\crack-seg\\images\\train\\3406.rf.31b5ada47d2d732d3b4ae51b1933c8f5.jpg",
+      "hamming_distance_63_bits": 12
+    },
+    {
+      "id": 479,
+      "sha256": "edc42f1adcf175b988e8d93aff7b607a0bb07e90f501c3de072ca065fdb23855",
+      "nearest_training_path": "C:\\Users\\Niranjan\\.cache\\hallucination-aware-visual-inspection\\crack-seg\\images\\train\\2290.rf.42e50f3530c3db4fee11e77c5bb1b1a1.jpg",
+      "hamming_distance_63_bits": 20
+    },
+    {
+      "id": 480,
+      "sha256": "25e0b3cfb78c84fd4dac4d8aa69808cdd60be49b66311fa2bb39b6adbbefcfbc",
+      "nearest_training_path": "C:\\Users\\Niranjan\\.cache\\hallucination-aware-visual-inspection\\crack-seg\\images\\train\\2054.rf.db87a41ebb253a141fe710f21857ca7b.jpg",
+      "hamming_distance_63_bits": 20
+    },
+    {
+      "id": 481,
+      "sha256": "5e2a77cf92d40ea25061ecbc56e79d0fde04c68d67578c77e9d213c093581ea4",
+      "nearest_training_path": "C:\\Users\\Niranjan\\.cache\\hallucination-aware-visual-inspection\\crack-seg\\images\\train\\1760.rf.0f3db06b0b674724e5fe5428fda7f2a4.jpg",
+      "hamming_distance_63_bits": 22
+    },
+    {
+      "id": 482,
+      "sha256": "9db0f6556a0ce1946b26a7613e273560e9f74c022e5731b81a3a4c1cf69b55f1",
+      "nearest_training_path": "C:\\Users\\Niranjan\\.cache\\hallucination-aware-visual-inspection\\crack-seg\\images\\train\\1932.rf.a58329acd37f6934cda22bc62299e853.jpg",
+      "hamming_distance_63_bits": 20
+    },
+    {
+      "id": 483,
+      "sha256": "f39d7dd2f2a658cf743ddbaaffa6b29c1ebcd3720f95ae5d73566b42e6540450",
+      "nearest_training_path": "C:\\Users\\Niranjan\\.cache\\hallucination-aware-visual-inspection\\crack-seg\\images\\train\\1671.rf.bda46840c7123a78583cd6f3ad39c702.jpg",
+      "hamming_distance_63_bits": 18
+    },
+    {
+      "id": 484,
+      "sha256": "37338489cd4a1cbee11d5c37351004ff03c350c71b52f5c78733d24f3666203c",
+      "nearest_training_path": "C:\\Users\\Niranjan\\.cache\\hallucination-aware-visual-inspection\\crack-seg\\images\\train\\2471.rf.c51ca4ec1c83af340a23bc5420c375fd.jpg",
+      "hamming_distance_63_bits": 18
+    },
+    {
+      "id": 485,
+      "sha256": "be6776eea3a6a10176122f2366d8240537f345ddeed3506f14664351562e4a4a",
+      "nearest_training_path": "C:\\Users\\Niranjan\\.cache\\hallucination-aware-visual-inspection\\crack-seg\\images\\train\\3525.rf.5c02edeae45c5b1cbd4f302e4a3c8376.jpg",
+      "hamming_distance_63_bits": 14
+    },
+    {
+      "id": 486,
+      "sha256": "a6a04a1de444d2b1580efa096b6273b55da10056434782f67f42ae805f29eda4",
+      "nearest_training_path": "C:\\Users\\Niranjan\\.cache\\hallucination-aware-visual-inspection\\crack-seg\\images\\train\\2486.rf.c0f4c099aa9a666fdd15148b904c794f.jpg",
+      "hamming_distance_63_bits": 18
+    },
+    {
+      "id": 487,
+      "sha256": "b4240772ec898f394b0cdf70002323395f1af4462369d6f8f0f2f72a9b17c687",
+      "nearest_training_path": "C:\\Users\\Niranjan\\.cache\\hallucination-aware-visual-inspection\\crack-seg\\images\\train\\3431.rf.9d75a80d428a971eead257ad1bb5be4e.jpg",
+      "hamming_distance_63_bits": 14
+    },
+    {
+      "id": 488,
+      "sha256": "4dd18f4b8c97450ae7b3127fa37ef608d79cb9a0cc30175a40cb537ffa82a031",
+      "nearest_training_path": "C:\\Users\\Niranjan\\.cache\\hallucination-aware-visual-inspection\\crack-seg\\images\\train\\2383.rf.0befc46119bc352a28ee5b0fb1480d8f.jpg",
+      "hamming_distance_63_bits": 16
+    },
+    {
+      "id": 489,
+      "sha256": "cd316442d8e942bb689871fcee849dc358dde651651945ca73ee7cab1b796b34",
+      "nearest_training_path": "C:\\Users\\Niranjan\\.cache\\hallucination-aware-visual-inspection\\crack-seg\\images\\train\\1726.rf.2e01e0190ac241962448cd4c116926f6.jpg",
+      "hamming_distance_63_bits": 18
+    },
+    {
+      "id": 490,
+      "sha256": "8376ce11454673da8e8922450d014c5081e6757f98e61fc51541bc31820d6f00",
+      "nearest_training_path": "C:\\Users\\Niranjan\\.cache\\hallucination-aware-visual-inspection\\crack-seg\\images\\train\\3384.rf.4f3e122a68892007036e7e535e6533e6.jpg",
+      "hamming_distance_63_bits": 16
+    },
+    {
+      "id": 491,
+      "sha256": "9eac04c76a207e3852e4f23093f05c5bc48d706e664abdde21d3d4c493466852",
+      "nearest_training_path": "C:\\Users\\Niranjan\\.cache\\hallucination-aware-visual-inspection\\crack-seg\\images\\train\\1760.rf.ba2c1b605e61e4466911a6ac1aa568c3.jpg",
+      "hamming_distance_63_bits": 20
+    },
+    {
+      "id": 492,
+      "sha256": "79b1b5982970fef55b3619fb79c6393b56c30b1e0585f6c419f59e1c3325a54b",
+      "nearest_training_path": "C:\\Users\\Niranjan\\.cache\\hallucination-aware-visual-inspection\\crack-seg\\images\\train\\1638.rf.cb2a456c8746e4192ed3df0ad1d0399c.jpg",
+      "hamming_distance_63_bits": 18
+    },
+    {
+      "id": 493,
+      "sha256": "d81ad6f91d953537e840689fe20bbb8481b89f9b575cac7cad54ea4e3512d778",
+      "nearest_training_path": "C:\\Users\\Niranjan\\.cache\\hallucination-aware-visual-inspection\\crack-seg\\images\\train\\1608.rf.441905469633874fdd2fba0cb5bf3ce5.jpg",
+      "hamming_distance_63_bits": 20
+    },
+    {
+      "id": 494,
+      "sha256": "693982a851d56e287deff5e4c535e2909c684f2a7ee031a5dd65c7fdf9173784",
+      "nearest_training_path": "C:\\Users\\Niranjan\\.cache\\hallucination-aware-visual-inspection\\crack-seg\\images\\train\\2231.rf.03eea48546d84422d8235be29df2b8cf.jpg",
+      "hamming_distance_63_bits": 18
+    },
+    {
+      "id": 495,
+      "sha256": "b8a09097587ad47c75a6009c58df48d8ef84218a81e4f79f838358f79eb423e6",
+      "nearest_training_path": "C:\\Users\\Niranjan\\.cache\\hallucination-aware-visual-inspection\\crack-seg\\images\\train\\2445.rf.b338eceb4a65d31300f30da9156da72e.jpg",
+      "hamming_distance_63_bits": 20
+    },
+    {
+      "id": 496,
+      "sha256": "191bc4891712e317fc773d3d4b480263708f5ad3189b9f9b3a574f83d98576ab",
+      "nearest_training_path": "C:\\Users\\Niranjan\\.cache\\hallucination-aware-visual-inspection\\crack-seg\\images\\train\\2480.rf.5f2195334adf98a8c2328d86862d93d0.jpg",
+      "hamming_distance_63_bits": 16
+    },
+    {
+      "id": 497,
+      "sha256": "9a2a18cb284d9f4edd4db12fa9bd507d6cc745e56d07c21fd4e9b96edc28a85b",
+      "nearest_training_path": "C:\\Users\\Niranjan\\.cache\\hallucination-aware-visual-inspection\\crack-seg\\images\\train\\2395.rf.4ff0f7cf56f7da56f5245f780a06efa7.jpg",
+      "hamming_distance_63_bits": 18
+    },
+    {
+      "id": 498,
+      "sha256": "a16c23d59eebe7ca70ff29f7654ba848dc832faaa3b31cd08bbbbfd13fcc4178",
+      "nearest_training_path": "C:\\Users\\Niranjan\\.cache\\hallucination-aware-visual-inspection\\crack-seg\\images\\train\\3426.rf.2c43c403702450aa238e9faa2e63f801.jpg",
+      "hamming_distance_63_bits": 18
+    },
+    {
+      "id": 499,
+      "sha256": "507db4604df9a83aeccb201566234b1a2d92a8969d5015be71dae781e1125153",
+      "nearest_training_path": "C:\\Users\\Niranjan\\.cache\\hallucination-aware-visual-inspection\\crack-seg\\images\\train\\2075.rf.e1136f38bc68400a841a8e7dc0928970.jpg",
+      "hamming_distance_63_bits": 20
+    },
+    {
+      "id": 500,
+      "sha256": "7769402ac48f92f72e7de30649dbf151096532ff3398855c5b59e95818706b43",
+      "nearest_training_path": "C:\\Users\\Niranjan\\.cache\\hallucination-aware-visual-inspection\\crack-seg\\images\\train\\2202.rf.9c68a8c0bbc505d4f3d80ac5510effee.jpg",
+      "hamming_distance_63_bits": 18
+    },
+    {
+      "id": 501,
+      "sha256": "02fd2a304b698496df6060e8f0b25cf8ce23213b771794ae6daf20113b091da1",
+      "nearest_training_path": "C:\\Users\\Niranjan\\.cache\\hallucination-aware-visual-inspection\\crack-seg\\images\\train\\1719.rf.7ac4890e7f93ed27230529bb79d6e9ea.jpg",
+      "hamming_distance_63_bits": 16
+    },
+    {
+      "id": 502,
+      "sha256": "c3ec047b544e00d424c31d57dc97a74c922d4245d1fc6a4f7ed7f7845d16926a",
+      "nearest_training_path": "C:\\Users\\Niranjan\\.cache\\hallucination-aware-visual-inspection\\crack-seg\\images\\train\\3589.rf.47f53894a26eff531a5b0537b86804d0.jpg",
+      "hamming_distance_63_bits": 18
+    },
+    {
+      "id": 503,
+      "sha256": "c6e3df071b4d7887e9a85b24c5ddc3b9ad0856e51d0b3eac9b6138bc28e2a960",
+      "nearest_training_path": "C:\\Users\\Niranjan\\.cache\\hallucination-aware-visual-inspection\\crack-seg\\images\\train\\2336.rf.94dc82cd6567811503e6c6fea6c37907.jpg",
+      "hamming_distance_63_bits": 20
+    },
+    {
+      "id": 504,
+      "sha256": "76af9bc2dc920b8cdb58b2bb2838eadb804737e8e51bc6bf04014f25103e58aa",
+      "nearest_training_path": "C:\\Users\\Niranjan\\.cache\\hallucination-aware-visual-inspection\\crack-seg\\images\\train\\1411.rf.a8dcca872ac879c9649cc33732f100e0.jpg",
+      "hamming_distance_63_bits": 16
+    },
+    {
+      "id": 505,
+      "sha256": "b404bc8f3bc4c7207501bfb72de044954c38bd0308506b35c2f747eae628f4db",
+      "nearest_training_path": "C:\\Users\\Niranjan\\.cache\\hallucination-aware-visual-inspection\\crack-seg\\images\\train\\2036.rf.984301e25e6713d79f90395d9a7fc0cb.jpg",
+      "hamming_distance_63_bits": 16
+    },
+    {
+      "id": 506,
+      "sha256": "4fea90cd3d5154ae1b40fce42d4350d169be787b0a6dd27fbd963778340fbfeb",
+      "nearest_training_path": "C:\\Users\\Niranjan\\.cache\\hallucination-aware-visual-inspection\\crack-seg\\images\\train\\1955.rf.08096c124917897385fa6a147fb7917d.jpg",
+      "hamming_distance_63_bits": 20
+    },
+    {
+      "id": 507,
+      "sha256": "a20235efbfc060b0cf9aadc477ffc6aa130443b664511e0cd83e2ed38c92c8f2",
+      "nearest_training_path": "C:\\Users\\Niranjan\\.cache\\hallucination-aware-visual-inspection\\crack-seg\\images\\train\\1316.rf.b90e096be1d4acb29a68b60d250328ef.jpg",
+      "hamming_distance_63_bits": 20
+    },
+    {
+      "id": 508,
+      "sha256": "99cfbb2713912d1b6b2d0f4da15ad7d778c708c94ff3aec703794c8387340ec4",
+      "nearest_training_path": "C:\\Users\\Niranjan\\.cache\\hallucination-aware-visual-inspection\\crack-seg\\images\\train\\2082.rf.69f70c2f45fb3ab968b9d63ab23b1636.jpg",
+      "hamming_distance_63_bits": 18
+    },
+    {
+      "id": 509,
+      "sha256": "6deca3c4f4f1372af54757fe5df10454cba6c2f826d59e3d8665a3e3c3d0e643",
+      "nearest_training_path": "C:\\Users\\Niranjan\\.cache\\hallucination-aware-visual-inspection\\crack-seg\\images\\train\\3830.rf.5160c8a0a033827dce5dd113e53e495c.jpg",
+      "hamming_distance_63_bits": 20
+    },
+    {
+      "id": 510,
+      "sha256": "eb4b67b6186cff9afcf219b9a66c7093baceca57ccdaf8153644a8d21c0ab0c2",
+      "nearest_training_path": "C:\\Users\\Niranjan\\.cache\\hallucination-aware-visual-inspection\\crack-seg\\images\\train\\2183.rf.bf814074f441a7dc144c07e483cc8ff9.jpg",
+      "hamming_distance_63_bits": 18
+    }
+  ],
+  "scope": "63-bit grayscale DCT perceptual hash, original and mirror. Screening only; no guarantee against crops, transformations or unseen pretraining. No sampled image removed based on this screen."
+}

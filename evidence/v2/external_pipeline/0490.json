@@ -1,0 +1,138 @@
+{
+  "id": 490,
+  "positive": false,
+  "seed": 20261397,
+  "calibration_sha256": "23717b8127e17f2aca75d93901e1574d6b66addad3e6036f05d0add6003dbaff",
+  "cached_detector_seconds": 2.8299071000001277,
+  "schema_version": "1.0",
+  "detected": true,
+  "confidence": 0.0667429443448782,
+  "raw_confidence": 0.0656346008181572,
+  "variance": 0.04708948306611837,
+  "box": [
+    23.89861488342285,
+    54.9461784362793,
+    76.56843566894531,
+    88.47188568115234
+  ],
+  "hallucination_risk": "High",
+  "tta_confidences": [
+    0.0656346008181572,
+    0.03706027567386627,
+    0.04881133511662483,
+    0.15704482793807983,
+    0.02516368217766285
+  ],
+  "tta_names": [
+    "original",
+    "horizontal_flip",
+    "brightness_0.8",
+    "contrast_1.15",
+    "rotation_+3"
+  ],
+  "uncertainty_metric": "population_standard_deviation_of_tta_confidence",
+  "thresholds": {
+    "confidence": 0.35,
+    "variance": 0.016384084442903905,
+    "high_risk_variance": 0.02457612666435586,
+    "detector_floor": 0.01
+  },
+  "decision_trace": {
+    "base_detection_present": true,
+    "confidence_passed": false,
+    "uncertainty_passed": false,
+    "risk": "High",
+    "gate_permitted": false
+  },
+  "detection_id": 0,
+  "normalized_image_sha256": "98099b35afa43b3d40d505c8b8935ef0975b834c4da231047c552d1e3d3dc5e1",
+  "models": {
+    "detector": "crack_yolov8s_best.pt",
+    "vlm": "vikhyatk/moondream2",
+    "vlm_revision": "2024-08-26"
+  },
+  "runtime": {
+    "device": "cpu",
+    "detector_dtype": "float32",
+    "vlm_dtype": "float32"
+  },
+  "vlm_called": false,
+  "vlm_succeeded": false,
+  "vlm_error": null,
+  "crop_box": null,
+  "explanation": "Region 1 (High): Explanation withheld \u2014 flagged for human review",
+  "gate_log": "1 REGIONS: 0 VLM CALLS",
+  "gate_reason": "Each region has an independent gate; image risk is the highest region risk. Scalar confidence and box describe the top region.",
+  "processing_time": 0.003246700000090641,
+  "detections": [
+    {
+      "schema_version": "1.0",
+      "detected": true,
+      "confidence": 0.0667429443448782,
+      "raw_confidence": 0.0656346008181572,
+      "variance": 0.04708948306611837,
+      "box": [
+        23.89861488342285,
+        54.9461784362793,
+        76.56843566894531,
+        88.47188568115234
+      ],
+      "hallucination_risk": "High",
+      "tta_confidences": [
+        0.0656346008181572,
+        0.03706027567386627,
+        0.04881133511662483,
+        0.15704482793807983,
+        0.02516368217766285
+      ],
+      "tta_names": [
+        "original",
+        "horizontal_flip",
+        "brightness_0.8",
+        "contrast_1.15",
+        "rotation_+3"
+      ],
+      "uncertainty_metric": "population_standard_deviation_of_tta_confidence",
+      "thresholds": {
+        "confidence": 0.35,
+        "variance": 0.016384084442903905,
+        "high_risk_variance": 0.02457612666435586,
+        "detector_floor": 0.01
+      },
+      "decision_trace": {
+        "base_detection_present": true,
+        "confidence_passed": false,
+        "uncertainty_passed": false,
+        "risk": "High",
+        "gate_permitted": false
+      },
+      "detection_id": 0,
+      "normalized_image_sha256": "98099b35afa43b3d40d505c8b8935ef0975b834c4da231047c552d1e3d3dc5e1",
+      "models": {
+        "detector": "crack_yolov8s_best.pt",
+        "vlm": "vikhyatk/moondream2",
+        "vlm_revision": "2024-08-26"
+      },
+      "runtime": {
+        "device": "cpu",
+        "detector_dtype": "float32",
+        "vlm_dtype": "float32"
+      },
+      "vlm_called": false,
+      "vlm_succeeded": false,
+      "vlm_error": null,
+      "crop_box": null,
+      "explanation": "Explanation withheld \u2014 flagged for human review",
+      "gate_log": "VLM SKIPPED: HIGH RISK",
+      "gate_reason": "Explanation withheld because calibrated confidence or TTA stability did not satisfy the Low-risk gate.",
+      "processing_time": 0.000584299999900395
+    }
+  ],
+  "pass_box_counts": [
+    1,
+    5,
+    1,
+    2,
+    1
+  ]
+}

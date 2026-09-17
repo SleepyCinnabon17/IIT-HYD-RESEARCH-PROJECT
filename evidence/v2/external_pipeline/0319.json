@@ -1,0 +1,510 @@
+{
+  "id": 319,
+  "positive": true,
+  "seed": 20261226,
+  "calibration_sha256": "23717b8127e17f2aca75d93901e1574d6b66addad3e6036f05d0add6003dbaff",
+  "cached_detector_seconds": 2.3565565000008064,
+  "schema_version": "1.0",
+  "detected": true,
+  "confidence": 0.11262237429618835,
+  "raw_confidence": 0.11900274455547333,
+  "variance": 0.02023218607087815,
+  "box": [
+    226.92221069335938,
+    103.37931823730469,
+    255.95394897460938,
+    255.4764862060547
+  ],
+  "hallucination_risk": "Medium",
+  "tta_confidences": [
+    0.11900274455547333,
+    0.0962364599108696,
+    0.10926810652017593,
+    0.14791177213191986,
+    0.09069278836250305
+  ],
+  "tta_names": [
+    "original",
+    "horizontal_flip",
+    "brightness_0.8",
+    "contrast_1.15",
+    "rotation_+3"
+  ],
+  "uncertainty_metric": "population_standard_deviation_of_tta_confidence",
+  "thresholds": {
+    "confidence": 0.35,
+    "variance": 0.016384084442903905,
+    "high_risk_variance": 0.02457612666435586,
+    "detector_floor": 0.01
+  },
+  "decision_trace": {
+    "base_detection_present": true,
+    "confidence_passed": false,
+    "uncertainty_passed": false,
+    "risk": "Medium",
+    "gate_permitted": false
+  },
+  "detection_id": 0,
+  "normalized_image_sha256": "2264d52b654c251fddcbe8356d6d780aef429c35530a94abd676f8da57458965",
+  "models": {
+    "detector": "crack_yolov8s_best.pt",
+    "vlm": "vikhyatk/moondream2",
+    "vlm_revision": "2024-08-26"
+  },
+  "runtime": {
+    "device": "cpu",
+    "detector_dtype": "float32",
+    "vlm_dtype": "float32"
+  },
+  "vlm_called": false,
+  "vlm_succeeded": false,
+  "vlm_error": null,
+  "crop_box": null,
+  "explanation": "Region 1 (Medium): Explanation withheld \u2014 flagged for human review\nRegion 2 (Medium): Explanation withheld \u2014 flagged for human review\nRegion 3 (Medium): Explanation withheld \u2014 flagged for human review\nRegion 4 (Medium): Explanation withheld \u2014 flagged for human review\nRegion 5 (Medium): Explanation withheld \u2014 flagged for human review\nRegion 6 (Medium): Explanation withheld \u2014 flagged for human review\nRegion 7 (Medium): Explanation withheld \u2014 flagged for human review",
+  "gate_log": "7 REGIONS: 0 VLM CALLS",
+  "gate_reason": "Each region has an independent gate; image risk is the highest region risk. Scalar confidence and box describe the top region.",
+  "processing_time": 0.008202699998946628,
+  "detections": [
+    {
+      "schema_version": "1.0",
+      "detected": true,
+      "confidence": 0.11262237429618835,
+      "raw_confidence": 0.11900274455547333,
+      "variance": 0.02023218607087815,
+      "box": [
+        226.92221069335938,
+        103.37931823730469,
+        255.95394897460938,
+        255.4764862060547
+      ],
+      "hallucination_risk": "Medium",
+      "tta_confidences": [
+        0.11900274455547333,
+        0.0962364599108696,
+        0.10926810652017593,
+        0.14791177213191986,
+        0.09069278836250305
+      ],
+      "tta_names": [
+        "original",
+        "horizontal_flip",
+        "brightness_0.8",
+        "contrast_1.15",
+        "rotation_+3"
+      ],
+      "uncertainty_metric": "population_standard_deviation_of_tta_confidence",
+      "thresholds": {
+        "confidence": 0.35,
+        "variance": 0.016384084442903905,
+        "high_risk_variance": 0.02457612666435586,
+        "detector_floor": 0.01
+      },
+      "decision_trace": {
+        "base_detection_present": true,
+        "confidence_passed": false,
+        "uncertainty_passed": false,
+        "risk": "Medium",
+        "gate_permitted": false
+      },
+      "detection_id": 0,
+      "normalized_image_sha256": "2264d52b654c251fddcbe8356d6d780aef429c35530a94abd676f8da57458965",
+      "models": {
+        "detector": "crack_yolov8s_best.pt",
+        "vlm": "vikhyatk/moondream2",
+        "vlm_revision": "2024-08-26"
+      },
+      "runtime": {
+        "device": "cpu",
+        "detector_dtype": "float32",
+        "vlm_dtype": "float32"
+      },
+      "vlm_called": false,
+      "vlm_succeeded": false,
+      "vlm_error": null,
+      "crop_box": null,
+      "explanation": "Explanation withheld \u2014 flagged for human review",
+      "gate_log": "VLM SKIPPED: MEDIUM RISK",
+      "gate_reason": "Explanation withheld because calibrated confidence or TTA stability did not satisfy the Low-risk gate.",
+      "processing_time": 0.00048439999955007806
+    },
+    {
+      "schema_version": "1.0",
+      "detected": true,
+      "confidence": 0.04010743293911219,
+      "raw_confidence": 0.045229386538267136,
+      "variance": 0.013054403080345897,
+      "box": [
+        227.712890625,
+        131.5919189453125,
+        256.0,
+        199.94039916992188
+      ],
+      "hallucination_risk": "Medium",
+      "tta_confidences": [
+        0.045229386538267136,
+        0.04574472829699516,
+        0.05162792652845383,
+        0.043340425938367844,
+        0.014594697393476963
+      ],
+      "tta_names": [
+        "original",
+        "horizontal_flip",
+        "brightness_0.8",
+        "contrast_1.15",
+        "rotation_+3"
+      ],
+      "uncertainty_metric": "population_standard_deviation_of_tta_confidence",
+      "thresholds": {
+        "confidence": 0.35,
+        "variance": 0.016384084442903905,
+        "high_risk_variance": 0.02457612666435586,
+        "detector_floor": 0.01
+      },
+      "decision_trace": {
+        "base_detection_present": true,
+        "confidence_passed": false,
+        "uncertainty_passed": true,
+        "risk": "Medium",
+        "gate_permitted": false
+      },
+      "detection_id": 1,
+      "normalized_image_sha256": "2264d52b654c251fddcbe8356d6d780aef429c35530a94abd676f8da57458965",
+      "models": {
+        "detector": "crack_yolov8s_best.pt",
+        "vlm": "vikhyatk/moondream2",
+        "vlm_revision": "2024-08-26"
+      },
+      "runtime": {
+        "device": "cpu",
+        "detector_dtype": "float32",
+        "vlm_dtype": "float32"
+      },
+      "vlm_called": false,
+      "vlm_succeeded": false,
+      "vlm_error": null,
+      "crop_box": null,
+      "explanation": "Explanation withheld \u2014 flagged for human review",
+      "gate_log": "VLM SKIPPED: MEDIUM RISK",
+      "gate_reason": "Explanation withheld because calibrated confidence or TTA stability did not satisfy the Low-risk gate.",
+      "processing_time": 0.00041880000026139896
+    },
+    {
+      "schema_version": "1.0",
+      "detected": true,
+      "confidence": 0.0354288399219513,
+      "raw_confidence": 0.04331318289041519,
+      "variance": 0.021515099594987826,
+      "box": [
+        212.48348999023438,
+        90.75534057617188,
+        255.69735717773438,
+        255.4905548095703
+      ],
+      "hallucination_risk": "Medium",
+      "tta_confidences": [
+        0.04331318289041519,
+        0.0,
+        0.03415858373045921,
+        0.06687108427286148,
+        0.032801348716020584
+      ],
+      "tta_names": [
+        "original",
+        "horizontal_flip",
+        "brightness_0.8",
+        "contrast_1.15",
+        "rotation_+3"
+      ],
+      "uncertainty_metric": "population_standard_deviation_of_tta_confidence",
+      "thresholds": {
+        "confidence": 0.35,
+        "variance": 0.016384084442903905,
+        "high_risk_variance": 0.02457612666435586,
+        "detector_floor": 0.01
+      },
+      "decision_trace": {
+        "base_detection_present": true,
+        "confidence_passed": false,
+        "uncertainty_passed": false,
+        "risk": "Medium",
+        "gate_permitted": false
+      },
+      "detection_id": 2,
+      "normalized_image_sha256": "2264d52b654c251fddcbe8356d6d780aef429c35530a94abd676f8da57458965",
+      "models": {
+        "detector": "crack_yolov8s_best.pt",
+        "vlm": "vikhyatk/moondream2",
+        "vlm_revision": "2024-08-26"
+      },
+      "runtime": {
+        "device": "cpu",
+        "detector_dtype": "float32",
+        "vlm_dtype": "float32"
+      },
+      "vlm_called": false,
+      "vlm_succeeded": false,
+      "vlm_error": null,
+      "crop_box": null,
+      "explanation": "Explanation withheld \u2014 flagged for human review",
+      "gate_log": "VLM SKIPPED: MEDIUM RISK",
+      "gate_reason": "Explanation withheld because calibrated confidence or TTA stability did not satisfy the Low-risk gate.",
+      "processing_time": 0.00042690000009315554
+    },
+    {
+      "schema_version": "1.0",
+      "detected": true,
+      "confidence": 0.025443685799837114,
+      "raw_confidence": 0.038860540837049484,
+      "variance": 0.014105289801370524,
+      "box": [
+        230.40908813476562,
+        127.67919921875,
+        255.9944305419922,
+        183.98928833007812
+      ],
+      "hallucination_risk": "Medium",
+      "tta_confidences": [
+        0.038860540837049484,
+        0.0,
+        0.03497415781021118,
+        0.03275227174162865,
+        0.02063145861029625
+      ],
+      "tta_names": [
+        "original",
+        "horizontal_flip",
+        "brightness_0.8",
+        "contrast_1.15",
+        "rotation_+3"
+      ],
+      "uncertainty_metric": "population_standard_deviation_of_tta_confidence",
+      "thresholds": {
+        "confidence": 0.35,
+        "variance": 0.016384084442903905,
+        "high_risk_variance": 0.02457612666435586,
+        "detector_floor": 0.01
+      },
+      "decision_trace": {
+        "base_detection_present": true,
+        "confidence_passed": false,
+        "uncertainty_passed": true,
+        "risk": "Medium",
+        "gate_permitted": false
+      },
+      "detection_id": 3,
+      "normalized_image_sha256": "2264d52b654c251fddcbe8356d6d780aef429c35530a94abd676f8da57458965",
+      "models": {
+        "detector": "crack_yolov8s_best.pt",
+        "vlm": "vikhyatk/moondream2",
+        "vlm_revision": "2024-08-26"
+      },
+      "runtime": {
+        "device": "cpu",
+        "detector_dtype": "float32",
+        "vlm_dtype": "float32"
+      },
+      "vlm_called": false,
+      "vlm_succeeded": false,
+      "vlm_error": null,
+      "crop_box": null,
+      "explanation": "Explanation withheld \u2014 flagged for human review",
+      "gate_log": "VLM SKIPPED: MEDIUM RISK",
+      "gate_reason": "Explanation withheld because calibrated confidence or TTA stability did not satisfy the Low-risk gate.",
+      "processing_time": 0.00045899999895482324
+    },
+    {
+      "schema_version": "1.0",
+      "detected": true,
+      "confidence": 0.018080104514956473,
+      "raw_confidence": 0.024132391437888145,
+      "variance": 0.009839623110553206,
+      "box": [
+        35.83060836791992,
+        233.343994140625,
+        54.43638229370117,
+        255.9619598388672
+      ],
+      "hallucination_risk": "Medium",
+      "tta_confidences": [
+        0.024132391437888145,
+        0.01584991253912449,
+        0.022567955777049065,
+        0.027850262820720673,
+        0.0
+      ],
+      "tta_names": [
+        "original",
+        "horizontal_flip",
+        "brightness_0.8",
+        "contrast_1.15",
+        "rotation_+3"
+      ],
+      "uncertainty_metric": "population_standard_deviation_of_tta_confidence",
+      "thresholds": {
+        "confidence": 0.35,
+        "variance": 0.016384084442903905,
+        "high_risk_variance": 0.02457612666435586,
+        "detector_floor": 0.01
+      },
+      "decision_trace": {
+        "base_detection_present": true,
+        "confidence_passed": false,
+        "uncertainty_passed": true,
+        "risk": "Medium",
+        "gate_permitted": false
+      },
+      "detection_id": 4,
+      "normalized_image_sha256": "2264d52b654c251fddcbe8356d6d780aef429c35530a94abd676f8da57458965",
+      "models": {
+        "detector": "crack_yolov8s_best.pt",
+        "vlm": "vikhyatk/moondream2",
+        "vlm_revision": "2024-08-26"
+      },
+      "runtime": {
+        "device": "cpu",
+        "detector_dtype": "float32",
+        "vlm_dtype": "float32"
+      },
+      "vlm_called": false,
+      "vlm_succeeded": false,
+      "vlm_error": null,
+      "crop_box": null,
+      "explanation": "Explanation withheld \u2014 flagged for human review",
+      "gate_log": "VLM SKIPPED: MEDIUM RISK",
+      "gate_reason": "Explanation withheld because calibrated confidence or TTA stability did not satisfy the Low-risk gate.",
+      "processing_time": 0.00042349999966972973
+    },
+    {
+      "schema_version": "1.0",
+      "detected": true,
+      "confidence": 0.01789750773459673,
+      "raw_confidence": 0.019950328394770622,
+      "variance": 0.01106220712278763,
+      "box": [
+        1.1857070922851562,
+        0.07159881293773651,
+        20.50445556640625,
+        25.375167846679688
+      ],
+      "hallucination_risk": "Medium",
+      "tta_confidences": [
+        0.019950328394770622,
+        0.0,
+        0.013528387062251568,
+        0.0223502516746521,
+        0.03365857154130936
+      ],
+      "tta_names": [
+        "original",
+        "horizontal_flip",
+        "brightness_0.8",
+        "contrast_1.15",
+        "rotation_+3"
+      ],
+      "uncertainty_metric": "population_standard_deviation_of_tta_confidence",
+      "thresholds": {
+        "confidence": 0.35,
+        "variance": 0.016384084442903905,
+        "high_risk_variance": 0.02457612666435586,
+        "detector_floor": 0.01
+      },
+      "decision_trace": {
+        "base_detection_present": true,
+        "confidence_passed": false,
+        "uncertainty_passed": true,
+        "risk": "Medium",
+        "gate_permitted": false
+      },
+      "detection_id": 5,
+      "normalized_image_sha256": "2264d52b654c251fddcbe8356d6d780aef429c35530a94abd676f8da57458965",
+      "models": {
+        "detector": "crack_yolov8s_best.pt",
+        "vlm": "vikhyatk/moondream2",
+        "vlm_revision": "2024-08-26"
+      },
+      "runtime": {
+        "device": "cpu",
+        "detector_dtype": "float32",
+        "vlm_dtype": "float32"
+      },
+      "vlm_called": false,
+      "vlm_succeeded": false,
+      "vlm_error": null,
+      "crop_box": null,
+      "explanation": "Explanation withheld \u2014 flagged for human review",
+      "gate_log": "VLM SKIPPED: MEDIUM RISK",
+      "gate_reason": "Explanation withheld because calibrated confidence or TTA stability did not satisfy the Low-risk gate.",
+      "processing_time": 0.0004242000013618963
+    },
+    {
+      "schema_version": "1.0",
+      "detected": true,
+      "confidence": 0.008548052981495857,
+      "raw_confidence": 0.013217310421168804,
+      "variance": 0.007084869564463384,
+      "box": [
+        227.3652801513672,
+        132.23733520507812,
+        255.84927368164062,
+        234.960205078125
+      ],
+      "hallucination_risk": "Medium",
+      "tta_confidences": [
+        0.013217310421168804,
+        0.0,
+        0.01646782085299492,
+        0.013055133633315563,
+        0.0
+      ],
+      "tta_names": [
+        "original",
+        "horizontal_flip",
+        "brightness_0.8",
+        "contrast_1.15",
+        "rotation_+3"
+      ],
+      "uncertainty_metric": "population_standard_deviation_of_tta_confidence",
+      "thresholds": {
+        "confidence": 0.35,
+        "variance": 0.016384084442903905,
+        "high_risk_variance": 0.02457612666435586,
+        "detector_floor": 0.01
+      },
+      "decision_trace": {
+        "base_detection_present": true,
+        "confidence_passed": false,
+        "uncertainty_passed": true,
+        "risk": "Medium",
+        "gate_permitted": false
+      },
+      "detection_id": 6,
+      "normalized_image_sha256": "2264d52b654c251fddcbe8356d6d780aef429c35530a94abd676f8da57458965",
+      "models": {
+        "detector": "crack_yolov8s_best.pt",
+        "vlm": "vikhyatk/moondream2",
+        "vlm_revision": "2024-08-26"
+      },
+      "runtime": {
+        "device": "cpu",
+        "detector_dtype": "float32",
+        "vlm_dtype": "float32"
+      },
+      "vlm_called": false,
+      "vlm_succeeded": false,
+      "vlm_error": null,
+      "crop_box": null,
+      "explanation": "Explanation withheld \u2014 flagged for human review",
+      "gate_log": "VLM SKIPPED: MEDIUM RISK",
+      "gate_reason": "Explanation withheld because calibrated confidence or TTA stability did not satisfy the Low-risk gate.",
+      "processing_time": 0.0003911000003427034
+    }
+  ],
+  "pass_box_counts": [
+    7,
+    3,
+    7,
+    7,
+    6
+  ]
+}

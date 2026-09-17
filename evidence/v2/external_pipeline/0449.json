@@ -1,0 +1,324 @@
+{
+  "id": 449,
+  "positive": false,
+  "seed": 20261356,
+  "calibration_sha256": "23717b8127e17f2aca75d93901e1574d6b66addad3e6036f05d0add6003dbaff",
+  "cached_detector_seconds": 3.403960300000108,
+  "schema_version": "1.0",
+  "detected": true,
+  "confidence": 0.041068199649453165,
+  "raw_confidence": 0.07747139781713486,
+  "variance": 0.030393096949095585,
+  "box": [
+    37.415199279785156,
+    240.63119506835938,
+    172.51344299316406,
+    255.980712890625
+  ],
+  "hallucination_risk": "High",
+  "tta_confidences": [
+    0.07747139781713486,
+    0.0,
+    0.07269714772701263,
+    0.016563652083277702,
+    0.03860880061984062
+  ],
+  "tta_names": [
+    "original",
+    "horizontal_flip",
+    "brightness_0.8",
+    "contrast_1.15",
+    "rotation_+3"
+  ],
+  "uncertainty_metric": "population_standard_deviation_of_tta_confidence",
+  "thresholds": {
+    "confidence": 0.35,
+    "variance": 0.016384084442903905,
+    "high_risk_variance": 0.02457612666435586,
+    "detector_floor": 0.01
+  },
+  "decision_trace": {
+    "base_detection_present": true,
+    "confidence_passed": false,
+    "uncertainty_passed": false,
+    "risk": "High",
+    "gate_permitted": false
+  },
+  "detection_id": 0,
+  "normalized_image_sha256": "f02a64ea69112ba1bc3575dba5bafae182dac3439722620430187dadaca6a965",
+  "models": {
+    "detector": "crack_yolov8s_best.pt",
+    "vlm": "vikhyatk/moondream2",
+    "vlm_revision": "2024-08-26"
+  },
+  "runtime": {
+    "device": "cpu",
+    "detector_dtype": "float32",
+    "vlm_dtype": "float32"
+  },
+  "vlm_called": false,
+  "vlm_succeeded": false,
+  "vlm_error": null,
+  "crop_box": null,
+  "explanation": "Region 1 (High): Explanation withheld \u2014 flagged for human review\nRegion 2 (High): Explanation withheld \u2014 flagged for human review\nRegion 3 (High): Explanation withheld \u2014 flagged for human review\nRegion 4 (Medium): Explanation withheld \u2014 flagged for human review",
+  "gate_log": "4 REGIONS: 0 VLM CALLS",
+  "gate_reason": "Each region has an independent gate; image risk is the highest region risk. Scalar confidence and box describe the top region.",
+  "processing_time": 0.012156800001321244,
+  "detections": [
+    {
+      "schema_version": "1.0",
+      "detected": true,
+      "confidence": 0.041068199649453165,
+      "raw_confidence": 0.07747139781713486,
+      "variance": 0.030393096949095585,
+      "box": [
+        37.415199279785156,
+        240.63119506835938,
+        172.51344299316406,
+        255.980712890625
+      ],
+      "hallucination_risk": "High",
+      "tta_confidences": [
+        0.07747139781713486,
+        0.0,
+        0.07269714772701263,
+        0.016563652083277702,
+        0.03860880061984062
+      ],
+      "tta_names": [
+        "original",
+        "horizontal_flip",
+        "brightness_0.8",
+        "contrast_1.15",
+        "rotation_+3"
+      ],
+      "uncertainty_metric": "population_standard_deviation_of_tta_confidence",
+      "thresholds": {
+        "confidence": 0.35,
+        "variance": 0.016384084442903905,
+        "high_risk_variance": 0.02457612666435586,
+        "detector_floor": 0.01
+      },
+      "decision_trace": {
+        "base_detection_present": true,
+        "confidence_passed": false,
+        "uncertainty_passed": false,
+        "risk": "High",
+        "gate_permitted": false
+      },
+      "detection_id": 0,
+      "normalized_image_sha256": "f02a64ea69112ba1bc3575dba5bafae182dac3439722620430187dadaca6a965",
+      "models": {
+        "detector": "crack_yolov8s_best.pt",
+        "vlm": "vikhyatk/moondream2",
+        "vlm_revision": "2024-08-26"
+      },
+      "runtime": {
+        "device": "cpu",
+        "detector_dtype": "float32",
+        "vlm_dtype": "float32"
+      },
+      "vlm_called": false,
+      "vlm_succeeded": false,
+      "vlm_error": null,
+      "crop_box": null,
+      "explanation": "Explanation withheld \u2014 flagged for human review",
+      "gate_log": "VLM SKIPPED: HIGH RISK",
+      "gate_reason": "Explanation withheld because calibrated confidence or TTA stability did not satisfy the Low-risk gate.",
+      "processing_time": 0.0011813000000984175
+    },
+    {
+      "schema_version": "1.0",
+      "detected": true,
+      "confidence": 0.0629387579858303,
+      "raw_confidence": 0.05990007519721985,
+      "variance": 0.03615507627487969,
+      "box": [
+        0.0,
+        239.67221069335938,
+        237.73110961914062,
+        255.96109008789062
+      ],
+      "hallucination_risk": "High",
+      "tta_confidences": [
+        0.05990007519721985,
+        0.0,
+        0.05957527831196785,
+        0.08894803375005722,
+        0.10627040266990662
+      ],
+      "tta_names": [
+        "original",
+        "horizontal_flip",
+        "brightness_0.8",
+        "contrast_1.15",
+        "rotation_+3"
+      ],
+      "uncertainty_metric": "population_standard_deviation_of_tta_confidence",
+      "thresholds": {
+        "confidence": 0.35,
+        "variance": 0.016384084442903905,
+        "high_risk_variance": 0.02457612666435586,
+        "detector_floor": 0.01
+      },
+      "decision_trace": {
+        "base_detection_present": true,
+        "confidence_passed": false,
+        "uncertainty_passed": false,
+        "risk": "High",
+        "gate_permitted": false
+      },
+      "detection_id": 1,
+      "normalized_image_sha256": "f02a64ea69112ba1bc3575dba5bafae182dac3439722620430187dadaca6a965",
+      "models": {
+        "detector": "crack_yolov8s_best.pt",
+        "vlm": "vikhyatk/moondream2",
+        "vlm_revision": "2024-08-26"
+      },
+      "runtime": {
+        "device": "cpu",
+        "detector_dtype": "float32",
+        "vlm_dtype": "float32"
+      },
+      "vlm_called": false,
+      "vlm_succeeded": false,
+      "vlm_error": null,
+      "crop_box": null,
+      "explanation": "Explanation withheld \u2014 flagged for human review",
+      "gate_log": "VLM SKIPPED: HIGH RISK",
+      "gate_reason": "Explanation withheld because calibrated confidence or TTA stability did not satisfy the Low-risk gate.",
+      "processing_time": 0.0005946999990555923
+    },
+    {
+      "schema_version": "1.0",
+      "detected": true,
+      "confidence": 0.04907713830471039,
+      "raw_confidence": 0.04917823523283005,
+      "variance": 0.048602487681065946,
+      "box": [
+        48.039405822753906,
+        241.146240234375,
+        145.4915008544922,
+        255.84701538085938
+      ],
+      "hallucination_risk": "High",
+      "tta_confidences": [
+        0.04917823523283005,
+        0.0,
+        0.06503822654485703,
+        0.13116922974586487,
+        0.0
+      ],
+      "tta_names": [
+        "original",
+        "horizontal_flip",
+        "brightness_0.8",
+        "contrast_1.15",
+        "rotation_+3"
+      ],
+      "uncertainty_metric": "population_standard_deviation_of_tta_confidence",
+      "thresholds": {
+        "confidence": 0.35,
+        "variance": 0.016384084442903905,
+        "high_risk_variance": 0.02457612666435586,
+        "detector_floor": 0.01
+      },
+      "decision_trace": {
+        "base_detection_present": true,
+        "confidence_passed": false,
+        "uncertainty_passed": false,
+        "risk": "High",
+        "gate_permitted": false
+      },
+      "detection_id": 2,
+      "normalized_image_sha256": "f02a64ea69112ba1bc3575dba5bafae182dac3439722620430187dadaca6a965",
+      "models": {
+        "detector": "crack_yolov8s_best.pt",
+        "vlm": "vikhyatk/moondream2",
+        "vlm_revision": "2024-08-26"
+      },
+      "runtime": {
+        "device": "cpu",
+        "detector_dtype": "float32",
+        "vlm_dtype": "float32"
+      },
+      "vlm_called": false,
+      "vlm_succeeded": false,
+      "vlm_error": null,
+      "crop_box": null,
+      "explanation": "Explanation withheld \u2014 flagged for human review",
+      "gate_log": "VLM SKIPPED: HIGH RISK",
+      "gate_reason": "Explanation withheld because calibrated confidence or TTA stability did not satisfy the Low-risk gate.",
+      "processing_time": 0.0006415999996534083
+    },
+    {
+      "schema_version": "1.0",
+      "detected": true,
+      "confidence": 0.008351625315845013,
+      "raw_confidence": 0.010989507660269737,
+      "variance": 0.007655490909804157,
+      "box": [
+        0.0,
+        240.7786102294922,
+        143.84658813476562,
+        255.88955688476562
+      ],
+      "hallucination_risk": "Medium",
+      "tta_confidences": [
+        0.010989507660269737,
+        0.0,
+        0.01050282921642065,
+        0.020265789702534676,
+        0.0
+      ],
+      "tta_names": [
+        "original",
+        "horizontal_flip",
+        "brightness_0.8",
+        "contrast_1.15",
+        "rotation_+3"
+      ],
+      "uncertainty_metric": "population_standard_deviation_of_tta_confidence",
+      "thresholds": {
+        "confidence": 0.35,
+        "variance": 0.016384084442903905,
+        "high_risk_variance": 0.02457612666435586,
+        "detector_floor": 0.01
+      },
+      "decision_trace": {
+        "base_detection_present": true,
+        "confidence_passed": false,
+        "uncertainty_passed": true,
+        "risk": "Medium",
+        "gate_permitted": false
+      },
+      "detection_id": 3,
+      "normalized_image_sha256": "f02a64ea69112ba1bc3575dba5bafae182dac3439722620430187dadaca6a965",
+      "models": {
+        "detector": "crack_yolov8s_best.pt",
+        "vlm": "vikhyatk/moondream2",
+        "vlm_revision": "2024-08-26"
+      },
+      "runtime": {
+        "device": "cpu",
+        "detector_dtype": "float32",
+        "vlm_dtype": "float32"
+      },
+      "vlm_called": false,
+      "vlm_succeeded": false,
+      "vlm_error": null,
+      "crop_box": null,
+      "explanation": "Explanation withheld \u2014 flagged for human review",
+      "gate_log": "VLM SKIPPED: MEDIUM RISK",
+      "gate_reason": "Explanation withheld because calibrated confidence or TTA stability did not satisfy the Low-risk gate.",
+      "processing_time": 0.0006472999994002748
+    }
+  ],
+  "pass_box_counts": [
+    4,
+    2,
+    5,
+    4,
+    2
+  ]
+}

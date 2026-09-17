@@ -1,0 +1,1196 @@
+{
+  "n": 30,
+  "old": {
+    "precision": 1.0,
+    "recall": 0.2,
+    "f1": 0.3333333333333333,
+    "accuracy": 0.6,
+    "tp": 3,
+    "fp": 0,
+    "fn": 12,
+    "tn": 15,
+    "n": 30,
+    "ci95": {
+      "precision": {
+        "low": 1.0,
+        "high": 1.0,
+        "width": 0.0
+      },
+      "recall": {
+        "low": 0.0,
+        "high": 0.4,
+        "width": 0.4
+      },
+      "f1": {
+        "low": 0.0,
+        "high": 0.5714285714285714,
+        "width": 0.5714285714285714
+      },
+      "accuracy": {
+        "low": 0.5,
+        "high": 0.7,
+        "width": 0.19999999999999996
+      }
+    },
+    "exact_binomial_ci95": {
+      "precision": [
+        0.2924017738212867,
+        1.0
+      ],
+      "recall": [
+        0.04331200510583601,
+        0.4808911338068531
+      ],
+      "specificity": [
+        0.7819806390891612,
+        1.0
+      ],
+      "accuracy": [
+        0.4060349300518187,
+        0.7734423511714232
+      ]
+    },
+    "simultaneous_rate_ci95": {
+      "precision": {
+        "low": 0.11636081260884532,
+        "high": 1.0,
+        "width": 0.8836391873911547
+      },
+      "recall": {
+        "low": 0.03335972283664306,
+        "high": 0.5175206867742023,
+        "width": 0.4841609639375592
+      },
+      "f1": {
+        "low": 0.05185346747695742,
+        "high": 0.6820607999411163,
+        "width": 0.6302073324641589
+      },
+      "accuracy": {
+        "low": 0.3900136852458606,
+        "high": 0.7587603433871011,
+        "width": 0.36874665814124047
+      }
+    }
+  },
+  "new": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0,
+    "accuracy": 1.0,
+    "tp": 15,
+    "fp": 0,
+    "fn": 0,
+    "tn": 15,
+    "n": 30,
+    "ci95": {
+      "precision": {
+        "low": 1.0,
+        "high": 1.0,
+        "width": 0.0
+      },
+      "recall": {
+        "low": 1.0,
+        "high": 1.0,
+        "width": 0.0
+      },
+      "f1": {
+        "low": 1.0,
+        "high": 1.0,
+        "width": 0.0
+      },
+      "accuracy": {
+        "low": 1.0,
+        "high": 1.0,
+        "width": 0.0
+      }
+    },
+    "exact_binomial_ci95": {
+      "precision": [
+        0.7819806390891612,
+        1.0
+      ],
+      "recall": [
+        0.7819806390891612,
+        1.0
+      ],
+      "specificity": [
+        0.7819806390891612,
+        1.0
+      ],
+      "accuracy": [
+        0.8842966917779725,
+        1.0
+      ]
+    },
+    "simultaneous_rate_ci95": {
+      "precision": {
+        "low": 0.7466676476550782,
+        "high": 1.0,
+        "width": 0.2533323523449218
+      },
+      "recall": {
+        "low": 0.7466676476550782,
+        "high": 1.0,
+        "width": 0.2533323523449218
+      },
+      "f1": {
+        "low": 0.7466676476550782,
+        "high": 1.0,
+        "width": 0.2533323523449218
+      },
+      "accuracy": {
+        "low": 0.7466676476550782,
+        "high": 1.0,
+        "width": 0.2533323523449218
+      }
+    }
+  },
+  "cases": [
+    {
+      "text": "The detected region is at the left.",
+      "box": [
+        5,
+        5,
+        25,
+        15
+      ],
+      "image_size": [
+        100,
+        100
+      ],
+      "confidence": 0.8,
+      "hallucinated": false,
+      "old_caught": false,
+      "new_caught": false,
+      "verification": {
+        "passed": true,
+        "reasons": [],
+        "attributes": {
+          "width": 0.2,
+          "height": 0.1,
+          "area": 0.02,
+          "confidence": 0.8,
+          "center_x": 0.15,
+          "center_y": 0.1,
+          "aspect_ratio": 2.0
+        },
+        "checked_claims": [
+          "left"
+        ],
+        "scope": "geometric contradictions only; appearance and causality not certified"
+      }
+    },
+    {
+      "text": "The bounding region is horizontal.",
+      "box": [
+        5,
+        5,
+        25,
+        15
+      ],
+      "image_size": [
+        100,
+        100
+      ],
+      "confidence": 0.8,
+      "hallucinated": false,
+      "old_caught": false,
+      "new_caught": false,
+      "verification": {
+        "passed": true,
+        "reasons": [],
+        "attributes": {
+          "width": 0.2,
+          "height": 0.1,
+          "area": 0.02,
+          "confidence": 0.8,
+          "center_x": 0.15,
+          "center_y": 0.1,
+          "aspect_ratio": 2.0
+        },
+        "checked_claims": [
+          "horizontal"
+        ],
+        "scope": "geometric contradictions only; appearance and causality not certified"
+      }
+    },
+    {
+      "text": "The region has width 20%.",
+      "box": [
+        5,
+        5,
+        25,
+        15
+      ],
+      "image_size": [
+        100,
+        100
+      ],
+      "confidence": 0.8,
+      "hallucinated": false,
+      "old_caught": false,
+      "new_caught": false,
+      "verification": {
+        "passed": true,
+        "reasons": [],
+        "attributes": {
+          "width": 0.2,
+          "height": 0.1,
+          "area": 0.02,
+          "confidence": 0.8,
+          "center_x": 0.15,
+          "center_y": 0.1,
+          "aspect_ratio": 2.0
+        },
+        "checked_claims": [
+          "width"
+        ],
+        "scope": "geometric contradictions only; appearance and causality not certified"
+      }
+    },
+    {
+      "text": "The region has height 10%.",
+      "box": [
+        5,
+        5,
+        25,
+        15
+      ],
+      "image_size": [
+        100,
+        100
+      ],
+      "confidence": 0.8,
+      "hallucinated": false,
+      "old_caught": false,
+      "new_caught": false,
+      "verification": {
+        "passed": true,
+        "reasons": [],
+        "attributes": {
+          "width": 0.2,
+          "height": 0.1,
+          "area": 0.02,
+          "confidence": 0.8,
+          "center_x": 0.15,
+          "center_y": 0.1,
+          "aspect_ratio": 2.0
+        },
+        "checked_claims": [
+          "height"
+        ],
+        "scope": "geometric contradictions only; appearance and causality not certified"
+      }
+    },
+    {
+      "text": "The detector confidence is 80%.",
+      "box": [
+        5,
+        5,
+        25,
+        15
+      ],
+      "image_size": [
+        100,
+        100
+      ],
+      "confidence": 0.8,
+      "hallucinated": false,
+      "old_caught": false,
+      "new_caught": false,
+      "verification": {
+        "passed": true,
+        "reasons": [],
+        "attributes": {
+          "width": 0.2,
+          "height": 0.1,
+          "area": 0.02,
+          "confidence": 0.8,
+          "center_x": 0.15,
+          "center_y": 0.1,
+          "aspect_ratio": 2.0
+        },
+        "checked_claims": [
+          "confidence"
+        ],
+        "scope": "geometric contradictions only; appearance and causality not certified"
+      }
+    },
+    {
+      "text": "The detected region is at the right.",
+      "box": [
+        5,
+        5,
+        25,
+        15
+      ],
+      "image_size": [
+        100,
+        100
+      ],
+      "confidence": 0.8,
+      "hallucinated": true,
+      "old_caught": false,
+      "new_caught": true,
+      "verification": {
+        "passed": false,
+        "reasons": [
+          "right contradicts measured bounding region"
+        ],
+        "attributes": {
+          "width": 0.2,
+          "height": 0.1,
+          "area": 0.02,
+          "confidence": 0.8,
+          "center_x": 0.15,
+          "center_y": 0.1,
+          "aspect_ratio": 2.0
+        },
+        "checked_claims": [
+          "right"
+        ],
+        "scope": "geometric contradictions only; appearance and causality not certified"
+      }
+    },
+    {
+      "text": "The bounding region is vertical.",
+      "box": [
+        5,
+        5,
+        25,
+        15
+      ],
+      "image_size": [
+        100,
+        100
+      ],
+      "confidence": 0.8,
+      "hallucinated": true,
+      "old_caught": false,
+      "new_caught": true,
+      "verification": {
+        "passed": false,
+        "reasons": [
+          "vertical contradicts measured bounding region"
+        ],
+        "attributes": {
+          "width": 0.2,
+          "height": 0.1,
+          "area": 0.02,
+          "confidence": 0.8,
+          "center_x": 0.15,
+          "center_y": 0.1,
+          "aspect_ratio": 2.0
+        },
+        "checked_claims": [
+          "vertical"
+        ],
+        "scope": "geometric contradictions only; appearance and causality not certified"
+      }
+    },
+    {
+      "text": "The region has area 95%.",
+      "box": [
+        5,
+        5,
+        25,
+        15
+      ],
+      "image_size": [
+        100,
+        100
+      ],
+      "confidence": 0.8,
+      "hallucinated": true,
+      "old_caught": false,
+      "new_caught": true,
+      "verification": {
+        "passed": false,
+        "reasons": [
+          "area percentage differs by more than 5 percentage points"
+        ],
+        "attributes": {
+          "width": 0.2,
+          "height": 0.1,
+          "area": 0.02,
+          "confidence": 0.8,
+          "center_x": 0.15,
+          "center_y": 0.1,
+          "aspect_ratio": 2.0
+        },
+        "checked_claims": [
+          "area"
+        ],
+        "scope": "geometric contradictions only; appearance and causality not certified"
+      }
+    },
+    {
+      "text": "There is no crack in the crop.",
+      "box": [
+        5,
+        5,
+        25,
+        15
+      ],
+      "image_size": [
+        100,
+        100
+      ],
+      "confidence": 0.8,
+      "hallucinated": true,
+      "old_caught": false,
+      "new_caught": true,
+      "verification": {
+        "passed": false,
+        "reasons": [
+          "absence claim conflicts with the detected region"
+        ],
+        "attributes": {
+          "width": 0.2,
+          "height": 0.1,
+          "area": 0.02,
+          "confidence": 0.8,
+          "center_x": 0.15,
+          "center_y": 0.1,
+          "aspect_ratio": 2.0
+        },
+        "checked_claims": [
+          "presence"
+        ],
+        "scope": "geometric contradictions only; appearance and causality not certified"
+      }
+    },
+    {
+      "text": "The structure is unsafe due to corrosion.",
+      "box": [
+        5,
+        5,
+        25,
+        15
+      ],
+      "image_size": [
+        100,
+        100
+      ],
+      "confidence": 0.8,
+      "hallucinated": true,
+      "old_caught": true,
+      "new_caught": true,
+      "verification": {
+        "passed": false,
+        "reasons": [
+          "unsupported diagnostic or measurement language"
+        ],
+        "attributes": {
+          "width": 0.2,
+          "height": 0.1,
+          "area": 0.02,
+          "confidence": 0.8,
+          "center_x": 0.15,
+          "center_y": 0.1,
+          "aspect_ratio": 2.0
+        },
+        "checked_claims": [],
+        "scope": "geometric contradictions only; appearance and causality not certified"
+      }
+    },
+    {
+      "text": "The detected region is at the right.",
+      "box": [
+        75,
+        60,
+        85,
+        95
+      ],
+      "image_size": [
+        100,
+        100
+      ],
+      "confidence": 0.4,
+      "hallucinated": false,
+      "old_caught": false,
+      "new_caught": false,
+      "verification": {
+        "passed": true,
+        "reasons": [],
+        "attributes": {
+          "width": 0.1,
+          "height": 0.35,
+          "area": 0.035,
+          "confidence": 0.4,
+          "center_x": 0.8,
+          "center_y": 0.775,
+          "aspect_ratio": 0.2857142857142857
+        },
+        "checked_claims": [
+          "right"
+        ],
+        "scope": "geometric contradictions only; appearance and causality not certified"
+      }
+    },
+    {
+      "text": "The bounding region is vertical.",
+      "box": [
+        75,
+        60,
+        85,
+        95
+      ],
+      "image_size": [
+        100,
+        100
+      ],
+      "confidence": 0.4,
+      "hallucinated": false,
+      "old_caught": false,
+      "new_caught": false,
+      "verification": {
+        "passed": true,
+        "reasons": [],
+        "attributes": {
+          "width": 0.1,
+          "height": 0.35,
+          "area": 0.035,
+          "confidence": 0.4,
+          "center_x": 0.8,
+          "center_y": 0.775,
+          "aspect_ratio": 0.2857142857142857
+        },
+        "checked_claims": [
+          "vertical"
+        ],
+        "scope": "geometric contradictions only; appearance and causality not certified"
+      }
+    },
+    {
+      "text": "The region has width 10%.",
+      "box": [
+        75,
+        60,
+        85,
+        95
+      ],
+      "image_size": [
+        100,
+        100
+      ],
+      "confidence": 0.4,
+      "hallucinated": false,
+      "old_caught": false,
+      "new_caught": false,
+      "verification": {
+        "passed": true,
+        "reasons": [],
+        "attributes": {
+          "width": 0.1,
+          "height": 0.35,
+          "area": 0.035,
+          "confidence": 0.4,
+          "center_x": 0.8,
+          "center_y": 0.775,
+          "aspect_ratio": 0.2857142857142857
+        },
+        "checked_claims": [
+          "width"
+        ],
+        "scope": "geometric contradictions only; appearance and causality not certified"
+      }
+    },
+    {
+      "text": "The region has height 35%.",
+      "box": [
+        75,
+        60,
+        85,
+        95
+      ],
+      "image_size": [
+        100,
+        100
+      ],
+      "confidence": 0.4,
+      "hallucinated": false,
+      "old_caught": false,
+      "new_caught": false,
+      "verification": {
+        "passed": true,
+        "reasons": [],
+        "attributes": {
+          "width": 0.1,
+          "height": 0.35,
+          "area": 0.035,
+          "confidence": 0.4,
+          "center_x": 0.8,
+          "center_y": 0.775,
+          "aspect_ratio": 0.2857142857142857
+        },
+        "checked_claims": [
+          "height"
+        ],
+        "scope": "geometric contradictions only; appearance and causality not certified"
+      }
+    },
+    {
+      "text": "The detector confidence is 40%.",
+      "box": [
+        75,
+        60,
+        85,
+        95
+      ],
+      "image_size": [
+        100,
+        100
+      ],
+      "confidence": 0.4,
+      "hallucinated": false,
+      "old_caught": false,
+      "new_caught": false,
+      "verification": {
+        "passed": true,
+        "reasons": [],
+        "attributes": {
+          "width": 0.1,
+          "height": 0.35,
+          "area": 0.035,
+          "confidence": 0.4,
+          "center_x": 0.8,
+          "center_y": 0.775,
+          "aspect_ratio": 0.2857142857142857
+        },
+        "checked_claims": [
+          "confidence"
+        ],
+        "scope": "geometric contradictions only; appearance and causality not certified"
+      }
+    },
+    {
+      "text": "The detected region is at the left.",
+      "box": [
+        75,
+        60,
+        85,
+        95
+      ],
+      "image_size": [
+        100,
+        100
+      ],
+      "confidence": 0.4,
+      "hallucinated": true,
+      "old_caught": false,
+      "new_caught": true,
+      "verification": {
+        "passed": false,
+        "reasons": [
+          "left contradicts measured bounding region"
+        ],
+        "attributes": {
+          "width": 0.1,
+          "height": 0.35,
+          "area": 0.035,
+          "confidence": 0.4,
+          "center_x": 0.8,
+          "center_y": 0.775,
+          "aspect_ratio": 0.2857142857142857
+        },
+        "checked_claims": [
+          "left"
+        ],
+        "scope": "geometric contradictions only; appearance and causality not certified"
+      }
+    },
+    {
+      "text": "The bounding region is horizontal.",
+      "box": [
+        75,
+        60,
+        85,
+        95
+      ],
+      "image_size": [
+        100,
+        100
+      ],
+      "confidence": 0.4,
+      "hallucinated": true,
+      "old_caught": false,
+      "new_caught": true,
+      "verification": {
+        "passed": false,
+        "reasons": [
+          "horizontal contradicts measured bounding region"
+        ],
+        "attributes": {
+          "width": 0.1,
+          "height": 0.35,
+          "area": 0.035,
+          "confidence": 0.4,
+          "center_x": 0.8,
+          "center_y": 0.775,
+          "aspect_ratio": 0.2857142857142857
+        },
+        "checked_claims": [
+          "horizontal"
+        ],
+        "scope": "geometric contradictions only; appearance and causality not certified"
+      }
+    },
+    {
+      "text": "The region has area 95%.",
+      "box": [
+        75,
+        60,
+        85,
+        95
+      ],
+      "image_size": [
+        100,
+        100
+      ],
+      "confidence": 0.4,
+      "hallucinated": true,
+      "old_caught": false,
+      "new_caught": true,
+      "verification": {
+        "passed": false,
+        "reasons": [
+          "area percentage differs by more than 5 percentage points"
+        ],
+        "attributes": {
+          "width": 0.1,
+          "height": 0.35,
+          "area": 0.035,
+          "confidence": 0.4,
+          "center_x": 0.8,
+          "center_y": 0.775,
+          "aspect_ratio": 0.2857142857142857
+        },
+        "checked_claims": [
+          "area"
+        ],
+        "scope": "geometric contradictions only; appearance and causality not certified"
+      }
+    },
+    {
+      "text": "There is no crack in the crop.",
+      "box": [
+        75,
+        60,
+        85,
+        95
+      ],
+      "image_size": [
+        100,
+        100
+      ],
+      "confidence": 0.4,
+      "hallucinated": true,
+      "old_caught": false,
+      "new_caught": true,
+      "verification": {
+        "passed": false,
+        "reasons": [
+          "absence claim conflicts with the detected region"
+        ],
+        "attributes": {
+          "width": 0.1,
+          "height": 0.35,
+          "area": 0.035,
+          "confidence": 0.4,
+          "center_x": 0.8,
+          "center_y": 0.775,
+          "aspect_ratio": 0.2857142857142857
+        },
+        "checked_claims": [
+          "presence"
+        ],
+        "scope": "geometric contradictions only; appearance and causality not certified"
+      }
+    },
+    {
+      "text": "The structure is unsafe due to corrosion.",
+      "box": [
+        75,
+        60,
+        85,
+        95
+      ],
+      "image_size": [
+        100,
+        100
+      ],
+      "confidence": 0.4,
+      "hallucinated": true,
+      "old_caught": true,
+      "new_caught": true,
+      "verification": {
+        "passed": false,
+        "reasons": [
+          "unsupported diagnostic or measurement language"
+        ],
+        "attributes": {
+          "width": 0.1,
+          "height": 0.35,
+          "area": 0.035,
+          "confidence": 0.4,
+          "center_x": 0.8,
+          "center_y": 0.775,
+          "aspect_ratio": 0.2857142857142857
+        },
+        "checked_claims": [],
+        "scope": "geometric contradictions only; appearance and causality not certified"
+      }
+    },
+    {
+      "text": "The detected region is at the center.",
+      "box": [
+        30,
+        40,
+        70,
+        60
+      ],
+      "image_size": [
+        100,
+        100
+      ],
+      "confidence": 0.9,
+      "hallucinated": false,
+      "old_caught": false,
+      "new_caught": false,
+      "verification": {
+        "passed": true,
+        "reasons": [],
+        "attributes": {
+          "width": 0.4,
+          "height": 0.2,
+          "area": 0.08,
+          "confidence": 0.9,
+          "center_x": 0.5,
+          "center_y": 0.5,
+          "aspect_ratio": 2.0
+        },
+        "checked_claims": [
+          "center"
+        ],
+        "scope": "geometric contradictions only; appearance and causality not certified"
+      }
+    },
+    {
+      "text": "The bounding region is horizontal.",
+      "box": [
+        30,
+        40,
+        70,
+        60
+      ],
+      "image_size": [
+        100,
+        100
+      ],
+      "confidence": 0.9,
+      "hallucinated": false,
+      "old_caught": false,
+      "new_caught": false,
+      "verification": {
+        "passed": true,
+        "reasons": [],
+        "attributes": {
+          "width": 0.4,
+          "height": 0.2,
+          "area": 0.08,
+          "confidence": 0.9,
+          "center_x": 0.5,
+          "center_y": 0.5,
+          "aspect_ratio": 2.0
+        },
+        "checked_claims": [
+          "horizontal"
+        ],
+        "scope": "geometric contradictions only; appearance and causality not certified"
+      }
+    },
+    {
+      "text": "The region has width 40%.",
+      "box": [
+        30,
+        40,
+        70,
+        60
+      ],
+      "image_size": [
+        100,
+        100
+      ],
+      "confidence": 0.9,
+      "hallucinated": false,
+      "old_caught": false,
+      "new_caught": false,
+      "verification": {
+        "passed": true,
+        "reasons": [],
+        "attributes": {
+          "width": 0.4,
+          "height": 0.2,
+          "area": 0.08,
+          "confidence": 0.9,
+          "center_x": 0.5,
+          "center_y": 0.5,
+          "aspect_ratio": 2.0
+        },
+        "checked_claims": [
+          "width"
+        ],
+        "scope": "geometric contradictions only; appearance and causality not certified"
+      }
+    },
+    {
+      "text": "The region has height 20%.",
+      "box": [
+        30,
+        40,
+        70,
+        60
+      ],
+      "image_size": [
+        100,
+        100
+      ],
+      "confidence": 0.9,
+      "hallucinated": false,
+      "old_caught": false,
+      "new_caught": false,
+      "verification": {
+        "passed": true,
+        "reasons": [],
+        "attributes": {
+          "width": 0.4,
+          "height": 0.2,
+          "area": 0.08,
+          "confidence": 0.9,
+          "center_x": 0.5,
+          "center_y": 0.5,
+          "aspect_ratio": 2.0
+        },
+        "checked_claims": [
+          "height"
+        ],
+        "scope": "geometric contradictions only; appearance and causality not certified"
+      }
+    },
+    {
+      "text": "The detector confidence is 90%.",
+      "box": [
+        30,
+        40,
+        70,
+        60
+      ],
+      "image_size": [
+        100,
+        100
+      ],
+      "confidence": 0.9,
+      "hallucinated": false,
+      "old_caught": false,
+      "new_caught": false,
+      "verification": {
+        "passed": true,
+        "reasons": [],
+        "attributes": {
+          "width": 0.4,
+          "height": 0.2,
+          "area": 0.08,
+          "confidence": 0.9,
+          "center_x": 0.5,
+          "center_y": 0.5,
+          "aspect_ratio": 2.0
+        },
+        "checked_claims": [
+          "confidence"
+        ],
+        "scope": "geometric contradictions only; appearance and causality not certified"
+      }
+    },
+    {
+      "text": "The detected region is at the bottom.",
+      "box": [
+        30,
+        40,
+        70,
+        60
+      ],
+      "image_size": [
+        100,
+        100
+      ],
+      "confidence": 0.9,
+      "hallucinated": true,
+      "old_caught": false,
+      "new_caught": true,
+      "verification": {
+        "passed": false,
+        "reasons": [
+          "bottom contradicts measured bounding region"
+        ],
+        "attributes": {
+          "width": 0.4,
+          "height": 0.2,
+          "area": 0.08,
+          "confidence": 0.9,
+          "center_x": 0.5,
+          "center_y": 0.5,
+          "aspect_ratio": 2.0
+        },
+        "checked_claims": [
+          "bottom"
+        ],
+        "scope": "geometric contradictions only; appearance and causality not certified"
+      }
+    },
+    {
+      "text": "The bounding region is vertical.",
+      "box": [
+        30,
+        40,
+        70,
+        60
+      ],
+      "image_size": [
+        100,
+        100
+      ],
+      "confidence": 0.9,
+      "hallucinated": true,
+      "old_caught": false,
+      "new_caught": true,
+      "verification": {
+        "passed": false,
+        "reasons": [
+          "vertical contradicts measured bounding region"
+        ],
+        "attributes": {
+          "width": 0.4,
+          "height": 0.2,
+          "area": 0.08,
+          "confidence": 0.9,
+          "center_x": 0.5,
+          "center_y": 0.5,
+          "aspect_ratio": 2.0
+        },
+        "checked_claims": [
+          "vertical"
+        ],
+        "scope": "geometric contradictions only; appearance and causality not certified"
+      }
+    },
+    {
+      "text": "The region has area 95%.",
+      "box": [
+        30,
+        40,
+        70,
+        60
+      ],
+      "image_size": [
+        100,
+        100
+      ],
+      "confidence": 0.9,
+      "hallucinated": true,
+      "old_caught": false,
+      "new_caught": true,
+      "verification": {
+        "passed": false,
+        "reasons": [
+          "area percentage differs by more than 5 percentage points"
+        ],
+        "attributes": {
+          "width": 0.4,
+          "height": 0.2,
+          "area": 0.08,
+          "confidence": 0.9,
+          "center_x": 0.5,
+          "center_y": 0.5,
+          "aspect_ratio": 2.0
+        },
+        "checked_claims": [
+          "area"
+        ],
+        "scope": "geometric contradictions only; appearance and causality not certified"
+      }
+    },
+    {
+      "text": "There is no crack in the crop.",
+      "box": [
+        30,
+        40,
+        70,
+        60
+      ],
+      "image_size": [
+        100,
+        100
+      ],
+      "confidence": 0.9,
+      "hallucinated": true,
+      "old_caught": false,
+      "new_caught": true,
+      "verification": {
+        "passed": false,
+        "reasons": [
+          "absence claim conflicts with the detected region"
+        ],
+        "attributes": {
+          "width": 0.4,
+          "height": 0.2,
+          "area": 0.08,
+          "confidence": 0.9,
+          "center_x": 0.5,
+          "center_y": 0.5,
+          "aspect_ratio": 2.0
+        },
+        "checked_claims": [
+          "presence"
+        ],
+        "scope": "geometric contradictions only; appearance and causality not certified"
+      }
+    },
+    {
+      "text": "The structure is unsafe due to corrosion.",
+      "box": [
+        30,
+        40,
+        70,
+        60
+      ],
+      "image_size": [
+        100,
+        100
+      ],
+      "confidence": 0.9,
+      "hallucinated": true,
+      "old_caught": true,
+      "new_caught": true,
+      "verification": {
+        "passed": false,
+        "reasons": [
+          "unsupported diagnostic or measurement language"
+        ],
+        "attributes": {
+          "width": 0.4,
+          "height": 0.2,
+          "area": 0.08,
+          "confidence": 0.9,
+          "center_x": 0.5,
+          "center_y": 0.5,
+          "aspect_ratio": 2.0
+        },
+        "checked_claims": [],
+        "scope": "geometric contradictions only; appearance and causality not certified"
+      }
+    }
+  ],
+  "limitation": "Authored geometry challenge set, not held-out natural VLM hallucination prevalence. Three box templates are correlated."
+}

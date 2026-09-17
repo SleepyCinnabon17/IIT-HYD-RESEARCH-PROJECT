@@ -1,0 +1,8 @@
+{
+  "repository": "vikhyatk/moondream2",
+  "resolved_commit": "92d3d73b6fd61ab84d9fe093a9c7fd8c04bf2c0d",
+  "sha256": "4bf7aed8ba4325d23fa7cd348d795a27f3b272682536f08aca4cdd62cde79293",
+  "real_model": true,
+  "dtype": "float32",
+  "device": "cpu"
+}

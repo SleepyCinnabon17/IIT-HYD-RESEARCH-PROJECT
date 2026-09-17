@@ -1,0 +1,167 @@
+{
+  "id": 285,
+  "sha256": "ff27838d68a107578c830faa91b19a3adbb32ae69cbc59220d2d5285662a8276",
+  "seconds": 7.188614000000598,
+  "detections": [
+    {
+      "schema_version": "1.0",
+      "detected": true,
+      "confidence": 0.8611906449000041,
+      "raw_confidence": 0.8650189638137817,
+      "variance": 0.02265624100253509,
+      "box": [
+        148.65805053710938,
+        1.2613983154296875,
+        263.76739501953125,
+        416.0
+      ],
+      "hallucination_risk": "Low",
+      "tta_confidences": [
+        0.8650189638137817,
+        0.8856818675994873,
+        0.861530065536499,
+        0.8640755414962769,
+        0.8508069515228271,
+        0.8641414046287537,
+        0.8681980967521667,
+        0.8655864000320435,
+        0.872570276260376,
+        0.8010777831077576,
+        0.8617458343505859,
+        0.8518552780151367,
+        0.9083464741706848,
+        0.8647539615631104,
+        0.8324707746505737
+      ],
+      "tta_names": [
+        "original",
+        "horizontal_flip",
+        "brightness_0.8",
+        "contrast_1.15",
+        "rotation_+3",
+        "vertical_flip",
+        "scale_0.85",
+        "color_0.5",
+        "brightness_1.2",
+        "rotation_-3",
+        "scale_1.15",
+        "contrast_0.85",
+        "rotation_+7",
+        "color_1.5",
+        "rotation_-7"
+      ],
+      "uncertainty_metric": "population_standard_deviation_of_tta_confidence",
+      "thresholds": {
+        "confidence": 0.35,
+        "variance": 0.03,
+        "high_risk_variance": 0.045,
+        "detector_floor": 0.01
+      },
+      "decision_trace": {
+        "base_detection_present": true,
+        "confidence_passed": true,
+        "uncertainty_passed": true,
+        "risk": "Low",
+        "gate_permitted": true
+      },
+      "detection_id": 0
+    },
+    {
+      "schema_version": "1.0",
+      "detected": true,
+      "confidence": 0.07340148662527403,
+      "raw_confidence": 0.09414339810609818,
+      "variance": 0.04545628845177864,
+      "box": [
+        0.0,
+        131.11572265625,
+        30.042078018188477,
+        152.21859741210938
+      ],
+      "hallucination_risk": "High",
+      "tta_confidences": [
+        0.09414339810609818,
+        0.112630695104599,
+        0.07493187487125397,
+        0.14543533325195312,
+        0.02692878618836403,
+        0.0651550441980362,
+        0.1342238038778305,
+        0.0940995067358017,
+        0.09094519168138504,
+        0.0,
+        0.09690359979867935,
+        0.07102995365858078,
+        0.0,
+        0.09459511190652847,
+        0.0
+      ],
+      "tta_names": [
+        "original",
+        "horizontal_flip",
+        "brightness_0.8",
+        "contrast_1.15",
+        "rotation_+3",
+        "vertical_flip",
+        "scale_0.85",
+        "color_0.5",
+        "brightness_1.2",
+        "rotation_-3",
+        "scale_1.15",
+        "contrast_0.85",
+        "rotation_+7",
+        "color_1.5",
+        "rotation_-7"
+      ],
+      "uncertainty_metric": "population_standard_deviation_of_tta_confidence",
+      "thresholds": {
+        "confidence": 0.35,
+        "variance": 0.03,
+        "high_risk_variance": 0.045,
+        "detector_floor": 0.01
+      },
+      "decision_trace": {
+        "base_detection_present": true,
+        "confidence_passed": false,
+        "uncertainty_passed": false,
+        "risk": "High",
+        "gate_permitted": false
+      },
+      "detection_id": 1
+    }
+  ],
+  "pass_box_counts": [
+    2,
+    3,
+    2,
+    2,
+    4,
+    2,
+    2,
+    2,
+    2,
+    1,
+    2,
+    2,
+    1,
+    2,
+    1
+  ],
+  "legacy_top_confidences": [
+    0.8650189638137817,
+    0.8856818675994873,
+    0.861530065536499,
+    0.8640755414962769,
+    0.8508069515228271,
+    0.8641414046287537,
+    0.8681980967521667,
+    0.8655864000320435,
+    0.872570276260376,
+    0.8010777831077576,
+    0.8617458343505859,
+    0.8518552780151367,
+    0.9083464741706848,
+    0.8647539615631104,
+    0.8324707746505737
+  ]
+}

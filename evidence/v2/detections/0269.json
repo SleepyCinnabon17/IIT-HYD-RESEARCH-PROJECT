@@ -1,0 +1,167 @@
+{
+  "id": 269,
+  "sha256": "97104e4290c3ec63b2111d6089efb9cc8415e45cfb5f582fe3b51b69c8f465af",
+  "seconds": 6.145032299999002,
+  "detections": [
+    {
+      "schema_version": "1.0",
+      "detected": true,
+      "confidence": 0.8063311457633973,
+      "raw_confidence": 0.7967454791069031,
+      "variance": 0.030071307054783177,
+      "box": [
+        0.0,
+        175.32492065429688,
+        415.4329833984375,
+        243.86497497558594
+      ],
+      "hallucination_risk": "Medium",
+      "tta_confidences": [
+        0.7967454791069031,
+        0.7983719110488892,
+        0.7975907325744629,
+        0.8010318279266357,
+        0.8624029159545898,
+        0.8518191576004028,
+        0.7996793389320374,
+        0.7995473742485046,
+        0.797439694404602,
+        0.796758770942688,
+        0.7979469299316406,
+        0.7910183668136597,
+        0.8652358055114746,
+        0.7958678603172302,
+        0.7435110211372375
+      ],
+      "tta_names": [
+        "original",
+        "horizontal_flip",
+        "brightness_0.8",
+        "contrast_1.15",
+        "rotation_+3",
+        "vertical_flip",
+        "scale_0.85",
+        "color_0.5",
+        "brightness_1.2",
+        "rotation_-3",
+        "scale_1.15",
+        "contrast_0.85",
+        "rotation_+7",
+        "color_1.5",
+        "rotation_-7"
+      ],
+      "uncertainty_metric": "population_standard_deviation_of_tta_confidence",
+      "thresholds": {
+        "confidence": 0.35,
+        "variance": 0.03,
+        "high_risk_variance": 0.045,
+        "detector_floor": 0.01
+      },
+      "decision_trace": {
+        "base_detection_present": true,
+        "confidence_passed": true,
+        "uncertainty_passed": false,
+        "risk": "Medium",
+        "gate_permitted": false
+      },
+      "detection_id": 0
+    },
+    {
+      "schema_version": "1.0",
+      "detected": true,
+      "confidence": 0.2873032889639338,
+      "raw_confidence": 0.3670809864997864,
+      "variance": 0.17764357689732743,
+      "box": [
+        17.832231521606445,
+        175.9741668701172,
+        415.2926330566406,
+        219.10939025878906
+      ],
+      "hallucination_risk": "High",
+      "tta_confidences": [
+        0.3670809864997864,
+        0.40081942081451416,
+        0.3342944383621216,
+        0.3634262681007385,
+        0.0,
+        0.0,
+        0.41364216804504395,
+        0.358108252286911,
+        0.38248899579048157,
+        0.5542060732841492,
+        0.3712061941623688,
+        0.37681761384010315,
+        0.0,
+        0.373505562543869,
+        0.013953360728919506
+      ],
+      "tta_names": [
+        "original",
+        "horizontal_flip",
+        "brightness_0.8",
+        "contrast_1.15",
+        "rotation_+3",
+        "vertical_flip",
+        "scale_0.85",
+        "color_0.5",
+        "brightness_1.2",
+        "rotation_-3",
+        "scale_1.15",
+        "contrast_0.85",
+        "rotation_+7",
+        "color_1.5",
+        "rotation_-7"
+      ],
+      "uncertainty_metric": "population_standard_deviation_of_tta_confidence",
+      "thresholds": {
+        "confidence": 0.35,
+        "variance": 0.03,
+        "high_risk_variance": 0.045,
+        "detector_floor": 0.01
+      },
+      "decision_trace": {
+        "base_detection_present": true,
+        "confidence_passed": false,
+        "uncertainty_passed": false,
+        "risk": "High",
+        "gate_permitted": false
+      },
+      "detection_id": 1
+    }
+  ],
+  "pass_box_counts": [
+    2,
+    5,
+    2,
+    2,
+    1,
+    1,
+    2,
+    2,
+    2,
+    3,
+    2,
+    2,
+    1,
+    2,
+    2
+  ],
+  "legacy_top_confidences": [
+    0.7967454791069031,
+    0.7983719110488892,
+    0.7975907325744629,
+    0.8010318279266357,
+    0.8624029159545898,
+    0.8518191576004028,
+    0.7996793389320374,
+    0.7995473742485046,
+    0.797439694404602,
+    0.796758770942688,
+    0.7979469299316406,
+    0.7910183668136597,
+    0.8652358055114746,
+    0.7958678603172302,
+    0.7435110211372375
+  ]
+}
