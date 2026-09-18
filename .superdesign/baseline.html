@@ -1,0 +1,153 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hallucination-Aware Crack Inspection</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=IBM+Plex+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+            background-color: #f3f4f6;
+            color: #1f2937;
+        }
+        .gradio-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        .gradio-card {
+            background: white;
+            border: 1px solid #e5e7eb;
+            border-radius: 0.5rem;
+            padding: 1rem;
+        }
+        .gradio-input-label {
+            font-size: 0.875rem;
+            font-weight: 500;
+            color: #374151;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+        .gradio-image-placeholder {
+            background-color: #f9fafb;
+            border: 2px dashed #e5e7eb;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 320px;
+            cursor: pointer;
+        }
+        .gradio-button-primary {
+            background-color: #ff9800; /* Gradio default orange primary */
+            color: white;
+            font-weight: 600;
+            transition: background-color 0.2s;
+        }
+        .gradio-button-primary:hover {
+            background-color: #fb8c00;
+        }
+        .mono {
+            font-family: 'IBM Plex Mono', monospace;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1rem;
+        }
+        th, td {
+            text-align: left;
+            padding: 0.75rem;
+            border-bottom: 1px solid #e5e7eb;
+        }
+        th {
+            font-size: 0.875rem;
+            color: #6b7280;
+        }
+    </style>
+</head>
+<body>
+    <div class="gradio-container min-h-screen" data-sd-id="1">
+        <header class="mb-8" data-sd-id="2">
+            <h1 class="text-3xl font-bold mb-4" data-sd-id="3">Hallucination-Aware Crack Inspection</h1>
+            <p class="text-gray-600 leading-relaxed" data-sd-id="4">
+                Detector → TTA uncertainty gate → grounded VLM explanation when allowed. Upload a surface image; uncertain cases are withheld for human review. This demonstration is not a safety certification or substitute for professional inspection.
+            </p>
+        </header>
+
+        <main class="space-y-6" data-sd-id="5">
+            <!-- Image Row -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6" data-sd-id="6">
+                <div class="gradio-card" data-sd-id="7">
+                    <label class="gradio-input-label" data-sd-id="8">Input image</label>
+                    <div class="gradio-image-placeholder rounded-lg" data-sd-id="9">
+                        <iconify-icon icon="lucide:upload-cloud" class="text-4xl text-gray-300 mb-2"></iconify-icon>
+                        <span class="text-gray-400 text-sm" data-sd-id="10">Drop Image Here</span>
+                        <span class="text-gray-300 text-xs mt-1" data-sd-id="11">- or -</span>
+                        <button class="mt-2 text-orange-500 font-medium" data-sd-id="12">Click to Upload</button>
+                    </div>
+                </div>
+                <div class="gradio-card" data-sd-id="13">
+                    <label class="gradio-input-label" data-sd-id="14">Annotated detection</label>
+                    <div class="gradio-image-placeholder bg-gray-50 border-solid border-gray-200 rounded-lg" data-sd-id="15">
+                        <iconify-icon icon="lucide:image" class="text-4xl text-gray-200"></iconify-icon>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Run Action -->
+            <button id="cta-run-inspection" class="w-full py-3 gradio-button-primary rounded-lg shadow-sm text-lg" data-sd-id="16">
+                Run inspection
+            </button>
+
+            <!-- Risk Indicator -->
+            <div class="gradio-card border-none bg-transparent p-0" data-sd-id="17">
+                <label class="gradio-input-label" data-sd-id="18">Risk decision</label>
+                <div role="status" aria-label="Hallucination risk" style="padding:12px 16px;border-radius:10px;font-weight:700;color:#334155;background:#e2e8f0;" class="flex items-center gap-2" data-sd-id="19">
+                    ⚪ Hallucination risk: N/A — no detection
+                </div>
+            </div>
+
+            <!-- Explanation Textbox -->
+            <div class="gradio-card" data-sd-id="20">
+                <label class="gradio-input-label" data-sd-id="21">Grounded result</label>
+                <textarea readonly="" class="w-full bg-gray-50 border border-gray-200 rounded p-3 h-24 text-gray-400 italic resize-none outline-none" placeholder="Inspection result will appear here..." data-sd-id="22"></textarea>
+            </div>
+
+            <!-- Metrics Markdown -->
+            <div class="gradio-card" data-sd-id="23">
+                <label class="gradio-input-label" data-sd-id="24">Metrics and gate evidence</label>
+                <div class="prose prose-sm max-w-none" data-sd-id="25">
+                    <table data-sd-id="26">
+                        <thead data-sd-id="27">
+                            <tr data-sd-id="28">
+                                <th data-sd-id="29">Metric</th>
+                                <th class="text-right" data-sd-id="30">Value</th>
+                            </tr>
+                        </thead>
+                        <tbody class="mono text-sm" data-sd-id="31">
+                            <tr data-sd-id="32"><td data-sd-id="33">Detection</td><td class="text-right text-gray-400" data-sd-id="34">-</td></tr>
+                            <tr data-sd-id="35"><td data-sd-id="36">Mean TTA confidence</td><td class="text-right text-gray-400" data-sd-id="37">-</td></tr>
+                            <tr data-sd-id="38"><td data-sd-id="39">Raw confidence</td><td class="text-right text-gray-400" data-sd-id="40">-</td></tr>
+                            <tr data-sd-id="41"><td data-sd-id="42">TTA variance</td><td class="text-right text-gray-400" data-sd-id="43">-</td></tr>
+                            <tr data-sd-id="44"><td data-sd-id="45">Processing time</td><td class="text-right text-gray-400" data-sd-id="46">-</td></tr>
+                        </tbody>
+                    </table>
+                    <p class="mt-4 text-xs text-gray-500 italic" data-sd-id="47">
+                        Upload an image and run inspection to view detailed metrics and gate logs.
+                    </p>
+                </div>
+            </div>
+
+            <footer class="pt-4" data-sd-id="48">
+                <p class="text-sm text-gray-500" data-sd-id="49">
+                    Numbered red boxes show all original-pass detections. Each region is gated independently. <code class="bg-gray-100 px-1 rounded">variance</code> in machine-readable results contains population standard deviation, not mathematical variance.
+                </p>
+            </footer>
+        </main>
+    </div>
+
+</body></html>

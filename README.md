@@ -1,5 +1,11 @@
 # Hallucination-Aware Visual Inspection Assistant
 
+**[Open the live demo](https://41c8a2ee07bcf44297.gradio.live)** ? [Hosting instructions](DEPLOYMENT.md)
+
+Temporary public demo launched September 18, 2026. The link expires after one week and works only while the host computer and app are running. Permanent cloud hosting is not yet configured.
+
+![Red and black inspection interface](docs/site-preview.png)
+
 A CPU-capable crack-inspection demonstration that places a deterministic uncertainty gate between a YOLOv8 segmentation detector and Moondream2. The language model can describe a detected region only when the detector's original pass exists and five-pass confidence stability is classified Low risk. Otherwise the system returns a no-detection or human-review message without calling the VLM.
 
 This is a research demonstration, not a structural assessment, safety certification, or replacement for a qualified inspector.

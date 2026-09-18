@@ -5,6 +5,7 @@ from __future__ import annotations
 import argparse
 import html
 from collections.abc import Sequence
+from pathlib import Path
 from typing import Any
 
 import gradio as gr
@@ -12,24 +13,19 @@ from PIL import Image
 
 import pipeline
 
+REPOSITORY = "https://github.com/SleepyCinnabon17/IIT-HYD-RESEARCH-PROJECT"
+WAITING_STATUS = '<div class="risk-state risk-ready" role="status"><span class="eyebrow">Inspection status</span><strong>Awaiting image</strong><span>Upload a surface photograph to begin.</span></div>'
+
 
 def risk_badge(risk: str, detected: bool) -> str:
     """Return an accessible, self-contained risk indicator."""
-    styles = {
-        "Low": ("#14532d", "#dcfce7"),
-        "Medium": ("#854d0e", "#fef9c3"),
-        "High": ("#991b1b", "#fee2e2"),
-        "N/A": ("#334155", "#e2e8f0"),
-    }
-    foreground, background = styles.get(risk, styles["N/A"])
-    symbols = {"Low": "🟢", "Medium": "🟡", "High": "🔴", "N/A": "⚪"}
     label = risk if detected else "N/A — no detection"
-    symbol = symbols.get(risk, symbols["N/A"])
+    state = "review" if risk in {"High", "Medium"} and detected else "ready"
+    detail = "At least one region needs human review." if state == "review" else "Read each region's observation below. This is not a safety assessment."
     return (
-        '<div role="status" aria-label="Hallucination risk" '
-        f'style="padding:12px 16px;border-radius:10px;font-weight:700;'
-        f'color:{foreground};background:{background};">'
-        f"{symbol} Hallucination risk: {html.escape(label)}</div>"
+        f'<div class="risk-state risk-{state}" role="status" aria-label="Hallucination risk">'
+        '<span class="eyebrow">Inspection status</span>'
+        f'<strong>Hallucination risk: {html.escape(label)}</strong><span>{detail}</span></div>'
     )
 
 
@@ -80,22 +76,53 @@ def inspect_for_ui(image: Image.Image | None) -> tuple[Image.Image, str, str, st
 
 def build_demo() -> gr.Blocks:
     """Construct the interface without launching a server."""
-    with gr.Blocks(title="Hallucination-Aware Crack Inspection") as demo:
-        gr.Markdown(
-            """# Hallucination-Aware Crack Inspection
-
-Detector → TTA uncertainty gate → grounded VLM explanation when allowed. Upload a surface image; uncertain cases are withheld for human review. This demonstration is not a safety certification or substitute for professional inspection.
-"""
-        )
-        with gr.Row():
-            input_image = gr.Image(type="pil", label="Input image")
-            output_image = gr.Image(
-                type="pil", label="Annotated detection", interactive=False
-            )
-        inspect_button = gr.Button("Run inspection", variant="primary")
-        risk = gr.HTML(label="Risk decision")
-        explanation = gr.Textbox(label="Grounded result", lines=3, interactive=False)
-        metrics = gr.Markdown(label="Metrics and gate evidence")
+    theme = gr.themes.Base(
+        primary_hue="red", secondary_hue="neutral", neutral_hue="neutral",
+        font=["Arial", "Helvetica", "sans-serif"],
+        font_mono=["Consolas", "Courier New", "monospace"],
+        radius_size=gr.themes.sizes.radius_none,
+    )
+    with gr.Blocks(
+        title="Crack Inspection | Evidence Before Explanation", theme=theme,
+        css=Path(__file__).with_name("ui.css").read_text(encoding="utf-8"),
+        analytics_enabled=False, delete_cache=(3600, 3600),
+    ) as demo:
+        gr.HTML(f'''<nav class="masthead" aria-label="Project navigation">
+<div><span class="eyebrow">Visual inspection / Research tool</span><span class="project-name">Hallucination-aware crack inspection</span></div>
+<div class="nav-links"><a href="{REPOSITORY}" target="_blank" rel="noopener noreferrer">Source</a><a href="{REPOSITORY}/blob/main/REPORT.md" target="_blank" rel="noopener noreferrer">Evaluation report</a></div></nav>
+<header class="intro"><p class="eyebrow red-ink">Inspect the surface. Question the result.</p>
+<h1>Evidence before<br><span>explanation.</span></h1>
+<p class="intro-copy">Locate visible cracks, check how consistently they are detected, and release an observation only when the evidence passes the gate.</p></header>
+<div class="process-strip" aria-label="Inspection process"><div><b>01</b> Detect regions</div><div><b>02</b> Check stability</div><div><b>03</b> Verify claims</div></div>''')
+        with gr.Row(equal_height=True, elem_id="workspace"):
+            with gr.Column(min_width=280):
+                gr.HTML('<div class="section-label"><span>01 / Input</span><span>Surface photograph</span></div>')
+                input_image = gr.Image(
+                    type="pil", label="Upload a surface image", sources=["upload"],
+                    height=340, elem_id="input-image", show_share_button=False,
+                )
+            with gr.Column(min_width=280):
+                gr.HTML('<div class="section-label"><span>02 / Result</span><span>Numbered detection regions</span></div>')
+                output_image = gr.Image(
+                    type="pil", label="Inspection result", interactive=False,
+                    height=340, elem_id="output-image", show_share_button=False,
+                )
+        with gr.Row(elem_id="actions"):
+            inspect_button = gr.Button("Run inspection", variant="primary", elem_id="run-inspection", scale=0, min_width=240)
+            gr.HTML('<p class="run-note">One image at a time. The first explanation may take several minutes while the model loads.</p>')
+        with gr.Row(elem_id="results-row"):
+            with gr.Column(scale=2, min_width=280):
+                gr.HTML('<div class="section-label"><span>03 / Observation</span></div>')
+                explanation = gr.Textbox(
+                    label="Observation", show_label=False, lines=5, interactive=False,
+                    placeholder="Run an inspection to see the observation or reason for human review.",
+                    elem_id="observation",
+                )
+            with gr.Column(scale=1, min_width=260):
+                risk = gr.HTML(WAITING_STATUS, label="Risk decision", elem_id="risk")
+                gr.HTML('<p class="review-note">Each region is assessed separately. The overall risk reflects the region needing the most review.</p>')
+        with gr.Accordion("Detailed evidence / confidence and gate decisions", open=False, elem_id="evidence-details"):
+            metrics = gr.Markdown("Evidence will appear after inspection.", label="Metrics and gate evidence")
         inspect_button.click(
             fn=inspect_for_ui,
             inputs=input_image,
@@ -103,8 +130,10 @@ Detector → TTA uncertainty gate → grounded VLM explanation when allowed. Upl
             api_name="inspect",
         )
         gr.Markdown(
-            "Numbered red boxes show all original-pass detections. Each region is gated independently. `variance` in machine-readable results contains population standard deviation, not mathematical variance."
+            "**Research demonstration.** A detection or Low-risk result is not a structural safety assessment. Uncertain results need human review.",
+            elem_id="research-note",
         )
+        gr.HTML('<div class="site-footer"><span>Visual evidence. Explicit uncertainty.</span><span>Detection / Stability / Grounding</span></div>')
     return demo
 
 
@@ -114,10 +143,12 @@ def main(argv: Sequence[str] | None = None) -> int:
     parser.add_argument("--port", type=int, default=7860)
     parser.add_argument("--share", action="store_true")
     args = parser.parse_args(argv)
-    build_demo().queue(default_concurrency_limit=1).launch(
+    build_demo().queue(default_concurrency_limit=1, max_size=8).launch(
         server_name=args.host,
         server_port=args.port,
         share=args.share,
+        max_file_size="20mb",
+        show_api=False,
     )
     return 0
 

@@ -1,0 +1,218 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="view-transition" content="same-origin">
+    <title>Evidence Before Explanation | Crack Inspection</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+
+        @view-transition {
+            navigation: auto;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        .theme-container {
+            font-family: 'Archivo', sans-serif;
+            background-color: #0b0b0b;
+            color: #f2f0eb;
+        }
+
+        .mono {
+            font-family: 'JetBrains Mono', monospace;
+        }
+
+        .border-base {
+            border-color: #303030;
+        }
+
+        .text-accent {
+            color: #d62b2b;
+        }
+
+        .bg-accent {
+            background-color: #d62b2b;
+        }
+
+        .bg-panel {
+            background-color: #111111;
+        }
+
+        /* Remove all default rounding */
+        * {
+            border-radius: 0 !important;
+        }
+
+        .step-strip {
+            border-top: 1px solid #303030;
+            border-bottom: 1px solid #303030;
+        }
+
+        ::view-transition-old(root),
+        ::view-transition-new(root) {
+            animation-duration: 0.4s;
+            animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .input-square {
+            aspect-ratio: 1 / 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="theme-container min-h-screen flex flex-col">
+        <!-- Top Nav / Masthead -->
+        <nav class="border-b border-base px-6 py-4 flex justify-between items-center">
+            <div class="flex flex-col">
+                <span class="text-[10px] tracking-[0.2em] uppercase text-muted font-semibold text-[#a4a4a4]">Visual Inspection / Research Tool</span>
+                <span class="text-xs mono text-[#a4a4a4] mt-1">HALLUCINATION-AWARE CRACK INSPECTION</span>
+            </div>
+            <div class="flex gap-6">
+                <a id="nav-github" href="https://github.com/SleepyCinnabon17/IIT-HYD-RESEARCH-PROJECT" class="text-xs uppercase tracking-widest hover:text-accent transition-colors">Source</a>
+                <a id="nav-report" href="https://github.com/SleepyCinnabon17/IIT-HYD-RESEARCH-PROJECT/blob/main/REPORT.md" class="text-xs uppercase tracking-widest hover:text-accent transition-colors">Evaluation report</a>
+            </div>
+        </nav>
+
+        <!-- Header Section -->
+        <header class="px-6 py-12 md:py-20 max-w-7xl mx-auto w-full">
+            <h1 class="text-5xl md:text-7xl font-bold tracking-tight mb-6">
+                Evidence before <span class="text-accent">explanation.</span>
+            </h1>
+            <p class="max-w-2xl text-[#a4a4a4] leading-relaxed">
+                Detector → TTA uncertainty gate → grounded VLM explanation when allowed.
+                Surface images are inspected for visible crack regions; uncertain cases are flagged for manual human verification.
+                This instrument is for research purposes only.
+            </p>
+        </header>
+
+        <!-- Procedural Strip -->
+        <div class="step-strip w-full mb-12">
+            <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x border-base">
+                <div class="px-6 py-4 flex items-center gap-4">
+                    <span class="mono text-accent text-sm">01</span>
+                    <span class="text-xs uppercase tracking-widest">Detect Regions</span>
+                </div>
+                <div class="px-6 py-4 flex items-center gap-4">
+                    <span class="mono text-accent text-sm">02</span>
+                    <span class="text-xs uppercase tracking-widest">Check Stability</span>
+                </div>
+                <div class="px-6 py-4 flex items-center gap-4">
+                    <span class="mono text-accent text-sm">03</span>
+                    <span class="text-xs uppercase tracking-widest">Verify Claims</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Workspace -->
+        <main class="flex-1 px-6 pb-20 max-w-7xl mx-auto w-full space-y-12">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-px bg-[#303030] border border-base">
+                <!-- Input -->
+                <div class="bg-panel p-8 flex flex-col items-center justify-center input-square group cursor-pointer hover:bg-[#151515] transition-colors">
+                    <div class="text-center">
+                        <iconify-icon icon="lucide:camera" class="text-4xl mb-4 text-[#303030] group-hover:text-accent transition-colors"></iconify-icon>
+                        <h3 class="text-sm uppercase tracking-widest mb-2">Upload a surface image</h3>
+                        <p class="text-xs text-[#a4a4a4] mono">UPLOAD A SURFACE PHOTOGRAPH (MAX 20MB)</p>
+                    </div>
+                </div>
+                <!-- Output -->
+                <div class="bg-panel p-8 flex flex-col items-center justify-center input-square bg-[#0d0d0d]">
+                    <div class="text-center">
+                        <iconify-icon icon="lucide:shield-alert" class="text-4xl mb-4 text-[#303030]"></iconify-icon>
+                        <h3 class="text-sm uppercase tracking-widest mb-2">Inspection result</h3>
+                        <p class="text-xs text-[#a4a4a4] mono">AWAITING UPLOAD</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Actions -->
+            <div class="flex flex-col md:flex-row gap-6 items-center">
+                <button id="cta-run-inspection" class="w-full md:w-auto px-12 py-4 bg-accent hover:bg-[#b52424] text-white font-bold uppercase tracking-[0.2em] text-sm transition-all">
+                    Run inspection
+                </button>
+                <div class="flex items-center gap-3">
+                    <span class="w-2 h-2 bg-[#303030]"></span>
+                    <span class="text-xs uppercase tracking-widest text-[#a4a4a4] mono">Status: Awaiting image</span>
+                </div>
+            </div>
+
+            <!-- Results / Evidence -->
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+                <div class="lg:col-span-2 space-y-8">
+                    <section>
+                        <label class="text-[10px] uppercase tracking-widest text-accent font-bold mb-4 block">Observation</label>
+                        <div class="bg-panel border border-base p-6 min-h-[120px]">
+                            <p class="text-[#a4a4a4] italic text-sm">No data available. Run inspection to generate grounded result.</p>
+                        </div>
+                    </section>
+
+                    <section>
+                        <div class="flex justify-between items-end border-b border-base pb-2 mb-4">
+                            <label class="text-[10px] uppercase tracking-widest text-accent font-bold">Detailed Evidence</label>
+                            <span class="text-[10px] mono text-[#a4a4a4]">EXPAND FOR FULL GATE LOG</span>
+                        </div>
+                        <div class="overflow-x-auto">
+                            <table class="w-full">
+                                <thead>
+                                    <tr class="text-[10px] uppercase tracking-widest text-[#a4a4a4] border-b border-base">
+                                        <th class="py-3 text-left font-medium">Metric</th>
+                                        <th class="py-3 text-right font-medium">Measurement</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="mono text-xs text-[#f2f0eb] divide-y divide-[#1a1a1a]">
+                                    <tr>
+                                        <td class="py-4">DETECTION_STATE</td>
+                                        <td class="py-4 text-right">NULL</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="py-4">MEAN_TTA_CONF</td>
+                                        <td class="py-4 text-right">Not measured</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="py-4">TTA_VARIANCE_STD</td>
+                                        <td class="py-4 text-right">Not measured</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </section>
+                </div>
+
+                <aside class="space-y-6">
+                    <div class="bg-panel border border-base p-6">
+                        <label class="text-[10px] uppercase tracking-widest text-[#a4a4a4] block mb-4">Uncertainty Disclosure</label>
+                        <p class="text-xs leading-relaxed text-[#a4a4a4]">
+                            Each detected region is checked across five image variations. Explanations are withheld when confidence or stability is insufficient. A Low-risk result is not a safety assessment.
+                        </p>
+                        <div class="mt-6 p-4 border border-base bg-[#0b0b0b]">
+                            <span class="text-[10px] uppercase tracking-widest block mb-2">System Health</span>
+                            <div class="flex items-center gap-2">
+                                <div class="w-1 h-1 bg-accent"></div>
+                                <span class="text-[10px] mono uppercase">Engine: Idle</span>
+                            </div>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="border-t border-base px-6 py-8 mt-auto">
+            <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between gap-4">
+                <p class="text-[10px] text-[#a4a4a4] max-w-xl leading-loose uppercase tracking-wider">
+                    Numbered red boxes in inspection results indicate initial detections. Each region undergoes independent gate verification.
+                    Variance values represent population standard deviation. This interface does not constitute safety certification.
+                </p>
+                <div class="flex gap-4">
+                    <iconify-icon icon="lucide:layers" class="text-[#303030] hover:text-white transition-colors cursor-pointer"></iconify-icon>
+                    <iconify-icon icon="lucide:info" class="text-[#303030] hover:text-white transition-colors cursor-pointer"></iconify-icon>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

@@ -6,3 +6,6 @@ __pycache__/
 models/*.pt
 evidence/*.log
 data/
+.runtime/
+.gradio/
+.superdesign/tmp/

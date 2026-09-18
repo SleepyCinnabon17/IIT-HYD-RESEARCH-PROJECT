@@ -1,0 +1,29 @@
+{
+  "1440": {
+    "viewport": 1440,
+    "scroll": 1440,
+    "radius": "0px",
+    "button": "rgb(198, 39, 39)",
+    "gradient": "none"
+  },
+  "390": {
+    "viewport": 390,
+    "scroll": 390,
+    "radius": "0px",
+    "button": "rgb(198, 39, 39)",
+    "gradient": "none"
+  },
+  "real_submission": {
+    "image": "test_images/ambiguous_02.jpg",
+    "observation": "No defect detected.",
+    "risk": "INSPECTION STATUS\nHallucination risk: N/A \u2014 no detection\nRead each region's observation below. This is not a safety assessment.",
+    "output_image": true
+  },
+  "browser_errors": [],
+  "public_submission": {
+    "url": "https://41c8a2ee07bcf44297.gradio.live",
+    "image": "test_images/ambiguous_02.jpg",
+    "observation": "No defect detected.",
+    "success": true
+  }
+}
