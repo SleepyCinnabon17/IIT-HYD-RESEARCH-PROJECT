@@ -1,0 +1,525 @@
+{
+  "operating_point": {
+    "raw_confidence_threshold": 0.015,
+    "localization_threshold": 0.305,
+    "localization_calibration": {
+      "threshold": 0.305,
+      "precision": 0.7051282051282052,
+      "recall": 0.7586206896551724,
+      "f1": 0.7308970099667774,
+      "tp": 110,
+      "predictions": 156,
+      "gt": 145
+    },
+    "localization_selection": "Maximum box F1 on Crack-Seg calibration subject to >=75% GT recall; not chosen on test images.",
+    "selection": "Maximum calibration accuracy with recall >=85% if feasible; otherwise no more than 5 percentage points below baseline recall. Ties favor recall then lower threshold.",
+    "recall_target_feasible": false,
+    "calibration_baseline_recall": 0.81,
+    "recall_floor": 0.76,
+    "protocol_amendment": "Initial >=85% recall target was infeasible on calibration (81% at floor). Fallback declared before scoring the fresh test; no test labels used.",
+    "calibration": {
+      "threshold": 0.015,
+      "precision": 0.6972477064220184,
+      "recall": 0.76,
+      "f1": 0.7272727272727273,
+      "accuracy": 0.715,
+      "tp": 76,
+      "fp": 33,
+      "fn": 24,
+      "tn": 67,
+      "n": 200
+    },
+    "manifest_sha256": "1ec605877fe9ebbdceba2b1fa5649b54142d01a419591a5140a68bb76f25c4dd",
+    "detector_sha256": "aceae4a99a4e7903a78d11336afc71b4cb47318888d87279922687bfeb16637d",
+    "confidence_guarantee": null
+  },
+  "datasets": {
+    "fresh_test": {
+      "before": {
+        "precision": 0.6715328467153284,
+        "recall": 0.92,
+        "f1": 0.7763713080168776,
+        "accuracy": 0.735,
+        "tp": 92,
+        "fp": 45,
+        "fn": 8,
+        "tn": 55,
+        "n": 200,
+        "ci95": {
+          "precision": {
+            "low": 0.624113475177305,
+            "high": 0.7235772357723578,
+            "width": 0.0994637605950528
+          },
+          "recall": {
+            "low": 0.86,
+            "high": 0.97,
+            "width": 0.10999999999999999
+          },
+          "f1": {
+            "low": 0.7333333333333333,
+            "high": 0.8177777777777778,
+            "width": 0.08444444444444454
+          },
+          "accuracy": {
+            "low": 0.68,
+            "high": 0.79,
+            "width": 0.10999999999999999
+          }
+        },
+        "exact_binomial_ci95": {
+          "precision": [
+            0.5861573431914835,
+            0.7493087788876445
+          ],
+          "recall": [
+            0.848442364135579,
+            0.9648284374821919
+          ],
+          "specificity": [
+            0.44728018877395,
+            0.6496797707603279
+          ],
+          "accuracy": [
+            0.6681299077913818,
+            0.7947609086140855
+          ]
+        },
+        "simultaneous_rate_ci95": {
+          "precision": {
+            "low": 0.5964567179245321,
+            "high": 0.7418458476555762,
+            "width": 0.145389129731044
+          },
+          "recall": {
+            "low": 0.8374479504786522,
+            "high": 0.9691068069267837,
+            "width": 0.13165885644813158
+          },
+          "f1": {
+            "low": 0.6967010666495348,
+            "high": 0.8403831149014203,
+            "width": 0.14368204825188546
+          },
+          "accuracy": {
+            "low": 0.6354289059177256,
+            "high": 0.8159341767978894,
+            "width": 0.18050527088016377
+          }
+        },
+        "boxes_per_image": 3.54
+      },
+      "after": {
+        "precision": 0.7107438016528925,
+        "recall": 0.86,
+        "f1": 0.7782805429864253,
+        "accuracy": 0.755,
+        "tp": 86,
+        "fp": 35,
+        "fn": 14,
+        "tn": 65,
+        "n": 200,
+        "ci95": {
+          "precision": {
+            "low": 0.656,
+            "high": 0.7719298245614035,
+            "width": 0.11592982456140344
+          },
+          "recall": {
+            "low": 0.79,
+            "high": 0.93,
+            "width": 0.14
+          },
+          "f1": {
+            "low": 0.7264150943396226,
+            "high": 0.8281938325991189,
+            "width": 0.10177873825949635
+          },
+          "accuracy": {
+            "low": 0.695,
+            "high": 0.815,
+            "width": 0.12
+          }
+        },
+        "exact_binomial_ci95": {
+          "precision": [
+            0.6213237969734496,
+            0.7895491434291151
+          ],
+          "recall": [
+            0.7762720186294195,
+            0.9212945950730457
+          ],
+          "specificity": [
+            0.5481506381760014,
+            0.7427062214688086
+          ],
+          "accuracy": [
+            0.6893601341380448,
+            0.8129158739239992
+          ]
+        },
+        "simultaneous_rate_ci95": {
+          "precision": {
+            "low": 0.6211057314134589,
+            "high": 0.7907689378407767,
+            "width": 0.1696632064273178
+          },
+          "recall": {
+            "low": 0.7638480858867454,
+            "high": 0.9279928630546302,
+            "width": 0.1641447771678849
+          },
+          "f1": {
+            "low": 0.6851209306001277,
+            "high": 0.8539030018694108,
+            "width": 0.16878207126928313
+          },
+          "accuracy": {
+            "low": 0.6489382184890917,
+            "high": 0.841226730340472,
+            "width": 0.1922885118513803
+          }
+        },
+        "boxes_per_image": 0.465
+      },
+      "accuracy_delta": {
+        "estimate": 0.02,
+        "paired_bootstrap_ci95": [
+          -0.02,
+          0.06
+        ]
+      }
+    },
+    "v2_evaluation": {
+      "before": {
+        "precision": 0.995,
+        "recall": 1.0,
+        "f1": 0.9974937343358395,
+        "accuracy": 0.995,
+        "tp": 199,
+        "fp": 1,
+        "fn": 0,
+        "tn": 0,
+        "n": 200,
+        "ci95": {
+          "precision": {
+            "low": 0.995,
+            "high": 0.995,
+            "width": 0.0
+          },
+          "recall": {
+            "low": 1.0,
+            "high": 1.0,
+            "width": 0.0
+          },
+          "f1": {
+            "low": 0.9974937343358395,
+            "high": 0.9974937343358395,
+            "width": 0.0
+          },
+          "accuracy": {
+            "low": 0.995,
+            "high": 0.995,
+            "width": 0.0
+          }
+        },
+        "exact_binomial_ci95": {
+          "precision": [
+            0.9724581015424416,
+            0.9998734189719902
+          ],
+          "recall": [
+            0.9816336723055656,
+            1.0
+          ],
+          "specificity": [
+            0.0,
+            0.975
+          ],
+          "accuracy": [
+            0.9724581015424416,
+            0.9998734189719902
+          ]
+        },
+        "simultaneous_rate_ci95": {
+          "precision": {
+            "low": 0.9948892465954905,
+            "high": 0.9999371898750079,
+            "width": 0.005047943279517408
+          },
+          "recall": {
+            "low": 0.9782204412009666,
+            "high": 1.0,
+            "width": 0.02177955879903337
+          },
+          "f1": {
+            "low": 0.9864844349708896,
+            "high": 0.999968593951195,
+            "width": 0.013484158980305416
+          },
+          "accuracy": {
+            "low": 0.9733293389949618,
+            "high": 0.9999375,
+            "width": 0.026608161005038267
+          }
+        },
+        "boxes_per_image": 9.075,
+        "localization": {
+          "tp": 229,
+          "predictions": 1815,
+          "gt": 251,
+          "precision": 0.12617079889807162,
+          "recall": 0.9123505976095617,
+          "f1": 0.22168441432720232
+        }
+      },
+      "after": {
+        "precision": 0.995,
+        "recall": 1.0,
+        "f1": 0.9974937343358395,
+        "accuracy": 0.995,
+        "tp": 199,
+        "fp": 1,
+        "fn": 0,
+        "tn": 0,
+        "n": 200,
+        "ci95": {
+          "precision": {
+            "low": 0.995,
+            "high": 0.995,
+            "width": 0.0
+          },
+          "recall": {
+            "low": 1.0,
+            "high": 1.0,
+            "width": 0.0
+          },
+          "f1": {
+            "low": 0.9974937343358395,
+            "high": 0.9974937343358395,
+            "width": 0.0
+          },
+          "accuracy": {
+            "low": 0.995,
+            "high": 0.995,
+            "width": 0.0
+          }
+        },
+        "exact_binomial_ci95": {
+          "precision": [
+            0.9724581015424416,
+            0.9998734189719902
+          ],
+          "recall": [
+            0.9816336723055656,
+            1.0
+          ],
+          "specificity": [
+            0.0,
+            0.975
+          ],
+          "accuracy": [
+            0.9724581015424416,
+            0.9998734189719902
+          ]
+        },
+        "simultaneous_rate_ci95": {
+          "precision": {
+            "low": 0.9948892465954905,
+            "high": 0.9999371898750079,
+            "width": 0.005047943279517408
+          },
+          "recall": {
+            "low": 0.9782204412009666,
+            "high": 1.0,
+            "width": 0.02177955879903337
+          },
+          "f1": {
+            "low": 0.9864844349708896,
+            "high": 0.999968593951195,
+            "width": 0.013484158980305416
+          },
+          "accuracy": {
+            "low": 0.9733293389949618,
+            "high": 0.9999375,
+            "width": 0.026608161005038267
+          }
+        },
+        "boxes_per_image": 1.45,
+        "localization": {
+          "tp": 198,
+          "predictions": 290,
+          "gt": 251,
+          "precision": 0.6827586206896552,
+          "recall": 0.7888446215139442,
+          "f1": 0.7319778188539742
+        }
+      },
+      "accuracy_delta": {
+        "estimate": 0.0,
+        "paired_bootstrap_ci95": [
+          0.0,
+          0.0
+        ]
+      }
+    },
+    "v2_external": {
+      "before": {
+        "precision": 0.6962962962962963,
+        "recall": 0.94,
+        "f1": 0.8,
+        "accuracy": 0.765,
+        "tp": 94,
+        "fp": 41,
+        "fn": 6,
+        "tn": 59,
+        "n": 200,
+        "ci95": {
+          "precision": {
+            "low": 0.6482758620689655,
+            "high": 0.75,
+            "width": 0.10172413793103452
+          },
+          "recall": {
+            "low": 0.89,
+            "high": 0.98,
+            "width": 0.08999999999999997
+          },
+          "f1": {
+            "low": 0.759995633187773,
+            "high": 0.8401864855531253,
+            "width": 0.08019085236535228
+          },
+          "accuracy": {
+            "low": 0.71,
+            "high": 0.815,
+            "width": 0.10499999999999998
+          }
+        },
+        "exact_binomial_ci95": {
+          "precision": [
+            0.6113051633305904,
+            0.7724495344219432
+          ],
+          "recall": [
+            0.8739700654191771,
+            0.9776651139286836
+          ],
+          "specificity": [
+            0.4871442037667309,
+            0.6873800234324292
+          ],
+          "accuracy": [
+            0.7000381273527178,
+            0.8219292653993161
+          ]
+        },
+        "simultaneous_rate_ci95": {
+          "precision": {
+            "low": 0.621087285855216,
+            "high": 0.7657951027074504,
+            "width": 0.14470781685223444
+          },
+          "recall": {
+            "low": 0.8636468075882214,
+            "high": 0.9809368187012394,
+            "width": 0.11729001111301796
+          },
+          "f1": {
+            "low": 0.7225536936630265,
+            "high": 0.8601166585666065,
+            "width": 0.13756296490358
+          },
+          "accuracy": {
+            "low": 0.6683767326268502,
+            "high": 0.8404673150225397,
+            "width": 0.17209058239568953
+          }
+        },
+        "boxes_per_image": 3.16
+      },
+      "after": {
+        "precision": 0.7024793388429752,
+        "recall": 0.85,
+        "f1": 0.7692307692307693,
+        "accuracy": 0.745,
+        "tp": 85,
+        "fp": 36,
+        "fn": 15,
+        "tn": 64,
+        "n": 200,
+        "ci95": {
+          "precision": {
+            "low": 0.6484375,
+            "high": 0.76316985645933,
+            "width": 0.11473235645933
+          },
+          "recall": {
+            "low": 0.78,
+            "high": 0.92,
+            "width": 0.14
+          },
+          "f1": {
+            "low": 0.7174887892376681,
+            "high": 0.8198198198198198,
+            "width": 0.10233103058215165
+          },
+          "accuracy": {
+            "low": 0.685,
+            "high": 0.805,
+            "width": 0.12
+          }
+        },
+        "exact_binomial_ci95": {
+          "precision": [
+            0.6126160630042274,
+            0.782149127075777
+          ],
+          "recall": [
+            0.764692499851379,
+            0.9135456143583515
+          ],
+          "specificity": [
+            0.5378781066724183,
+            0.7335915772667655
+          ],
+          "accuracy": [
+            0.6787246033612752,
+            0.803859184799545
+          ]
+        },
+        "simultaneous_rate_ci95": {
+          "precision": {
+            "low": 0.6122845197956593,
+            "high": 0.7834228171585949,
+            "width": 0.1711382973629355
+          },
+          "recall": {
+            "low": 0.7520904045990072,
+            "high": 0.9205848494845557,
+            "width": 0.16849444488554843
+          },
+          "f1": {
+            "low": 0.6750245903663669,
+            "high": 0.8464834875273425,
+            "width": 0.17145889716097562
+          },
+          "accuracy": {
+            "low": 0.63792298709676,
+            "high": 0.8330446162147134,
+            "width": 0.1951216291179534
+          }
+        },
+        "boxes_per_image": 0.37
+      },
+      "accuracy_delta": {
+        "estimate": -0.02,
+        "paired_bootstrap_ci95": [
+          -0.055,
+          0.015
+        ]
+      }
+    }
+  }
+}

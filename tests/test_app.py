@@ -8,6 +8,19 @@ import app
 
 def fake_result(*, risk: str = "High", detected: bool = True) -> dict:
     return {
+        "detections": [
+            {
+                "raw_confidence": 0.42,
+                "confidence": 0.40,
+                "variance": 0.05,
+                "hallucination_risk": risk,
+                "box": [1, 1, 6, 6],
+                "vlm_succeeded": False,
+                "vlm_called": False,
+            }
+        ]
+        if detected
+        else [],
         "annotated_image": Image.new("RGB", (8, 8), "white"),
         "explanation": "Explanation withheld — flagged for human review",
         "hallucination_risk": risk,
@@ -27,15 +40,26 @@ def fake_result(*, risk: str = "High", detected: bool = True) -> dict:
 
 def test_ui_adapter_uses_public_inspect_and_formats_evidence() -> None:
     image = Image.new("RGB", (8, 8), "gray")
-    with patch.object(
-        app.pipeline, "inspect", return_value=fake_result()
-    ) as inspect_spy:
+    with (
+        patch.object(
+            app.pipeline, "inspect", return_value=fake_result()
+        ) as inspect_spy,
+        patch.object(
+            app.inspection_view,
+            "operating_point",
+            return_value={
+                "raw_confidence_threshold": 0.05,
+                "localization_threshold": 0.3,
+            },
+        ),
+    ):
         annotated, explanation, badge, metrics = app.inspect_for_ui(image)
 
     inspect_spy.assert_called_once_with(image)
     assert annotated.size == (8, 8)
-    assert explanation.startswith("Explanation withheld")
-    assert "Hallucination risk: High" in badge
+    assert "Description withheld" in explanation
+    assert "1 crack candidate region" in badge
+    assert "Hallucination risk: High" not in badge
     assert "VLM SKIPPED: HIGH RISK" in metrics
     assert "`0.03`" in metrics
 

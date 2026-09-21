@@ -1,0 +1,17 @@
+{
+  "sample_id": 112,
+  "sample_sha256": "7e4a563ffc0fa904c449e92374328e91e7021f17bb75656b4b063b8c56b8f8a4",
+  "observation": "Region 1: crack candidate; detector score 63%. Box at middle center, spanning 6% of image width and 99% of height. Description withheld (uncertain detector evidence).\n\n2 weaker candidate(s) kept in Detailed evidence, omitted from the overlay.",
+  "status": "DETECTOR EVIDENCE / SEPARATE FROM LANGUAGE\n1 crack candidate region\nSolid red: stable detection. Dashed white: uncertain detection. Neither is a safety assessment.",
+  "mobile": {
+    "viewport": 390,
+    "scroll": 390
+  },
+  "browser_errors": [],
+  "public_submission": {
+    "url": "https://985c93b43c166c52dc.gradio.live",
+    "success": true,
+    "presence_threshold": 0.01,
+    "localization_threshold": 0.305
+  }
+}

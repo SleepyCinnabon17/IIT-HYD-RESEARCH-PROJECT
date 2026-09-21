@@ -1,0 +1,36 @@
+{
+  "raw_confidence_threshold": 0.01,
+  "localization_threshold": 0.305,
+  "localization_calibration": {
+    "threshold": 0.305,
+    "precision": 0.7051282051282052,
+    "recall": 0.7586206896551724,
+    "f1": 0.7308970099667774,
+    "tp": 110,
+    "predictions": 156,
+    "gt": 145
+  },
+  "localization_selection": "Maximum box F1 on Crack-Seg calibration subject to >=75% GT recall; not chosen on test images.",
+  "selection": "Maximum calibration accuracy with recall >=85% if feasible; otherwise no more than 5 percentage points below baseline recall. Ties favor recall then lower threshold.",
+  "recall_target_feasible": false,
+  "calibration_baseline_recall": 0.81,
+  "recall_floor": 0.76,
+  "protocol_amendment": "Initial >=85% recall target was infeasible on calibration (81% at floor). Fallback declared before scoring the fresh test; no test labels used.",
+  "calibration": {
+    "threshold": 0.015,
+    "precision": 0.6972477064220184,
+    "recall": 0.76,
+    "f1": 0.7272727272727273,
+    "accuracy": 0.715,
+    "tp": 76,
+    "fp": 33,
+    "fn": 24,
+    "tn": 67,
+    "n": 200
+  },
+  "manifest_sha256": "1ec605877fe9ebbdceba2b1fa5649b54142d01a419591a5140a68bb76f25c4dd",
+  "detector_sha256": "aceae4a99a4e7903a78d11336afc71b4cb47318888d87279922687bfeb16637d",
+  "confidence_guarantee": null,
+  "presence_trial_threshold": 0.015,
+  "release_decision": "Keep baseline presence threshold: trial regressed on old external benchmark and reduced recall on both external tests. Deploy localization filtering and separated language status only."
+}

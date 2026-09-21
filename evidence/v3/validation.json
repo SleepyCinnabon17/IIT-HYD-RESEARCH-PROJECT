@@ -1,0 +1,9 @@
+{
+  "cached_new_images": 400,
+  "calibration_images": 200,
+  "fresh_test_images": 200,
+  "exact_overlap_with_v2": 0,
+  "tests": "78 passed",
+  "deployment_presence_threshold": 0.01,
+  "deployment_localization_threshold": 0.305
+}

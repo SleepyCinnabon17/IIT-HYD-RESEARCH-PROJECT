@@ -3,3 +3,8 @@ evidence/v2/** -text whitespace=trailing-space,space-before-tab,cr-at-eol
 pipeline.py -text whitespace=trailing-space,space-before-tab,cr-at-eol
 evaluate_v2.py -text whitespace=trailing-space,space-before-tab,cr-at-eol
 models/gate_calibration.json -text whitespace=trailing-space,space-before-tab,cr-at-eol
+
+evidence/v3/** -text whitespace=trailing-space,space-before-tab,cr-at-eol
+evaluate_v3.py -text whitespace=trailing-space,space-before-tab,cr-at-eol
+inspection_view.py -text whitespace=trailing-space,space-before-tab,cr-at-eol
+models/detection_operating_point.json -text whitespace=trailing-space,space-before-tab,cr-at-eol

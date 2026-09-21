@@ -1,14 +1,24 @@
 # Hallucination-Aware Visual Inspection Assistant
 
-**[Open the live demo](https://41c8a2ee07bcf44297.gradio.live)** ? [Hosting instructions](DEPLOYMENT.md)
+**[Open the live demo](https://985c93b43c166c52dc.gradio.live)** | [Hosting instructions](DEPLOYMENT.md)
 
-Temporary public demo launched September 18, 2026. The link expires after one week and works only while the host computer and app are running. Permanent cloud hosting is not yet configured.
+Temporary public demo launched September 21, 2026. The link expires after one week and works only while the host computer and app are running. Permanent cloud hosting is not yet configured.
 
 ![Red and black inspection interface](docs/site-preview.png)
 
 A CPU-capable crack-inspection demonstration that places a deterministic uncertainty gate between a YOLOv8 segmentation detector and Moondream2. The language model can describe a detected region only when the detector's original pass exists and five-pass confidence stability is classified Low risk. Otherwise the system returns a no-detection or human-review message without calling the VLM.
 
 This is a research demonstration, not a structural assessment, safety certification, or replacement for a qualified inspector.
+
+## Reading the inspection result
+
+The page separates **crack candidates** from **language reliability**. Solid red boxes mark candidates that pass the existing TTA language gate; dashed white boxes mark uncertain candidates. A withheld description does not mean the crack is a hallucination. Only explicit grounding/unsupported-claim failures are labeled as blocked language claims.
+
+The overlay uses a separately calibrated localization threshold (0.305). Weaker candidates still receive all five TTA passes and remain in Detailed evidence. Image-level crack presence retains the sensitive 0.01 floor: a trial increase did not improve external accuracy consistently. Detector scores are not probabilities that a crack is real. See the full before/after results and recall tradeoffs in [REPORT.md](REPORT.md).
+
+![Real crack candidate with a withheld language description](docs/inspection-v3.png)
+
+Example: Crack-Seg evaluation sample 112, recorded in `evidence/v2/split_manifest.json`. This screenshot illustrates behavior; it is not a separate accuracy benchmark.
 
 ## Architecture
 

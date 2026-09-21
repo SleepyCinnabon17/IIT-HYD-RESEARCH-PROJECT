@@ -54,6 +54,6 @@ http://127.0.0.1:7860.
 The hosting configuration is prepared. A permanent cloud deployment has not yet
 been created or tested; no hosting account is connected in the current workspace.
 
-The temporary public demo is [https://41c8a2ee07bcf44297.gradio.live](https://41c8a2ee07bcf44297.gradio.live), launched September 18, 2026. Its `/config` endpoint was checked successfully over HTTPS. The link expires after one week and requires the local server to stay running.
+The temporary public demo is [https://985c93b43c166c52dc.gradio.live](https://985c93b43c166c52dc.gradio.live), launched September 21, 2026. Its `/config` endpoint was checked successfully over HTTPS. The link expires after one week and requires the local server to stay running.
 
 The Docker image has not been built or smoke-tested here because the local Docker daemon is unavailable. The hosting entrypoint has unit coverage for pinned downloads and checksum rejection.

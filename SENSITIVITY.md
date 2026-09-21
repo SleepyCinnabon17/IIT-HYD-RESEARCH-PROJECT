@@ -1,5 +1,73 @@
 # Sensitivity
 
+<!-- V3 RESULTS START -->
+## V3 operating-point evaluation - September 21, 2026
+
+**Release decision:** ship the calibrated box overlay and separate detection/language statuses. Keep image-level presence at 0.01. The 0.015 presence trial below was rejected: fresh accuracy improved slightly but the older external benchmark and sensitivity regressed. Deployed image-level metrics therefore remain the Before values. No detector weights or language gate were weakened.
+
+| Metric | Before (V2 policy on same images) | Trial (presence) / deployed (overlay) | Delta |
+|---|---:|---:|---:|
+| fresh_test, n=200: precision | 67.15% | 71.07% | +3.92 pp |
+| fresh_test, n=200: recall | 92.00% | 86.00% | -6.00 pp |
+| fresh_test, n=200: f1 | 77.64% | 77.83% | +0.19 pp |
+| fresh_test, n=200: accuracy | 73.50% | 75.50% | +2.00 pp |
+| v2_evaluation, n=200: precision | 99.50% | 99.50% | +0.00 pp |
+| v2_evaluation, n=200: recall | 100.00% | 100.00% | +0.00 pp |
+| v2_evaluation, n=200: f1 | 99.75% | 99.75% | +0.00 pp |
+| v2_evaluation, n=200: accuracy | 99.50% | 99.50% | +0.00 pp |
+| v2_external, n=200: precision | 69.63% | 70.25% | +0.62 pp |
+| v2_external, n=200: recall | 94.00% | 85.00% | -9.00 pp |
+| v2_external, n=200: f1 | 80.00% | 76.92% | -3.08 pp |
+| v2_external, n=200: accuracy | 76.50% | 74.50% | -2.00 pp |
+| Box localization precision, IoU >=0.5 | 12.62% | 68.28% | +55.66 pp |
+| Box localization recall, IoU >=0.5 | 91.24% | 78.88% | -12.35 pp |
+| Box localization f1, IoU >=0.5 | 22.17% | 73.20% | +51.03 pp |
+| Drawn boxes / Crack-Seg image | 9.07 | 1.45 | -7.62 |
+
+These are measured detector operating-point changes, not retrained weights or a claim that all hallucinations are identifiable. Every candidate at the original 0.01 floor still receives its independent five-pass TTA gate and remains in the audit. Only the overlay uses the new deployed threshold; image-level presence retains the old sensitive threshold. The existing language gate and grounding checks remain unchanged.
+
+**Frozen trial thresholds:** crack presence `0.015`; displayed localization `0.305`. Presence maximizes accuracy on a NEW balanced 200-image SDNET calibration split subject to >=85% recall when feasible. The initial target was infeasible (81% baseline calibration recall); a documented calibration-only amendment limits sensitivity loss to 5 percentage points instead. Localization maximizes box F1 on the original disjoint 111-image Crack-Seg calibration split subject to >=75% ground-truth-box recall. Ties favor recall, then a lower threshold. Test scores never choose thresholds. See the complete curves and hashed manifest in `evidence/v3/`.
+
+**Independent checks:** a NEW 200-image SDNET test split (100 cracked / 100 non-cracked), the unchanged previous 200-image SDNET benchmark, and the unchanged 200-image Crack-Seg benchmark. All 400 new images had fresh detector inference. Prior 400 test-image detector outputs were replayed exactly; no new VLM accuracy result is claimed. Seed 20260921; selected bytes are disjoint from prior evaluation/calibration and known Crack-Seg training images. SDNET is now calibration data, so call these domain-adapted results, not validation on an untouched external domain. Parent-scene independence and unseen pretraining exposure remain unverified. Crack-Seg still has only one negative and its accuracy is not a useful general false-positive estimate.
+
+### Confidence intervals and tradeoffs
+
+| Dataset | After metric | Estimate | Conservative 95% CI |
+|---|---|---:|---|
+| fresh_test | precision | 71.07% | [62.11%, 79.08%] |
+| fresh_test | recall | 86.00% | [76.38%, 92.80%] |
+| fresh_test | f1 | 77.83% | [68.51%, 85.39%] |
+| fresh_test | accuracy | 75.50% | [64.89%, 84.12%] |
+| v2_evaluation | precision | 99.50% | [99.49%, 99.99%] |
+| v2_evaluation | recall | 100.00% | [97.82%, 100.00%] |
+| v2_evaluation | f1 | 99.75% | [98.65%, 100.00%] |
+| v2_evaluation | accuracy | 99.50% | [97.33%, 99.99%] |
+| v2_external | precision | 70.25% | [61.23%, 78.34%] |
+| v2_external | recall | 85.00% | [75.21%, 92.06%] |
+| v2_external | f1 | 76.92% | [67.50%, 84.65%] |
+| v2_external | accuracy | 74.50% | [63.79%, 83.30%] |
+
+fresh_test: paired accuracy change +2.00 pp (95% paired bootstrap [-2.00, +6.00] pp); FP 45 -> 35, FN 8 -> 14.
+
+v2_evaluation: paired accuracy change +0.00 pp (95% paired bootstrap [+0.00, +0.00] pp); FP 1 -> 1, FN 0 -> 0.
+
+v2_external: paired accuracy change -2.00 pp (95% paired bootstrap [-5.50, +1.50] pp); FP 41 -> 36, FN 6 -> 15.
+
+Narrower overlays sacrifice some box recall; omitted candidates remain in Detailed evidence. An image can have a possible crack signal without a reliable location to draw. Solid red boxes mean the detector passes the existing stability gate; dashed white boxes mean candidate detections with uncertain language support. A blocked language claim is separate from detector evidence. Scores are not calibrated probabilities, and automated grounding cannot verify every visual assertion. No structural safety assessment is provided.
+
+### Reproduction
+
+```powershell
+python evaluate_v3.py prepare
+python evaluate_v3.py infer
+python evaluate_v3.py calibrate
+python evaluate_v3.py report
+```
+
+Use the existing Crack-Seg and SDNET dataset paths documented for V2. `infer` verifies image hashes and caches one original detector pass per image, sufficient for this raw-score operating-point study. It does not substitute a one-pass language gate: deployed inference still performs five passes for every base candidate. Historical inference source and provenance are preserved; the current report source hash is recorded separately. The fresh test and old benchmark estimates are descriptive patch-level results, not guarantees on user road photographs.
+
+<!-- V3 RESULTS END -->
+
 | Metric | Old (n=5/29) | New (n=200 + external n=200) | Delta |
 |---|---|---|---|
 | Precision | 75.00% (n=5) | Crack-Seg 99.50%; SDNET 69.63% | In-domain vs pilot +24.50 pp; domain gap -29.87 pp |

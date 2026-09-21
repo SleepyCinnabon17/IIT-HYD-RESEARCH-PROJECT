@@ -1,0 +1,16 @@
+{
+  "config": {
+    "detector_path": "models/crack_yolov8s_best.pt",
+    "confidence_threshold": 0.35,
+    "variance_threshold": 0.03,
+    "detector_confidence_floor": 0.01,
+    "image_size": 640,
+    "crop_expansion": 0.15,
+    "device": "cpu",
+    "tta_passes": 5
+  },
+  "weights_sha256": "aceae4a99a4e7903a78d11336afc71b4cb47318888d87279922687bfeb16637d",
+  "manifest_sha256": "1ec605877fe9ebbdceba2b1fa5649b54142d01a419591a5140a68bb76f25c4dd",
+  "pipeline_sha256": "159a753f73773a36fcde4e12f2258159c19c889f742a91e8483c669bf404a5ed",
+  "evaluation_sha256": "e1782caf470c7ec8cd607331061c9514f695d99ea5a386e7ebee0b71ca6932f7"
+}
