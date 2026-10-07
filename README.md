@@ -4,8 +4,6 @@
 
 For a downloadable Windows demo and same-Wi-Fi sharing, see [Test and share](TEST_AND_SHARE.md). Build the ZIP with `python package_demo.py`.
 
-The September 21 temporary public demo has expired. On October 6, 2026, the local app was restarted successfully, but Gradio and Cloudflare public tunnel attempts failed from the current network. Permanent cloud hosting is not yet configured. The local link works only on the host computer while the app is running.
-
 ![Red and black inspection interface](docs/site-preview.png)
 
 A CPU-capable crack-inspection demonstration that places a deterministic uncertainty gate between a YOLOv8 segmentation detector and Moondream2. The language model can describe a detected region only when the detector's original pass exists and five-pass confidence stability is classified Low risk. Otherwise the system returns a no-detection or human-review message without calling the VLM.
