@@ -22,7 +22,7 @@ def test_unstable_real_candidate_is_not_labeled_hallucination():
     result = {"detections": [region(risk="High")]}
     got = view.summarize(Image.new("RGB", (80, 80)), result, POLICY)
     assert got["present"] and got["selected_ids"] == [1]
-    assert "crack candidate" in got["heading"]
+    assert "Crack detector: 1 region" == got["heading"]
     assert "withheld" in got["observation"]
     assert "hallucination" not in got["observation"].lower()
     assert got["blocked_claims"] == 0
@@ -92,3 +92,42 @@ def test_only_explicit_verifier_failures_are_blocked_claims(error):
     r = region()
     r.update(vlm_called=True, vlm_error=error)
     assert view.claim_status(r) == "Unsupported language claim blocked"
+
+
+@pytest.mark.parametrize("risk", ["Medium", "High"])
+def test_mixed_detector_scores_show_both_colors_independent_of_language_gate(risk):
+    image = Image.new("RGB", (80, 80), "gray")
+    weak = region(0.2, risk="Low")
+    weak["box"] = [45, 45, 75, 75]
+    got = view.summarize(image, {"detections": [region(risk=risk), weak]}, POLICY)
+    assert got["image"].getpixel((8, 35)) == (228, 60, 60)
+    assert got["image"].getpixel((48, 75)) == (238, 238, 238)
+    assert got["image"].getpixel((54, 75)) == image.getpixel((54, 75))
+    assert got["selected_ids"] == [1] and got["uncertain_ids"] == [2]
+    assert "Dashed white" in got["detail"]
+
+
+def test_white_preview_is_bounded_and_does_not_force_red_boxes():
+    regions = [region(0.1 + i * 0.01) for i in range(10)]
+    got = view.summarize(Image.new("RGB", (80, 80)), {"detections": regions}, POLICY)
+    assert got["selected_ids"] == []
+    assert got["uncertain_ids"] == [10, 9, 8, 7, 6]
+    assert got["hidden_count"] == 5
+
+
+def test_gate_reason_identifies_missing_matches_and_variation():
+    r = region(risk="High", tta_confidences=[0.82, 0.8, 0, 0.78, 0.81],
+               variance=0.32, confidence=0.642,
+               thresholds={"variance": 0.016384, "confidence": 0.35})
+    reason = view.language_gate_reason(r)
+    assert "not matched in 1/5" in reason
+    assert "32.0 percentage points" in reason
+    assert "language limit of 1.6" in reason
+    assert "mean score" not in reason
+
+
+def test_low_mean_explained_without_claiming_variation_failure():
+    r = region(confidence=0.2, variance=0.001,
+               thresholds={"variance": 0.016384, "confidence": 0.35})
+    assert "mean score 20%" in view.language_gate_reason(r)
+    assert "variation" not in view.language_gate_reason(r)

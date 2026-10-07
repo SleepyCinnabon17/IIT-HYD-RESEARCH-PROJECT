@@ -57,8 +57,8 @@ def test_ui_adapter_uses_public_inspect_and_formats_evidence() -> None:
 
     inspect_spy.assert_called_once_with(image)
     assert annotated.size == (8, 8)
-    assert "Description withheld" in explanation
-    assert "1 crack candidate region" in badge
+    assert "AI description withheld" in explanation
+    assert "Crack detector: 1 region" in badge
     assert "Hallucination risk: High" not in badge
     assert "VLM SKIPPED: HIGH RISK" in metrics
     assert "`0.03`" in metrics

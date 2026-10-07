@@ -7,5 +7,6 @@ models/*.pt
 evidence/*.log
 data/
 .runtime/
+dist/
 .gradio/
 .superdesign/tmp/

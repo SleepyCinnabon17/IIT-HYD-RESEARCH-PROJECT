@@ -1,8 +1,10 @@
 # Hallucination-Aware Visual Inspection Assistant
 
-**[Open the live demo](https://985c93b43c166c52dc.gradio.live)** | [Hosting instructions](DEPLOYMENT.md)
+**[Open locally](http://127.0.0.1:7860)** | [Hosting instructions](DEPLOYMENT.md)
 
-Temporary public demo launched September 21, 2026. The link expires after one week and works only while the host computer and app are running. Permanent cloud hosting is not yet configured.
+For a downloadable Windows demo and same-Wi-Fi sharing, see [Test and share](TEST_AND_SHARE.md). Build the ZIP with `python package_demo.py`.
+
+The September 21 temporary public demo has expired. On October 6, 2026, the local app was restarted successfully, but Gradio and Cloudflare public tunnel attempts failed from the current network. Permanent cloud hosting is not yet configured. The local link works only on the host computer while the app is running.
 
 ![Red and black inspection interface](docs/site-preview.png)
 
@@ -12,7 +14,7 @@ This is a research demonstration, not a structural assessment, safety certificat
 
 ## Reading the inspection result
 
-The page separates **crack candidates** from **language reliability**. Solid red boxes mark candidates that pass the existing TTA language gate; dashed white boxes mark uncertain candidates. A withheld description does not mean the crack is a hallucination. Only explicit grounding/unsupported-claim failures are labeled as blocked language claims.
+The page separates **crack candidates** from **language reliability**. Solid red boxes meet the calibrated localization threshold. Dashed white boxes show up to five of the highest-scoring weaker candidates between the presence and localization thresholds. Colors depend on detector scores, independently of the language gate; an image may have either or both colors. The observation reports measured box locations even when generated descriptions are withheld. Detailed evidence retains every candidate and explains failed language checks. A withheld description does not invalidate a detection.
 
 The overlay uses a separately calibrated localization threshold (0.305). Weaker candidates still receive all five TTA passes and remain in Detailed evidence. Image-level crack presence retains the sensitive 0.01 floor: a trial increase did not improve external accuracy consistently. Detector scores are not probabilities that a crack is real. See the full before/after results and recall tradeoffs in [REPORT.md](REPORT.md).
 

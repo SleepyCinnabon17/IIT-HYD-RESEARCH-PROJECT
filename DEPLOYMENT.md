@@ -20,6 +20,11 @@ verified before the server starts. The calibration artifact is retained. Request
 are queued one at a time, with at most eight waiting requests and a 20 MB upload
 limit. No private model token is required for these public model downloads.
 
+Hugging Face's [current hardware documentation](https://huggingface.co/docs/hub/spaces-gpus)
+states that CPU Basic has no hourly charge, but creating a new Docker or Gradio
+compute Space requires a paid plan (checked October 6, 2026). This is not a
+fully free hosting option for a new free account.
+
 For Hugging Face Spaces, create a **Docker** Space and upload this repository's
 application files with `Dockerfile`, `.dockerignore`, `deployment.py`,
 `requirements.txt`, and `models/*.json`. Set its README metadata to:
@@ -54,6 +59,20 @@ http://127.0.0.1:7860.
 The hosting configuration is prepared. A permanent cloud deployment has not yet
 been created or tested; no hosting account is connected in the current workspace.
 
-The temporary public demo is [https://985c93b43c166c52dc.gradio.live](https://985c93b43c166c52dc.gradio.live), launched September 21, 2026. Its `/config` endpoint was checked successfully over HTTPS. The link expires after one week and requires the local server to stay running.
+The September 21, 2026 Gradio public link has expired. On October 6, the local
+server was restarted and `/config` returned HTTP 200 at http://127.0.0.1:7860.
+Gradio could not create a share link. A Cloudflare Quick Tunnel also failed:
+its diagnostics reported QUIC and HTTP/2 connections blocked or unreachable,
+and the public endpoint returned HTTP 530. No working public URL was established.
+
+For normal local use, run the app in a terminal and keep that terminal open:
+
+```powershell
+.\.venv\Scripts\python.exe app.py
+```
+
+Stop it with Ctrl+C. Restart it after closing the terminal or rebooting the
+computer. Historical logs and PID files in `.runtime` may refer to older sessions.
+See [Test and share](TEST_AND_SHARE.md) for the downloadable Windows package.
 
 The Docker image has not been built or smoke-tested here because the local Docker daemon is unavailable. The hosting entrypoint has unit coverage for pinned downloads and checksum rejection.

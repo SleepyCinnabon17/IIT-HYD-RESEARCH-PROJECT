@@ -142,13 +142,13 @@ def deterministic_tta(image: Image.Image, n: int = 5) -> list[tuple[str, Image.I
     if n not in range(1, 16):
         raise ValueError("TTA pass count must be within [1, 15].")
     variants = [
-        (TTA_NAMES[0], rgb.copy()),
-        (TTA_NAMES[1], ImageOps.mirror(rgb)),
-        (TTA_NAMES[2], ImageEnhance.Brightness(rgb).enhance(0.8)),
-        (TTA_NAMES[3], ImageEnhance.Contrast(rgb).enhance(1.15)),
+        (TTA_NAMES[0], lambda: rgb.copy()),
+        (TTA_NAMES[1], lambda: ImageOps.mirror(rgb)),
+        (TTA_NAMES[2], lambda: ImageEnhance.Brightness(rgb).enhance(0.8)),
+        (TTA_NAMES[3], lambda: ImageEnhance.Contrast(rgb).enhance(1.15)),
         (
             TTA_NAMES[4],
-            rgb.rotate(
+            lambda: rgb.rotate(
                 3.0,
                 resample=Image.Resampling.BILINEAR,
                 expand=False,
@@ -157,18 +157,18 @@ def deterministic_tta(image: Image.Image, n: int = 5) -> list[tuple[str, Image.I
         ),
     ]
     variants.extend([
-        ("vertical_flip", ImageOps.flip(rgb)),
-        ("scale_0.85", rgb.resize((round(rgb.width * .85), round(rgb.height * .85)))),
-        ("color_0.5", ImageEnhance.Color(rgb).enhance(.5)),
-        ("brightness_1.2", ImageEnhance.Brightness(rgb).enhance(1.2)),
-        ("rotation_-3", rgb.rotate(-3, resample=Image.Resampling.BILINEAR, fillcolor=(128, 128, 128))),
-        ("scale_1.15", rgb.resize((round(rgb.width * 1.15), round(rgb.height * 1.15)))),
-        ("contrast_0.85", ImageEnhance.Contrast(rgb).enhance(.85)),
-        ("rotation_+7", rgb.rotate(7, resample=Image.Resampling.BILINEAR, fillcolor=(128, 128, 128))),
-        ("color_1.5", ImageEnhance.Color(rgb).enhance(1.5)),
-        ("rotation_-7", rgb.rotate(-7, resample=Image.Resampling.BILINEAR, fillcolor=(128, 128, 128))),
+        ("vertical_flip", lambda: ImageOps.flip(rgb)),
+        ("scale_0.85", lambda: rgb.resize((round(rgb.width * .85), round(rgb.height * .85)))),
+        ("color_0.5", lambda: ImageEnhance.Color(rgb).enhance(.5)),
+        ("brightness_1.2", lambda: ImageEnhance.Brightness(rgb).enhance(1.2)),
+        ("rotation_-3", lambda: rgb.rotate(-3, resample=Image.Resampling.BILINEAR, fillcolor=(128, 128, 128))),
+        ("scale_1.15", lambda: rgb.resize((round(rgb.width * 1.15), round(rgb.height * 1.15)))),
+        ("contrast_0.85", lambda: ImageEnhance.Contrast(rgb).enhance(.85)),
+        ("rotation_+7", lambda: rgb.rotate(7, resample=Image.Resampling.BILINEAR, fillcolor=(128, 128, 128))),
+        ("color_1.5", lambda: ImageEnhance.Color(rgb).enhance(1.5)),
+        ("rotation_-7", lambda: rgb.rotate(-7, resample=Image.Resampling.BILINEAR, fillcolor=(128, 128, 128))),
     ])
-    return variants[:n]
+    return [(name, transform()) for name, transform in variants[:n]]
 
 
 def classify_risk(
@@ -308,10 +308,10 @@ def run_all_detections(image: Image.Image, config: PipelineConfig, detector: Any
     regions = []
     for i, p in enumerate(base):
         scores = [row[i] for row in matched]
-        # Reuse the audited decision construction without another inference call.
-        seq = iter(DetectionPass(c, p.box if c else None) for c in scores)
-        region = run_detection_with_uncertainty(image, config=config, detector=detector,
-                                                predictor=lambda *_: next(seq))  # noqa: B023 - consumed synchronously before the next iteration
+        # The detector already ran: summarize its matched scores directly,
+        # without generating full-resolution images again for every region.
+        passes = [DetectionPass(c, p.box if c else None) for c in scores]
+        region = _summarize_passes(passes, config, [name for name, _ in augmented])
         region["detection_id"] = i
         regions.append(region)
     return {"detections": regions, "pass_box_counts": [len(p) for p in all_passes],
@@ -345,7 +345,8 @@ def run_detection_with_uncertainty(
     predict = predictor or _predict_top
 
     passes: list[DetectionPass] = []
-    for _, augmented in deterministic_tta(rgb, cfg.tta_passes):
+    augmented_frames = deterministic_tta(rgb, cfg.tta_passes)
+    for _, augmented in augmented_frames:
         prediction = predict(active_detector, augmented, cfg)
         confidence = float(prediction.confidence)
         if not math.isfinite(confidence) or not 0.0 <= confidence <= 1.0:
@@ -361,6 +362,13 @@ def run_detection_with_uncertainty(
             DetectionPass(confidence=confidence if box is not None else 0.0, box=box)
         )
 
+    return _summarize_passes(passes, cfg, [name for name, _ in augmented_frames])
+
+
+def _summarize_passes(
+    passes: list[DetectionPass], cfg: PipelineConfig, names: list[str]
+) -> dict[str, Any]:
+    """Build the gate decision from existing predictions without image work."""
     confidences = [item.confidence for item in passes]
     calibrated = statistics.fmean(confidences)
     stddev = statistics.pstdev(confidences)
@@ -384,7 +392,7 @@ def run_detection_with_uncertainty(
         "box": base.box,
         "hallucination_risk": risk,
         "tta_confidences": confidences,
-        "tta_names": [name for name, _ in deterministic_tta(rgb, cfg.tta_passes)],
+        "tta_names": names,
         "uncertainty_metric": "population_standard_deviation_of_tta_confidence",
         "thresholds": {
             "confidence": cfg.confidence_threshold,

@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import statistics
+from unittest.mock import patch
 
 import numpy as np
 import pytest
@@ -20,6 +21,32 @@ from pipeline import (
     load_image,
     run_detection_with_uncertainty,
 )
+
+
+@pytest.mark.parametrize("passes", [3, 5, 15])
+def test_multiple_regions_reuse_image_transforms_and_preserve_gate_results(passes):
+    image = Image.new("RGB", (100, 80), "gray")
+    cfg = PipelineConfig(tta_passes=passes)
+    calls = []
+
+    def predict(*_):
+        calls.append(1)
+        return [DetectionPass(0.8, [5, 5, 90, 70]),
+                DetectionPass(0.2, [10, 10, 80, 60])]
+
+    with patch.object(pipeline, "deterministic_tta", wraps=deterministic_tta) as transforms:
+        batch = pipeline.run_all_detections(image, cfg, object(), predict)
+    assert len(calls) == passes
+    assert transforms.call_count == 1
+    assert len(batch["detections"]) == 2
+    for region in batch["detections"]:
+        scores = iter(region["tta_confidences"])
+        expected = run_detection_with_uncertainty(
+            image, config=cfg, detector=object(),
+            predictor=lambda *_, scores=scores, box=region["box"]: DetectionPass(next(scores), box),
+        )
+        for key in ("confidence", "variance", "hallucination_risk", "decision_trace", "tta_names"):
+            assert region[key] == expected[key]
 
 
 def solid_image(size=(100, 80), value=180):

@@ -38,13 +38,15 @@ def metrics_markdown(result: dict[str, Any]) -> str:
     """Format auditable detector and gate metrics for the interface."""
     thresholds = result["thresholds"]
     confidences = ", ".join(f"{value:.4f}" for value in result["tta_confidences"])
-    summary = f"""| Metric | Value |
+    summary = f"""Language checks control generated descriptions, not whether the detector found a crack.
+
+| Metric | Value |
 |---|---:|
 | Any proposal at inference floor | `{"Yes" if result["detected"] else "No"}` |
 | Mean TTA confidence | `{result["confidence"]:.2%}` |
 | Raw confidence | `{result["raw_confidence"]:.2%}` |
-| TTA variance (population stddev) | `{result["variance"]:.4f}` |
-| Language gate risk across all proposals | `{result["hallucination_risk"]}` |
+| Score variation (population stddev) | `{result["variance"]:.4f}` |
+| Language gate risk across all proposals, including weak ones | `{result["hallucination_risk"]}` |
 | Language gate confidence threshold | `{thresholds["confidence"]:.2f}` |
 | Standard-deviation threshold | `{thresholds["variance"]:.2f}` |
 | Processing time | `{result["processing_time"]:.3f} s` |
@@ -60,6 +62,13 @@ def metrics_markdown(result: dict[str, Any]) -> str:
         summary += "| Region | Raw score | Mean TTA score | TTA stddev | Language risk | Claim status |\n|---|---:|---:|---:|---|---|\n"
         for i, region in enumerate(result["detections"], 1):
             summary += f"| {i} | {region['raw_confidence']:.2%} | {region['confidence']:.2%} | {region['variance']:.4f} | {region['hallucination_risk']} | {inspection_view.claim_status(region)} |\n"
+        summary += "\n**Why AI descriptions were withheld:**\n\n"
+        reasons = [
+            f"- Region {i}: {inspection_view.language_gate_reason(region)}."
+            for i, region in enumerate(result["detections"], 1)
+            if not region.get("vlm_called") and not region.get("vlm_succeeded")
+        ]
+        summary += "\n".join(reasons) if reasons else "No regions withheld by the language gate."
     return summary
 
 
@@ -168,7 +177,7 @@ def build_demo() -> gr.Blocks:
             with gr.Column(scale=1, min_width=260):
                 risk = gr.HTML(WAITING_STATUS, label="Risk decision", elem_id="risk")
                 gr.HTML(
-                    '<p class="review-note">A visible crack and an unreliable description can coexist. Only an unsupported language claim is labeled blocked; uncertainty does not mean hallucination.</p>'
+                    '<p class="review-note">Detection and AI description are separate results. Region locations come directly from detector boxes, even when the language model is skipped.</p>'
                 )
         with gr.Accordion(
             "Detailed evidence / all candidates and language checks",
